@@ -7,11 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "gts lint",
     "clean": "gts clean",
-    "compile": "npm install && tsc",
+    "compile": "tsc",
     "fix": "gts fix",
-    "prepare": "npm.cmd run compile",
-    "pretest": "npm.cmd run compile",
-    "posttest": "npm.cmd run lint",
     "nodemon-run": "nodemon build/src",
     "watch": "tsc-watch && npm run nodemon-run",
     "build-and-run": "npm run compile && node build/src/index.js"
