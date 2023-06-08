@@ -1,31 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.doSomeStuff = void 0;
-const something_1 = require("./example/something");
-console.log('Try npm run lint/fix!');
-const longString = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut aliquet diam.';
-const trailing = 'Semicolon';
-const why = 'am I tabbed?';
-function doSomeStuff(withThis, andThat, andThose) {
-    //function on one line
-    if (!andThose.length) {
-        return false;
+const config_server_1 = require("./server/config-server");
+const dotenv = require("dotenv");
+dotenv.config();
+const port = process.env.PORT || 6000;
+function main() {
+    const app = (0, config_server_1.configServer)();
+    if (!app) {
+        process.exit(1);
     }
-    console.log(withThis);
-    console.log(andThat);
-    console.dir(andThose);
-    console.log(__dirname);
-    return;
+    const server = app.listen(port, () => { var _a; console.log(`Listening on port ${(_a = server === null || server === void 0 ? void 0 : server.address()) === null || _a === void 0 ? void 0 : _a.port}`); });
 }
-exports.doSomeStuff = doSomeStuff;
-doSomeStuff('something special', trailing, [why]);
-function somemagic(a, b) {
-    return a + b;
-}
-console.log('the magic is: ' + somemagic(5, 7));
-// TODO: more examples
-console.log('hello!');
-console.log('dogo');
-const result = (0, something_1.add)(25);
-console.log(result);
+main();
 //# sourceMappingURL=index.js.map
