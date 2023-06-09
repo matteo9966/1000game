@@ -4,16 +4,16 @@
     "colId": "0e58a88b-d946-4561-8afd-eef5694d0588",
     "containerId": "",
     "name": "INSERT GAME",
-    "url": "/games/gamegg",
+    "url": "/games/game",
     "method": "POST",
     "sortNum": 10000,
     "created": "2023-06-09T09:08:17.105Z",
-    "modified": "2023-06-09T10:07:47.232Z",
+    "modified": "2023-06-09T12:47:55.804Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"userId\":\"tomacco111123\",\n  \"game\":{\n    \"name\":\"999CB\",\n    \"description\":\"Some other new Game 2\"\n  }\n}",
+      "raw": "{\n  \"userId\":\"tomacco111123\",\n  \"game\":{\n    \"name\":\"1000CB game\",\n    \"description\":\"Best game ever :)\"\n  }\n}",
       "form": []
     },
     "tests": []
@@ -27,12 +27,31 @@
     "method": "PATCH",
     "sortNum": 20000,
     "created": "2023-06-09T09:57:32.272Z",
-    "modified": "2023-06-09T10:11:53.276Z",
+    "modified": "2023-06-09T13:12:09.400Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"gameId\": \"potato\",\n  \"goals\": [\n    {\n      \"id\": 37\n    },\n       {\n      \"id\": 39\n    },\n       {\n      \"id\": 40\n    }\n  ]\n}",
+      "raw": "{\n  \"gameId\": \"9ac0468b4d08\",\n  \"goals\": [\n    {\n      \"name\": \"giocare a calcio\",\n      \"points\": 200\n    },\n    {\"name\":\"get a dog\",\"points\":200}\n  ]\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "21a2121b-cb5f-472e-91a9-9abaaaa82e0f",
+    "colId": "0e58a88b-d946-4561-8afd-eef5694d0588",
+    "containerId": "",
+    "name": "INSERT PROPOSED GOAL",
+    "url": "/games//proposed-goals",
+    "method": "PATCH",
+    "sortNum": 30000,
+    "created": "2023-06-09T13:23:43.132Z",
+    "modified": "2023-06-09T13:27:45.157Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"gameId\": \"9ac0468b4d08\",\n  \"goals\": [\n    {\n      \"name\": \"giocare a calcio con cristiano ronaldo\",\n      \"points\": 2000\n    },\n    {\"name\":\"vedere messi dal vivo\",\"points\":200}\n  ]\n}",
       "form": []
     },
     "tests": []

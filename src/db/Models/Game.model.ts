@@ -6,6 +6,8 @@ import {Model} from './Model';
 class GameModel extends Model {
   constructor(db: DB, name: string) {
     super(db, name);
+    this.appendGoals = this.appendGoals.bind(this)
+    this.appendProposedGoals = this.appendProposedGoals.bind(this)
   }
 
   insertGame(game: Game) {
@@ -16,9 +18,15 @@ class GameModel extends Model {
     return this.insert(`/${gameId}/goals`, goals, false);
   }
 
-  getGameById(gameId:string){
+  appendProposedGoals(goals: Goal[], gameId: string) {
+    return this.insert(`/${gameId}/proposedGoals`, goals, false);
+  }
+
+  getGameById(gameId: string) {
     return this.get(`/${gameId}`) as Promise<Game>;
   }
 }
 
 export const gameModel = dbClient.createModel<GameModel>(GameModel, 'Games');
+
+export type appendGoalType = typeof gameModel.appendGoals
