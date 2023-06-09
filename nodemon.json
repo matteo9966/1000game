@@ -1,6 +1,6 @@
 {
     "verbose": true,
-    "ignore": ["*.test.js", "**/fixtures/**","*.ts"],
+    "ignore": ["*.test.js", "**/fixtures/**","*.ts","**/*.json","*.json"],
     "execMap": {
 
     }

@@ -1,0 +1,24 @@
+[
+  {
+    "_id": "0e58a88b-d946-4561-8afd-eef5694d0588",
+    "colName": "1000Game",
+    "created": "2023-06-09T09:08:03.459Z",
+    "sortNum": 10000,
+    "folders": [],
+    "settings": {
+      "options": {
+        "baseUrl": "http://localhost:5000/api/v1"
+      },
+      "preReq": {
+        "runRequests": [
+          {
+            "reqId": "ac819341-efb3-41aa-adfc-6c6ed8faa241",
+            "colId": "0e58a88b-d946-4561-8afd-eef5694d0588",
+            "triggerCondition": "run-always",
+            "triggerValue": ""
+          }
+        ]
+      }
+    }
+  }
+]

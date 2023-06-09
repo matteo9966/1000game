@@ -1,15 +1,17 @@
+import "express-async-errors";
 import * as e from 'express';
-import router from './config-routes';
 import { ROUTES } from '../config/routes.config';
 import * as dotenv from 'dotenv';
+import { errorMiddleware } from "../middleware/error.middleware";
+import gameRoutes from '../routes/game.route';
 dotenv.config();
 const basepath = process.env.BASEPATH 
 
 export function configServer(){
     const app = e()
-    console.log("basepath:",basepath);
-    if (!basepath) return null
-    app.use(basepath,router)
-    // app.listen(port)
+    app.use(e.json());
+    app.use(`${basepath}${ROUTES.games.base}`,gameRoutes)
+    app.use(errorMiddleware)
     return app
+
 }

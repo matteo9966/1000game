@@ -1,4 +1,9 @@
 
 export const ROUTES = {
-    health:`/health`
+    health:`/health`,
+    games:{
+        base:'/games',
+        insertGame:'/game',
+        insertGoals:'/goals'
+    }
 }
