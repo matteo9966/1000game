@@ -1,4 +1,5 @@
 import {Goal} from '../interfaces/Goal.interface';
+import { User } from '../interfaces/User.interface';
 
 export const parseObject = <T extends Record<string, any>>(
   template: T,
@@ -24,6 +25,16 @@ const goalTemplate: Goal = {
   points: 0,
 };
 
+const userTemplate:User = {
+  gameID:"",
+  goals:[],
+  id:"",
+  name:"",
+  password:"",
+  proposed:[],
+  role:"user",
+}
+
 
 export const parseNewGoal = (obj: Record<string, any>, id?: string) => {
   const newGoal = parseObject(goalTemplate, obj);
@@ -33,3 +44,11 @@ export const parseNewGoal = (obj: Record<string, any>, id?: string) => {
   return newGoal;
 };
 
+
+export const parseNewUser = (obj: Record<string, any>, id?: string)=>{
+  const newUser = parseObject(userTemplate,obj);
+  if(id){
+    newUser.id=id;
+  }
+  return newUser
+}

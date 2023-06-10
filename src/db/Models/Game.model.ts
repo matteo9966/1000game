@@ -25,6 +25,10 @@ class GameModel extends Model {
   getGameById(gameId: string) {
     return this.get(`/${gameId}`) as Promise<Game>;
   }
+
+  insertPlayer(gameId:string,playerId:string){
+    return this.insert(`/${gameId}/players`,playerId,false);
+  }
 }
 
 export const gameModel = dbClient.createModel<GameModel>(GameModel, 'Games');

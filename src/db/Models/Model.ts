@@ -24,7 +24,7 @@ export class Model {
    * @param value
    * @returns
    */
-  async insert(path: string, value: any, ovverride = false) {
+  protected async insert(path: string, value: any, ovverride = false) {
     if (!this.db) {
       return false;
     }
@@ -44,7 +44,7 @@ export class Model {
    * @param path
    * @returns
    */
-  async get<T>(path: string) {
+  protected async get<T>(path: string) {
     if (!this.db) return null;
     try {
       const fullPath = `/${this.name}${path}`;
@@ -54,7 +54,7 @@ export class Model {
     }
   }
 
-  async findById<T>(id: string) {
+   async findById<T>(id: string) {
     if (!this.db) {
       return null;
     }
@@ -72,12 +72,12 @@ export class Model {
     }
   }
 
-  async delete(path: string) {
+  protected async delete(path: string) {
     const fullPath = `/${this.name}${path}`;
     //TODO
   }
 
-  get db() {
+  protected get db() {
     return this._db?.db;
   }
 }

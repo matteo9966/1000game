@@ -4,7 +4,7 @@ declare global {
   namespace NodeJS {
     interface ProcessEnv {
       ENV: 'dev' | 'prod';
-      PORT: number;
+      PORT: string;
       BASEPATH:string;
       DBNAME: string;
 

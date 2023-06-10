@@ -27,12 +27,12 @@
     "method": "PATCH",
     "sortNum": 20000,
     "created": "2023-06-09T09:57:32.272Z",
-    "modified": "2023-06-09T13:12:09.400Z",
+    "modified": "2023-06-10T06:44:20.701Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"gameId\": \"9ac0468b4d08\",\n  \"goals\": [\n    {\n      \"name\": \"giocare a calcio\",\n      \"points\": 200\n    },\n    {\"name\":\"get a dog\",\"points\":200}\n  ]\n}",
+      "raw": "{\n  \"gameId\": \"9ac0468b4d08\",\n  \"goals\": [\n    {\n      \"name\": \"partita a padel\",\n      \"points\": 20\n    },\n    {\"name\":\"get a dog\",\"points\":200}\n  ]\n}",
       "form": []
     },
     "tests": []
@@ -52,6 +52,25 @@
     "body": {
       "type": "json",
       "raw": "{\n  \"gameId\": \"9ac0468b4d08\",\n  \"goals\": [\n    {\n      \"name\": \"giocare a calcio con cristiano ronaldo\",\n      \"points\": 2000\n    },\n    {\"name\":\"vedere messi dal vivo\",\"points\":200}\n  ]\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "17d59fcc-de5e-4c51-8747-2584e3b87789",
+    "colId": "0e58a88b-d946-4561-8afd-eef5694d0588",
+    "containerId": "",
+    "name": "SIGNUP ADMIN",
+    "url": "/users/signup-user",
+    "method": "POST",
+    "sortNum": 40000,
+    "created": "2023-06-10T08:06:20.775Z",
+    "modified": "2023-06-10T08:12:06.305Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\":\"gabriele\",\n  \"password\":\"secretpassword12\"\n}",
       "form": []
     },
     "tests": []

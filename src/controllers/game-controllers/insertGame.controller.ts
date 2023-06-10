@@ -15,9 +15,11 @@ export const insertGameController: RequestHandler = async (req, res, next) => {
         throw new CustomServerError('Missing game',400);
     }
 
+    //same logic as the 
+
     const game:Game = {
         description:body.game?.description||"",
-        goals:body.game?.goals,
+        goals:body.game?.goals || [],
         id:idGenerator(),
         players:[body.userId],
         proposedGoals:[],

@@ -76,6 +76,20 @@
                     "id": "e9c7297d864a6",
                     "name": "get a dog",
                     "points": 200
+                },
+                {
+                    "categories": [],
+                    "description": "",
+                    "id": "3c614a47227e3",
+                    "name": "partita a padel",
+                    "points": 20
+                },
+                {
+                    "categories": [],
+                    "description": "",
+                    "id": "2966c14bae96a",
+                    "name": "get a dog",
+                    "points": 200
                 }
             ],
             "id": "9ac0468b4d08",
@@ -180,6 +194,55 @@
             ],
             "proposedGoals": [],
             "name": "1000CB game"
+        },
+        "b0d0860ee035": {
+            "description": "Best game ever :)",
+            "id": "b0d0860ee035",
+            "players": [
+                "tomacco111123"
+            ],
+            "proposedGoals": [],
+            "name": "1000CB game"
+        },
+        "0b4db5fbaef33": {
+            "description": "Best game ever :)",
+            "goals": [],
+            "id": "0b4db5fbaef33",
+            "players": [
+                "tomacco111123"
+            ],
+            "proposedGoals": [],
+            "name": "1000CB game"
+        },
+        "76cd16b0fe061": {
+            "description": "Best game ever :)",
+            "goals": [],
+            "id": "76cd16b0fe061",
+            "players": [
+                "tomacco111123"
+            ],
+            "proposedGoals": [],
+            "name": "1000CB game"
+        }
+    },
+    "Users": {
+        "25ffb71393c4c": {
+            "gameID": "",
+            "goals": [],
+            "id": "25ffb71393c4c",
+            "name": "matteo",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$pRyZ5yujX8CIYvHjvSIYIg$pkGGyLGGMwy3ESbBaQGUiSiBRYzWigwGhXPyTvYFZ88",
+            "proposed": [],
+            "role": "admin"
+        },
+        "6fd04279c594b": {
+            "gameID": "",
+            "goals": [],
+            "id": "6fd04279c594b",
+            "name": "gabriele",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$ZQKXCQRlhWSmZt07epn89w$QF+gmAL7UBSOEqVG/61YB6TzuGGh+3tC9Zg3cip2AuY",
+            "proposed": [],
+            "role": "admin"
         }
     }
 }
