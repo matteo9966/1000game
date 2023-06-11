@@ -8,12 +8,12 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2023-06-09T09:08:17.105Z",
-    "modified": "2023-06-09T12:47:55.804Z",
+    "modified": "2023-06-11T16:21:54.974Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"userId\":\"tomacco111123\",\n  \"game\":{\n    \"name\":\"1000CB game\",\n    \"description\":\"Best game ever :)\"\n  }\n}",
+      "raw": "{\n  \"userId\":\"9d03dbdc261b4\",\n  \"game\":{\n    \"name\":\"1000 cb\",\n    \"description\":\"TRY THIS ONE\"\n  }\n}",
       "form": []
     },
     "tests": []
@@ -65,12 +65,69 @@
     "method": "POST",
     "sortNum": 40000,
     "created": "2023-06-10T08:06:20.775Z",
-    "modified": "2023-06-10T08:12:06.305Z",
+    "modified": "2023-06-11T17:22:27.054Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\":\"gabriele\",\n  \"password\":\"secretpassword12\"\n}",
+      "raw": "{\n  \"name\":\"test-user-1\",\n  \"password\":\"secret11\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "0cabc6a3-c63a-4a51-957e-ed6439fa644b",
+    "colId": "0e58a88b-d946-4561-8afd-eef5694d0588",
+    "containerId": "",
+    "name": "INSERT USER (admin inserts user) - invalid user",
+    "url": "/games/insert-user",
+    "method": "PATCH",
+    "sortNum": 50000,
+    "created": "2023-06-11T15:28:12.317Z",
+    "modified": "2023-06-11T15:48:49.008Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"adminId\": \"potato\",\n  \"gameId\": \"tomacco\",\n  \"username\": \"fernando\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "41aa3436-891f-4be5-b0dc-426cbb8351d6",
+    "colId": "0e58a88b-d946-4561-8afd-eef5694d0588",
+    "containerId": "",
+    "name": "INSERT USER (admin inserts user) Invalid GameId",
+    "url": "/games/insert-user",
+    "method": "PATCH",
+    "sortNum": 60000,
+    "created": "2023-06-11T15:48:56.438Z",
+    "modified": "2023-06-11T15:50:27.068Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"adminId\": \"25ffb71393c4c\",\n  \"gameId\": \"tomacco\",\n  \"username\": \"fernando\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "ff568dbe-bed6-4425-8451-46ad559c71c7",
+    "colId": "0e58a88b-d946-4561-8afd-eef5694d0588",
+    "containerId": "",
+    "name": "INSERT USER (admin inserts user) Invalid GameId valid",
+    "url": "/games/insert-user",
+    "method": "PATCH",
+    "sortNum": 70000,
+    "created": "2023-06-11T15:50:50.093Z",
+    "modified": "2023-06-11T16:31:45.415Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"adminId\": \"9d03dbdc261b4\",\n  \"gameId\": \"2cab22b89b84c\",\n  \"username\": \"test-matteo-3\"\n}",
       "form": []
     },
     "tests": []

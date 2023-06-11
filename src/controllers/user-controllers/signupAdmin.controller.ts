@@ -22,7 +22,7 @@ export const signupAdminController: RequestHandler = async (req, res, next) => {
 
   const passwordHash = await hashPassword(parsedUser.password);
   if (!passwordHash) {
-    throw new CustomServerError('Error while creating the new user', 500);
+    throw new CustomServerError('Error while creating the new user - hash', 500);
   }
   parsedUser.password = passwordHash;
 

@@ -1,3 +1,4 @@
+import { CustomServerError } from '../../errors/CustomServerError';
 import {Game} from '../../interfaces/Game.interface';
 import {Goal} from '../../interfaces/Goal.interface';
 import { User } from '../../interfaces/User.interface';
@@ -11,8 +12,22 @@ class UserModel extends Model {
     // this.appendProposedGoals = this.appendProposedGoals.bind(this)
   }
 
-  insertUser(user:User){
-    return this.insert(`/${user.id}`,user);
+  async insertUser(user:User){
+    const users = await this.get<Record<string,User>>('');
+    console.log(users)
+    if(!users || !(Object.keys(users).includes(user.name))){
+       
+       return this.insert(`/${user.name}`,user);
+
+    }else{
+        throw new CustomServerError('username already in use',400);
+    }
+
+   
+  }
+
+  findUserByName(name:string){
+
   }
 
 //   insertGame(game: Game) {

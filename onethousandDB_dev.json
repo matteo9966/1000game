@@ -1,248 +1,203 @@
 {
-    "Games": {
-        "potato": {
-            "goals": [
-                {
-                    "id": 32
-                },
-                {
-                    "id": 33
-                },
-                {
-                    "id": 37
-                },
-                {
-                    "id": 39
-                },
-                {
-                    "id": 40
-                }
-            ]
-        },
-        "9ac0468b4d08": {
-            "description": "Best game ever :)",
-            "goals": [
-                {
-                    "0": "p",
-                    "1": "o",
-                    "2": "t",
-                    "3": "a",
-                    "4": "t",
-                    "5": "o",
-                    "categories": [],
-                    "description": "",
-                    "id": "87aaaf71855a1",
-                    "name": "",
-                    "points": 0
-                },
-                {
-                    "categories": [],
-                    "description": "",
-                    "id": "404956e2cd5cc",
-                    "name": "",
-                    "points": 0
-                },
-                {
-                    "categories": [],
-                    "description": "",
-                    "id": "7d44c7f992bda",
-                    "name": "giocare a calcio",
-                    "points": 200
-                },
-                {
-                    "categories": [],
-                    "description": "",
-                    "id": "091404647e772",
-                    "name": "giocare a calcio",
-                    "points": 200
-                },
-                {
-                    "categories": [],
-                    "description": "",
-                    "id": "973b3f052e6d5",
-                    "name": "get a dog",
-                    "points": 200
-                },
-                {
-                    "categories": [],
-                    "description": "",
-                    "id": "1af7e1493fbc8",
-                    "name": "giocare a calcio",
-                    "points": 200
-                },
-                {
-                    "categories": [],
-                    "description": "",
-                    "id": "e9c7297d864a6",
-                    "name": "get a dog",
-                    "points": 200
-                },
-                {
-                    "categories": [],
-                    "description": "",
-                    "id": "3c614a47227e3",
-                    "name": "partita a padel",
-                    "points": 20
-                },
-                {
-                    "categories": [],
-                    "description": "",
-                    "id": "2966c14bae96a",
-                    "name": "get a dog",
-                    "points": 200
-                }
-            ],
-            "id": "9ac0468b4d08",
-            "players": [
-                "tomacco111123"
-            ],
-            "proposedGoals": [
-                {
-                    "categories": [],
-                    "description": "",
-                    "id": "89a6034fd4ee9",
-                    "name": "giocare a calcio con cristiano ronaldo",
-                    "points": 2000
-                },
-                {
-                    "categories": [],
-                    "description": "",
-                    "id": "65d1a657f9908",
-                    "name": "vedere messi dal vivo",
-                    "points": 200
-                }
-            ],
-            "name": "1000CB game"
-        },
-        "a5a85b6c20f9c": {
-            "description": "Best game ever :)",
-            "id": "a5a85b6c20f9c",
-            "players": [
-                "tomacco111123"
-            ],
-            "proposedGoals": [],
-            "name": "1000CB game"
-        },
-        "36e7a087019e6": {
-            "description": "Best game ever :)",
-            "id": "36e7a087019e6",
-            "players": [
-                "tomacco111123"
-            ],
-            "proposedGoals": [],
-            "name": "1000CB game"
-        },
-        "2b63e46d710a1": {
-            "description": "Best game ever :)",
-            "id": "2b63e46d710a1",
-            "players": [
-                "tomacco111123"
-            ],
-            "proposedGoals": [],
-            "name": "1000CB game"
-        },
-        "aaee3dadccaeb": {
-            "description": "Best game ever :)",
-            "id": "aaee3dadccaeb",
-            "players": [
-                "tomacco111123"
-            ],
-            "proposedGoals": [],
-            "name": "1000CB game"
-        },
-        "1cb8071c62cd4": {
-            "description": "Best game ever :)",
-            "id": "1cb8071c62cd4",
-            "players": [
-                "tomacco111123"
-            ],
-            "proposedGoals": [],
-            "name": "1000CB game"
-        },
-        "fd1bf4c7dd521": {
-            "description": "Best game ever :)",
-            "id": "fd1bf4c7dd521",
-            "players": [
-                "tomacco111123"
-            ],
-            "proposedGoals": [],
-            "name": "1000CB game"
-        },
-        "e17c9391edcaa": {
-            "description": "Best game ever :)",
-            "id": "e17c9391edcaa",
-            "players": [
-                "tomacco111123"
-            ],
-            "proposedGoals": [],
-            "name": "1000CB game"
-        },
-        "4df3c6846daa4": {
-            "description": "Best game ever :)",
-            "id": "4df3c6846daa4",
-            "players": [
-                "tomacco111123"
-            ],
-            "proposedGoals": [],
-            "name": "1000CB game"
-        },
-        "c78b4a6977f7f": {
-            "description": "Best game ever :)",
-            "id": "c78b4a6977f7f",
-            "players": [
-                "tomacco111123"
-            ],
-            "proposedGoals": [],
-            "name": "1000CB game"
-        },
-        "b0d0860ee035": {
-            "description": "Best game ever :)",
-            "id": "b0d0860ee035",
-            "players": [
-                "tomacco111123"
-            ],
-            "proposedGoals": [],
-            "name": "1000CB game"
-        },
-        "0b4db5fbaef33": {
-            "description": "Best game ever :)",
+    "Users": {
+        "9d03dbdc261b4": {
+            "gameID": "",
             "goals": [],
-            "id": "0b4db5fbaef33",
-            "players": [
-                "tomacco111123"
-            ],
-            "proposedGoals": [],
-            "name": "1000CB game"
+            "id": "9d03dbdc261b4",
+            "name": "test-user",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$DnpVwWd+C8jEXdKmxq9jew$fKReSCgqvdwgLUipBsaUQHNXlwuSkU7wA/Y3QQUNvgo",
+            "proposed": [],
+            "role": "admin"
         },
-        "76cd16b0fe061": {
-            "description": "Best game ever :)",
+        "a14ca0926ddbe": {
+            "gameID": "",
             "goals": [],
-            "id": "76cd16b0fe061",
-            "players": [
-                "tomacco111123"
-            ],
-            "proposedGoals": [],
-            "name": "1000CB game"
+            "id": "a14ca0926ddbe",
+            "name": "test-matteo",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$5NkxcEn+fyQmT2627ttZCA$x3+iaib3KV9bJllj8hvbYqfAPajXKP0dH+DHZ5Vts+k",
+            "proposed": [],
+            "role": "user"
+        },
+        "c9668aa3db4dd": {
+            "gameID": "",
+            "goals": [],
+            "id": "c9668aa3db4dd",
+            "name": "test-matteo-2",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$ZHgZAusCD4vWxlBV6oB/FA$5wWzMq5m5BdEasfKVku54zZr2NAm7Gy33x+Um/Sg01Q",
+            "proposed": [],
+            "role": "user"
+        },
+        "afd67fd1788d8": {
+            "gameID": "",
+            "goals": [],
+            "id": "afd67fd1788d8",
+            "name": "test-matteo-3",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$tBn04WoqZLsKPG7VPPMcyg$eoeClILudSdhbc0YDpq/oKAxmu//065jbKnxUkNdhq4",
+            "proposed": [],
+            "role": "user"
+        },
+        "test-user": {
+            "gameID": "",
+            "goals": [],
+            "id": "f41e62f11828a",
+            "name": "test-user",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$DZSKT58bjcnfaQul0lHKog$bHXyf68GDLuggHgDA2FE/Z802CX3L5FyOb1iF8FCSGE",
+            "proposed": [],
+            "role": "admin"
+        },
+        "test-user-1": {
+            "gameID": "",
+            "goals": [],
+            "id": "02eede614e01c",
+            "name": "test-user-1",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$1L0LcQzBMhUORlVPYBzpGw$TxVA1cC9uQZ8ZrIKzvz663iVejdyGY8ZArsYFC96Q5Y",
+            "proposed": [],
+            "role": "admin"
         }
     },
-    "Users": {
-        "25ffb71393c4c": {
-            "gameID": "",
+    "Games": {
+        "2cab22b89b84c": {
+            "description": "TRY THIS ONE",
             "goals": [],
-            "id": "25ffb71393c4c",
-            "name": "matteo",
-            "password": "$argon2id$v=19$m=65536,t=3,p=4$pRyZ5yujX8CIYvHjvSIYIg$pkGGyLGGMwy3ESbBaQGUiSiBRYzWigwGhXPyTvYFZ88",
-            "proposed": [],
-            "role": "admin"
+            "id": "2cab22b89b84c",
+            "players": [
+                "9d03dbdc261b4",
+                "a14ca0926ddbe",
+                "c9668aa3db4dd",
+                "afd67fd1788d8"
+            ],
+            "proposedGoals": [],
+            "name": "1000 cb"
         },
-        "6fd04279c594b": {
-            "gameID": "",
+        "dd82a4d8540ac": {
+            "description": "TRY THIS ONE",
             "goals": [],
-            "id": "6fd04279c594b",
-            "name": "gabriele",
-            "password": "$argon2id$v=19$m=65536,t=3,p=4$ZQKXCQRlhWSmZt07epn89w$QF+gmAL7UBSOEqVG/61YB6TzuGGh+3tC9Zg3cip2AuY",
-            "proposed": [],
-            "role": "admin"
+            "id": "dd82a4d8540ac",
+            "players": [
+                "9d03dbdc261b4"
+            ],
+            "proposedGoals": [],
+            "name": "1000 cb"
+        },
+        "e2b77e96d4acf": {
+            "description": "TRY THIS ONE",
+            "goals": [],
+            "id": "e2b77e96d4acf",
+            "players": [
+                "9d03dbdc261b4"
+            ],
+            "proposedGoals": [],
+            "name": "1000 cb"
+        },
+        "d451e4ed3bc08": {
+            "description": "TRY THIS ONE",
+            "goals": [],
+            "id": "d451e4ed3bc08",
+            "players": [
+                "9d03dbdc261b4"
+            ],
+            "proposedGoals": [],
+            "name": "1000 cb"
+        },
+        "e7f026bc8c9ee": {
+            "description": "TRY THIS ONE",
+            "goals": [],
+            "id": "e7f026bc8c9ee",
+            "players": [
+                "9d03dbdc261b4"
+            ],
+            "proposedGoals": [],
+            "name": "1000 cb"
+        },
+        "2b85c3c172749": {
+            "description": "TRY THIS ONE",
+            "goals": [],
+            "id": "2b85c3c172749",
+            "players": [
+                "9d03dbdc261b4"
+            ],
+            "proposedGoals": [],
+            "name": "1000 cb"
+        },
+        "b6f45098e29db": {
+            "description": "TRY THIS ONE",
+            "goals": [],
+            "id": "b6f45098e29db",
+            "players": [
+                "9d03dbdc261b4"
+            ],
+            "proposedGoals": [],
+            "name": "1000 cb"
+        },
+        "ee1c31cff2fd7": {
+            "description": "TRY THIS ONE",
+            "goals": [],
+            "id": "ee1c31cff2fd7",
+            "players": [
+                "9d03dbdc261b4"
+            ],
+            "proposedGoals": [],
+            "name": "1000 cb"
+        },
+        "d12814c51cb1a": {
+            "description": "TRY THIS ONE",
+            "goals": [],
+            "id": "d12814c51cb1a",
+            "players": [
+                "9d03dbdc261b4"
+            ],
+            "proposedGoals": [],
+            "name": "1000 cb"
+        },
+        "46ffc0c79348a": {
+            "description": "TRY THIS ONE",
+            "goals": [],
+            "id": "46ffc0c79348a",
+            "players": [
+                "9d03dbdc261b4"
+            ],
+            "proposedGoals": [],
+            "name": "1000 cb"
+        },
+        "3a32292494b6b": {
+            "description": "TRY THIS ONE",
+            "goals": [],
+            "id": "3a32292494b6b",
+            "players": [
+                "9d03dbdc261b4"
+            ],
+            "proposedGoals": [],
+            "name": "1000 cb"
+        },
+        "05be4b8809ac2": {
+            "description": "TRY THIS ONE",
+            "goals": [],
+            "id": "05be4b8809ac2",
+            "players": [
+                "9d03dbdc261b4"
+            ],
+            "proposedGoals": [],
+            "name": "1000 cb"
+        },
+        "4950d470fa69a": {
+            "description": "TRY THIS ONE",
+            "goals": [],
+            "id": "4950d470fa69a",
+            "players": [
+                "9d03dbdc261b4"
+            ],
+            "proposedGoals": [],
+            "name": "1000 cb"
+        },
+        "1613c2b258191": {
+            "description": "TRY THIS ONE",
+            "goals": [],
+            "id": "1613c2b258191",
+            "players": [
+                "9d03dbdc261b4"
+            ],
+            "proposedGoals": [],
+            "name": "1000 cb"
         }
     }
 }

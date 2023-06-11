@@ -1,6 +1,6 @@
 // admin user can add user to a game, it makes two updates: insert user in userdb insert user in db
 
-import {RequestHandler} from 'express';
+import {RequestHandler, response} from 'express';
 import {gameModel} from '../../db/Models/Game.model';
 import {userModel} from '../../db/Models/User.model';
 import {CustomServerError} from '../../errors/CustomServerError';
@@ -9,6 +9,9 @@ import {User} from '../../interfaces/User.interface';
 import {hashPassword} from '../../utils/hashPassword';
 import {idGenerator} from '../../utils/idGenerator';
 import {parseNewUser} from '../../utils/parseObject';
+import {InsertUserResponse} from '../../interfaces/Responses/InsertUserResponse';
+import { logger2 } from '../../logger/winston.logger';
+import { basename } from 'path';
 
 export const insertUserController: RequestHandler = async (req, res, next) => {
   //get adminID get user id
@@ -20,20 +23,32 @@ export const insertUserController: RequestHandler = async (req, res, next) => {
     );
   }
 
+  //check if the game already has the same username
+
   const user = await userModel.findById<User>(body.adminId);
   if (!user) {
     throw new CustomServerError('User with provided id does not exist', 400);
   }
 
-  const game = await gameModel.getGameById(body.gameId);
+  const game = await gameModel.getGameByIdLookupPlayers(body.gameId);
   if (!game) {
-    throw new CustomServerError('Game with provided id does not exist', 400);
+    throw new CustomServerError(
+      'Error while fetching the game data from database',
+      500
+    );
   }
-  const isPartOfGame = game.players.includes(body.adminId); //is part of group
+  const isPartOfGame = game.players.map(p => p.id).includes(body.adminId); //is part of group
   if (!isPartOfGame || !(user.role === 'admin')) {
     throw new CustomServerError(
       'You do not have the authorization to edit this game',
       401
+    );
+  }
+
+  if (game.players.map(p => p.name).includes(body.username)) {
+    throw new CustomServerError(
+      'User with provided name is already in the game, choose another username',
+      400
     );
   }
 
@@ -70,13 +85,14 @@ export const insertUserController: RequestHandler = async (req, res, next) => {
     );
   }
 
-  //i inserted the user , now just return the user with its temporary passowrd
+  const responseBody: InsertUserResponse = {
+    error: null,
+    data: {
+      name: parsedUser.name,
+      password: temporaryUserPassword,
+    },
+  };
 
-  /* 
-    {
-        name:'matteo',
-        tempPassword:'my new password'
-    }
-  
-  */
+  res.json(responseBody);
+
 };

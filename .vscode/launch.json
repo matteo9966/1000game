@@ -15,7 +15,8 @@
             "outFiles": [
                 "${workspaceFolder}/build/**/*.js"
             ],
-            "preLaunchTask": "tsc: watch - tsconfig.json"
+            "preLaunchTask": "tsc: watch - tsconfig.json",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }

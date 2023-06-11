@@ -12,8 +12,8 @@ import {parseNewGoal} from '../../utils/parseObject';
 export const insertGoalsControllerFactory:(appendFn:appendGoalType)=> RequestHandler = (appendFn)=> async (req, res, next) => {
   const body: InsertGoalsRequest = req.body;
 
-  if (!body?.goals || !body?.gameId)
-    throw new CustomServerError('missing goals or gameId', 400);
+  if (!body?.goals || !body?.gameId || !body?.adminId)
+    throw new CustomServerError('missing goals or gameId or adminId', 400);
 
   if (body?.goals && body.goals?.length === 0) {
     res.status(200);

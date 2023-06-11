@@ -1,5 +1,7 @@
 import {JsonDB} from 'node-json-db';
 import {DB} from '../DB';
+import { logger2 } from '../../logger/winston.logger';
+import { basename } from 'path';
 export class Model {
   private _db: DB | null = null;
   constructor(db: DB, private name: string) {
@@ -34,6 +36,7 @@ export class Model {
       return true;
     } catch (error) {
       //log error
+      logger2(error,basename(__filename))
       return false;
     }
   }
@@ -55,6 +58,23 @@ export class Model {
   }
 
    async findById<T>(id: string) {
+    if (!this.db) {
+      return null;
+    }
+
+    if (!id) {
+      return null;
+    }
+
+    try {
+      const fullPath = `/${this.name}/${id}`;
+      const result = (await this.db.getObject(fullPath)) as T;
+      return result;
+    } catch (error) {
+      return null;
+    }
+  }
+   async findByName<T>(id: string) {
     if (!this.db) {
       return null;
     }
