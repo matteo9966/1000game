@@ -1,0 +1,26 @@
+[12-06-23 09:45:35] 	signupAdmin.controller.js ==> ERRORE!
+[12-06-23 09:45:35] 	errorMiddleware ==> Error: username already in use
+[12-06-23 09:46:19] 	signupAdmin.controller.js ==> ERRORE!
+[12-06-23 09:46:19] 	errorMiddleware ==> Error: username already in use
+[12-06-23 09:48:24] 	signupAdmin.controller.js ==> ERRORE!
+[12-06-23 09:48:24] 	errorMiddleware ==> Error: username already in use
+[12-06-23 09:48:31] 	errorMiddleware ==> TypeError: Cannot read properties of undefined (reading 'get')
+[12-06-23 09:53:11] 	errorMiddleware ==> TypeError: Cannot read properties of undefined (reading 'get')
+[12-06-23 09:58:40] 	errorMiddleware ==> TypeError: Cannot read properties of undefined (reading 'get')
+[12-06-23 10:02:24] 	errorMiddleware ==> Error: User with provided id does not exist
+[12-06-23 10:02:29] 	errorMiddleware ==> Error: User with provided id does not exist
+[12-06-23 10:02:43] 	errorMiddleware ==> Error: User with provided name is already in the game, choose another username
+[12-06-23 10:04:31] 	errorMiddleware ==> SyntaxError: Unexpected end of JSON input
+[12-06-23 10:04:31] 	signupAdmin.controller.js ==> ERRORE!
+[12-06-23 10:04:36] 	errorMiddleware ==> SyntaxError: Unexpected end of JSON input
+[12-06-23 10:04:37] 	login.controller.js ==> DataError: Can't find dataPath: /Games. Stopped at Games
+[12-06-23 10:05:51] 	errorMiddleware ==> SyntaxError: Unexpected end of JSON input
+[12-06-23 10:06:11] 	errorMiddleware ==> SyntaxError: Unexpected end of JSON input
+[12-06-23 10:06:22] 	errorMiddleware ==> SyntaxError: Unexpected end of JSON input
+[12-06-23 10:06:25] 	errorMiddleware ==> SyntaxError: Unexpected end of JSON input
+[12-06-23 10:06:29] 	errorMiddleware ==> SyntaxError: Unexpected end of JSON input
+[12-06-23 10:06:33] 	errorMiddleware ==> SyntaxError: Unexpected end of JSON input
+[12-06-23 10:07:07] 	errorMiddleware ==> SyntaxError: Unexpected end of JSON input
+[12-06-23 10:07:13] 	errorMiddleware ==> SyntaxError: Unexpected end of JSON input
+[12-06-23 10:07:13] 	errorMiddleware ==> Error: Invalid Game,doesnt exist
+[12-06-23 10:07:18] 	errorMiddleware ==> SyntaxError: Unexpected end of JSON input

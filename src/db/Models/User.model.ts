@@ -1,7 +1,9 @@
+import { basename } from 'path';
 import { CustomServerError } from '../../errors/CustomServerError';
 import {Game} from '../../interfaces/Game.interface';
 import {Goal} from '../../interfaces/Goal.interface';
 import { User } from '../../interfaces/User.interface';
+import { logger2 } from '../../logger/winston.logger';
 import {DB, dbClient} from '../DB';
 import {Model} from './Model';
 
@@ -13,8 +15,13 @@ class UserModel extends Model {
   }
 
   async insertUser(user:User){
-    const users = await this.get<Record<string,User>>('');
-    console.log(users)
+    let users;
+    try {
+      users = await this.get<Record<string,User>>('');
+    } catch (error) {
+      users = {};
+    }
+
     if(!users || !(Object.keys(users).includes(user.name))){
        
        return this.insert(`/${user.name}`,user);
@@ -26,9 +33,11 @@ class UserModel extends Model {
    
   }
 
-  findUserByName(name:string){
-
+  async addGameIdToUser (username:string,gameId:string){
+    return this.insert(`/${username}/gameID`,gameId,true);
   }
+
+
 
 //   insertGame(game: Game) {
 //     return this.insert(`/${game.id}`, game);

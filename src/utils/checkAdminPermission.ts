@@ -10,7 +10,7 @@ export async function checkAdminPermission(adminId:string,gameId:string){
   
 
     try {
-      const user = await userModel.findById<User>(adminId);
+      const user = await userModel.findByName<User>(adminId);
       if (!user) {
         throw new CustomServerError('User with provided id does not exist', 400);
       }

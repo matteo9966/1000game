@@ -74,6 +74,8 @@ export class Model {
       return null;
     }
   }
+
+  
    async findByName<T>(id: string) {
     if (!this.db) {
       return null;

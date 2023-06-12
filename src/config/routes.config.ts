@@ -11,5 +11,6 @@ export const ROUTES = {
     users:{
         base:'/users',
         signupUser:'/signup-user',
+        login:'/login'
     }
 }

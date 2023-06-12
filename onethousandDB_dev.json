@@ -1,203 +1,95 @@
 {
     "Users": {
-        "9d03dbdc261b4": {
-            "gameID": "",
+        "admin-1": {
+            "gameID": "eb5453fd9b54b",
             "goals": [],
-            "id": "9d03dbdc261b4",
-            "name": "test-user",
-            "password": "$argon2id$v=19$m=65536,t=3,p=4$DnpVwWd+C8jEXdKmxq9jew$fKReSCgqvdwgLUipBsaUQHNXlwuSkU7wA/Y3QQUNvgo",
+            "id": "82382bb5d5d5c",
+            "name": "admin-1",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$yqsXqQ1WYaVQYtE5Ixsq+A$DBCHYesNjPdyZ59GYWKucV4hIMybrold7vHFcRz05wA",
             "proposed": [],
             "role": "admin"
         },
-        "a14ca0926ddbe": {
-            "gameID": "",
+        "user-1": {
+            "gameID": "eb5453fd9b54b",
             "goals": [],
-            "id": "a14ca0926ddbe",
-            "name": "test-matteo",
-            "password": "$argon2id$v=19$m=65536,t=3,p=4$5NkxcEn+fyQmT2627ttZCA$x3+iaib3KV9bJllj8hvbYqfAPajXKP0dH+DHZ5Vts+k",
+            "id": "952ae103661f4",
+            "name": "user-1",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$CYc78oL+ebfOgQ8AO7Zixw$jLom7f+YY/ULn+TNf42IOCKTDGGKjiXg6P7A0qmZ5vI",
             "proposed": [],
             "role": "user"
         },
-        "c9668aa3db4dd": {
-            "gameID": "",
+        "user-2": {
+            "gameID": "eb5453fd9b54b",
             "goals": [],
-            "id": "c9668aa3db4dd",
-            "name": "test-matteo-2",
-            "password": "$argon2id$v=19$m=65536,t=3,p=4$ZHgZAusCD4vWxlBV6oB/FA$5wWzMq5m5BdEasfKVku54zZr2NAm7Gy33x+Um/Sg01Q",
+            "id": "29b2128ab2a1c",
+            "name": "user-2",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$UiqEyuW2TGVFRqK8STBvGw$kp7Mjyl/l90rQUi2inBTZF0pqTCGuWlGrtgTNbS8e/c",
             "proposed": [],
             "role": "user"
         },
-        "afd67fd1788d8": {
-            "gameID": "",
+        "user-3": {
+            "gameID": "eb5453fd9b54b",
             "goals": [],
-            "id": "afd67fd1788d8",
-            "name": "test-matteo-3",
-            "password": "$argon2id$v=19$m=65536,t=3,p=4$tBn04WoqZLsKPG7VPPMcyg$eoeClILudSdhbc0YDpq/oKAxmu//065jbKnxUkNdhq4",
+            "id": "c16ee8dcb6028",
+            "name": "user-3",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$HBYmF7soX3tu0cBxeNEe3Q$U7ztX5L4edlNUSdvKyCzlDiiK7WPZ6wZ+5LJ0P60KdE",
             "proposed": [],
             "role": "user"
         },
-        "test-user": {
-            "gameID": "",
+        "user-4": {
+            "gameID": "eb5453fd9b54b",
             "goals": [],
-            "id": "f41e62f11828a",
-            "name": "test-user",
-            "password": "$argon2id$v=19$m=65536,t=3,p=4$DZSKT58bjcnfaQul0lHKog$bHXyf68GDLuggHgDA2FE/Z802CX3L5FyOb1iF8FCSGE",
+            "id": "d186db1fae12f",
+            "name": "user-4",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$ToLNnj2fQ+B7fjlduzn2CA$FjT/HjnG0mxrnIiXpAJgGvdCO1tge3PHLAEcdsisqX0",
             "proposed": [],
-            "role": "admin"
-        },
-        "test-user-1": {
-            "gameID": "",
-            "goals": [],
-            "id": "02eede614e01c",
-            "name": "test-user-1",
-            "password": "$argon2id$v=19$m=65536,t=3,p=4$1L0LcQzBMhUORlVPYBzpGw$TxVA1cC9uQZ8ZrIKzvz663iVejdyGY8ZArsYFC96Q5Y",
-            "proposed": [],
-            "role": "admin"
+            "role": "user"
         }
     },
     "Games": {
-        "2cab22b89b84c": {
+        "eb5453fd9b54b": {
             "description": "TRY THIS ONE",
-            "goals": [],
-            "id": "2cab22b89b84c",
-            "players": [
-                "9d03dbdc261b4",
-                "a14ca0926ddbe",
-                "c9668aa3db4dd",
-                "afd67fd1788d8"
+            "goals": [
+                {
+                    "categories": [],
+                    "description": "",
+                    "id": "7238b87902a37",
+                    "name": "partita a padel",
+                    "points": 20
+                },
+                {
+                    "categories": [],
+                    "description": "",
+                    "id": "b0c9d426efcd",
+                    "name": "get a dog",
+                    "points": 200
+                }
             ],
-            "proposedGoals": [],
-            "name": "1000 cb"
-        },
-        "dd82a4d8540ac": {
-            "description": "TRY THIS ONE",
-            "goals": [],
-            "id": "dd82a4d8540ac",
+            "id": "eb5453fd9b54b",
             "players": [
-                "9d03dbdc261b4"
+                "admin-1",
+                "user-1",
+                "user-2",
+                "user-3",
+                "user-4"
             ],
-            "proposedGoals": [],
-            "name": "1000 cb"
-        },
-        "e2b77e96d4acf": {
-            "description": "TRY THIS ONE",
-            "goals": [],
-            "id": "e2b77e96d4acf",
-            "players": [
-                "9d03dbdc261b4"
+            "proposedGoals": [
+                {
+                    "categories": [],
+                    "description": "",
+                    "id": "f0204265a29ed",
+                    "name": "giocare a calcio con cristiano ronaldo",
+                    "points": 2000
+                },
+                {
+                    "categories": [],
+                    "description": "",
+                    "id": "e623d54d94c68",
+                    "name": "vedere messi dal vivo",
+                    "points": 200
+                }
             ],
-            "proposedGoals": [],
-            "name": "1000 cb"
-        },
-        "d451e4ed3bc08": {
-            "description": "TRY THIS ONE",
-            "goals": [],
-            "id": "d451e4ed3bc08",
-            "players": [
-                "9d03dbdc261b4"
-            ],
-            "proposedGoals": [],
-            "name": "1000 cb"
-        },
-        "e7f026bc8c9ee": {
-            "description": "TRY THIS ONE",
-            "goals": [],
-            "id": "e7f026bc8c9ee",
-            "players": [
-                "9d03dbdc261b4"
-            ],
-            "proposedGoals": [],
-            "name": "1000 cb"
-        },
-        "2b85c3c172749": {
-            "description": "TRY THIS ONE",
-            "goals": [],
-            "id": "2b85c3c172749",
-            "players": [
-                "9d03dbdc261b4"
-            ],
-            "proposedGoals": [],
-            "name": "1000 cb"
-        },
-        "b6f45098e29db": {
-            "description": "TRY THIS ONE",
-            "goals": [],
-            "id": "b6f45098e29db",
-            "players": [
-                "9d03dbdc261b4"
-            ],
-            "proposedGoals": [],
-            "name": "1000 cb"
-        },
-        "ee1c31cff2fd7": {
-            "description": "TRY THIS ONE",
-            "goals": [],
-            "id": "ee1c31cff2fd7",
-            "players": [
-                "9d03dbdc261b4"
-            ],
-            "proposedGoals": [],
-            "name": "1000 cb"
-        },
-        "d12814c51cb1a": {
-            "description": "TRY THIS ONE",
-            "goals": [],
-            "id": "d12814c51cb1a",
-            "players": [
-                "9d03dbdc261b4"
-            ],
-            "proposedGoals": [],
-            "name": "1000 cb"
-        },
-        "46ffc0c79348a": {
-            "description": "TRY THIS ONE",
-            "goals": [],
-            "id": "46ffc0c79348a",
-            "players": [
-                "9d03dbdc261b4"
-            ],
-            "proposedGoals": [],
-            "name": "1000 cb"
-        },
-        "3a32292494b6b": {
-            "description": "TRY THIS ONE",
-            "goals": [],
-            "id": "3a32292494b6b",
-            "players": [
-                "9d03dbdc261b4"
-            ],
-            "proposedGoals": [],
-            "name": "1000 cb"
-        },
-        "05be4b8809ac2": {
-            "description": "TRY THIS ONE",
-            "goals": [],
-            "id": "05be4b8809ac2",
-            "players": [
-                "9d03dbdc261b4"
-            ],
-            "proposedGoals": [],
-            "name": "1000 cb"
-        },
-        "4950d470fa69a": {
-            "description": "TRY THIS ONE",
-            "goals": [],
-            "id": "4950d470fa69a",
-            "players": [
-                "9d03dbdc261b4"
-            ],
-            "proposedGoals": [],
-            "name": "1000 cb"
-        },
-        "1613c2b258191": {
-            "description": "TRY THIS ONE",
-            "goals": [],
-            "id": "1613c2b258191",
-            "players": [
-                "9d03dbdc261b4"
-            ],
-            "proposedGoals": [],
-            "name": "1000 cb"
+            "name": "GAME 1"
         }
     }
 }

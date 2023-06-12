@@ -1,4 +1,4 @@
-export interface LoginAdminRequest{
+export interface LoginRequest{
     name:string;
     password:string;
 }

@@ -8,8 +8,11 @@ import {parseNewUser} from '../../utils/parseObject';
 import {hashPassword} from '../../utils/hashPassword';
 import {idGenerator} from '../../utils/idGenerator';
 import {SignupAdminResponse} from '../../interfaces/Responses/signupAdminResponse';
+import { logger2 } from '../../logger/winston.logger';
+import { basename } from 'path';
 
 export const signupAdminController: RequestHandler = async (req, res, next) => {
+  logger2('ERRORE!',basename(__filename))
   const body: SignupAdminRequest = req.body;
   if (!body.name || !body.password) {
     throw new CustomServerError('Please provide name and password', 400);

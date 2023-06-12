@@ -25,7 +25,7 @@ export const insertUserController: RequestHandler = async (req, res, next) => {
 
   //check if the game already has the same username
 
-  const user = await userModel.findById<User>(body.adminId);
+  const user = await userModel.findByName<User>(body.adminId);
   if (!user) {
     throw new CustomServerError('User with provided id does not exist', 400);
   }
@@ -37,7 +37,7 @@ export const insertUserController: RequestHandler = async (req, res, next) => {
       500
     );
   }
-  const isPartOfGame = game.players.map(p => p.id).includes(body.adminId); //is part of group
+  const isPartOfGame = game.players.map(p => p.name).includes(body.adminId); //is part of group
   if (!isPartOfGame || !(user.role === 'admin')) {
     throw new CustomServerError(
       'You do not have the authorization to edit this game',
@@ -67,6 +67,8 @@ export const insertUserController: RequestHandler = async (req, res, next) => {
     throw new CustomServerError('Error while creating the user', 500);
   }
   parsedUser.password = hashedPassword;
+  parsedUser.gameID = body.gameId;
+  parsedUser.tempPassword = temporaryUserPassword; 
 
   const inserted = await userModel.insertUser(parsedUser);
   if (!inserted) {
@@ -76,7 +78,7 @@ export const insertUserController: RequestHandler = async (req, res, next) => {
   //insert user in the game  gameModel: append userId to game
   const insertedPlayer = await gameModel.insertPlayer(
     body.gameId,
-    parsedUser.id
+    parsedUser.name
   );
   if (!insertedPlayer) {
     throw new CustomServerError(
