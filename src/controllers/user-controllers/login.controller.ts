@@ -37,12 +37,14 @@ const {password,...loggedInUser} = user;
 
 const gameId = loggedInUser.gameID;  
 
-let game;
-try { 
-    game = await gameModel.getGameById(gameId) //user is not necessarily associated with a game
-} catch (error) {
-    logger2(error,basename(__filename))
-    game=null;
+let game=null;
+if(gameId){
+    try { 
+        game = await gameModel.getGameById(gameId) //user is not necessarily associated with a game
+    } catch (error) {
+        logger2(error,basename(__filename))
+        game=null;
+    }
 }
 
 const responseBody:LoginResponse = {

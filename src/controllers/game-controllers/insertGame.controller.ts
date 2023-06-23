@@ -23,6 +23,11 @@ export const insertGameController: RequestHandler = async (req, res, next) => {
     throw new CustomServerError('Invalid username',400);
   }
 
+  //one game per user, so admin can create only one game, if he wants to create multiple games i must have multiple accounts
+  if(user.gameID){
+   throw new CustomServerError('Admin already created a game',400);
+  }
+
 
 
   

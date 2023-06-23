@@ -8,12 +8,12 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2023-06-09T09:08:17.105Z",
-    "modified": "2023-06-12T08:05:37.906Z",
+    "modified": "2023-06-23T13:10:08.658Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "// {\n//   \"username\":\"admin-1\",\n//   \"game\":{\n//     \"name\":\"GAME 1\",\n//     \"description\":\"TRY THIS ONE\"\n//   }\n// }",
+      "raw": "{\n  \"username\":\"admin-1\",\n  \"game\":{\n    \"name\":\"GAME 1\",\n    \"description\":\"TRY THIS ONE\"\n  }\n}",
       "form": []
     },
     "tests": []
@@ -59,13 +59,13 @@
   {
     "_id": "17d59fcc-de5e-4c51-8747-2584e3b87789",
     "colId": "0e58a88b-d946-4561-8afd-eef5694d0588",
-    "containerId": "",
+    "containerId": "26a86e92-f41c-45fe-9856-530ea5c8ff2f",
     "name": "SIGNUP ADMIN",
     "url": "/users/signup-user",
     "method": "POST",
-    "sortNum": 40000,
+    "sortNum": 30000,
     "created": "2023-06-10T08:06:20.775Z",
-    "modified": "2023-06-12T06:56:04.271Z",
+    "modified": "2023-06-15T05:55:31.079Z",
     "headers": [],
     "params": [],
     "body": {
@@ -82,9 +82,9 @@
     "name": "INSERT USER (admin inserts user) - invalid user",
     "url": "/games/insert-user",
     "method": "PATCH",
-    "sortNum": 50000,
+    "sortNum": 10000,
     "created": "2023-06-11T15:28:12.317Z",
-    "modified": "2023-06-11T15:48:49.008Z",
+    "modified": "2023-06-15T05:55:25.619Z",
     "headers": [],
     "params": [],
     "body": {
@@ -135,18 +135,18 @@
   {
     "_id": "abd25b64-4c89-4f52-8c36-b6dad4cdc5b6",
     "colId": "0e58a88b-d946-4561-8afd-eef5694d0588",
-    "containerId": "",
+    "containerId": "26a86e92-f41c-45fe-9856-530ea5c8ff2f",
     "name": "LOGIN",
     "url": "/users/login",
     "method": "POST",
-    "sortNum": 45000,
+    "sortNum": 20000,
     "created": "2023-06-12T07:47:55.240Z",
-    "modified": "2023-06-12T07:48:31.905Z",
+    "modified": "2023-06-23T13:02:21.365Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"name\":\"admin-1\",\n  \"password\":\"secret11\"\n}",
+      "raw": "{\n  \"name\":\"admin-1\",\n  \"password\":\"secret\"\n}",
       "form": []
     },
     "tests": []

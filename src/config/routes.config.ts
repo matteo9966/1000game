@@ -12,5 +12,6 @@ export const ROUTES = {
         base:'/users',
         signupUser:'/signup-user',
         login:'/login'
+        
     }
 }

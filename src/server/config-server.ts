@@ -5,12 +5,18 @@ import * as dotenv from 'dotenv';
 import { errorMiddleware } from "../middleware/error.middleware";
 import gameRoutes from '../routes/game.route';
 import userRoutes from '../routes/user.route';
+import * as cors from 'cors';
+import { requestMonitorMiddleware } from "../middleware/request-monitor.middleware";
 dotenv.config();
 const basepath = process.env.BASEPATH 
 
 export function configServer(){
     const app = e()
     app.use(e.json());
+    app.use(requestMonitorMiddleware)
+    app.use(cors({
+        origin:['http://192.168.1.178:4200']
+    }))
     app.use(`${basepath}${ROUTES.games.base}`,gameRoutes)
     app.use(`${basepath}${ROUTES.users.base}`,userRoutes)
     app.use(errorMiddleware)

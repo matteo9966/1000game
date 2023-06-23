@@ -10,6 +10,12 @@ const winstonTransports = [
   }),
 ];
 
+const winstonTransportLogMessages = [
+  new transports.File({
+    filename:`./logs/requests.log`,
+  })
+]
+
 export const logger = createLogger({
   level: 'error',
   format: format.combine(
@@ -21,6 +27,24 @@ export const logger = createLogger({
   ),
   transports: winstonTransports,
 });
+
+export const loggerRequests = createLogger({
+  level: 'info',
+  format: format.combine(
+    format.timestamp({
+      format: 'DD-MM-YY HH:mm:ss',
+    }),
+    format.align(),
+    format.printf(info => `[${info.timestamp}] ${info.message}`)
+  ),
+  transports: winstonTransportLogMessages,
+});
+
+
+
+export const requestLogger = (label:string,message:string)=>{
+    loggerRequests.info(label+ " ===> "+message);
+}
 
 export const logger2 = (error: any, basename: string) => {
   logger.error(`${basename} ==> ${error}`);

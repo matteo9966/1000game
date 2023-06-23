@@ -1,7 +1,7 @@
 {
     "Users": {
         "admin-1": {
-            "gameID": "eb5453fd9b54b",
+            "gameID": "90401ec5963f5",
             "goals": [],
             "id": "82382bb5d5d5c",
             "name": "admin-1",
@@ -44,6 +44,276 @@
             "password": "$argon2id$v=19$m=65536,t=3,p=4$ToLNnj2fQ+B7fjlduzn2CA$FjT/HjnG0mxrnIiXpAJgGvdCO1tge3PHLAEcdsisqX0",
             "proposed": [],
             "role": "user"
+        },
+        "matteo": {
+            "gameID": "",
+            "goals": [],
+            "id": "89a5d4cba41d",
+            "name": "matteo",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$GWehSW45HRcHqN9LbmH4fw$sqoLaw+1nwMYM2PrTl8RQEzqlYuG0OKlyBtvKNkWSsM",
+            "proposed": [],
+            "role": "admin"
+        },
+        "mariogeppetto": {
+            "gameID": "",
+            "goals": [],
+            "id": "6aad25ba4081b",
+            "name": "mariogeppetto",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$Z9bFz2YxvoYWjp7BTNIdaQ$wg+iScubaeIwq+LiUN9OQZ51k8I+Bz+dpHUorEmOAaA",
+            "proposed": [],
+            "role": "admin"
+        },
+        "maurilio": {
+            "gameID": "",
+            "goals": [],
+            "id": "0195d1c53aa25",
+            "name": "maurilio",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$NWjXCMZVBerNovbP6hH2eQ$fgZ/HzMSQ99r3VkqdyB2rCfimZNcvwWOs/T6lYxZt3I",
+            "proposed": [],
+            "role": "admin"
+        },
+        "matteo1": {
+            "gameID": "",
+            "goals": [],
+            "id": "c3cbbd224db02",
+            "name": "matteo1",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$KL9tqEfCoJaSWrTxFVbbXQ$/B2Ndb94xuVixvND1SMUzfXDgpeVGtzqaWlLpmaHtQU",
+            "proposed": [],
+            "role": "admin"
+        },
+        "Mattevcvbcv": {
+            "gameID": "",
+            "goals": [],
+            "id": "ba3bc2731d403",
+            "name": "Mattevcvbcv",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$B4uM9pur4dVMm0IY1tAmjw$ToyFc2Qd0ibkcV/1aWGprydfHaiL0t/uNIHrzCQL84A",
+            "proposed": [],
+            "role": "admin"
+        },
+        "sssss": {
+            "gameID": "",
+            "goals": [],
+            "id": "6494e23ac9437",
+            "name": "sssss",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$8GCABFlXDnBdOCde1nD8Gw$6svsTuvTFXV+RbXqqNYsW8WCERO/F3er7hQKV8AlaM4",
+            "proposed": [],
+            "role": "admin"
+        },
+        "a13241234": {
+            "gameID": "",
+            "goals": [],
+            "id": "4415d33575386",
+            "name": "a13241234",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$QDtyLpAvthv6VqjvE30qHQ$Yg4YXy5xzqK+GK6ngc7DlvMDQ8D0IIOyBV3GnaQ0uAI",
+            "proposed": [],
+            "role": "admin"
+        },
+        "asfasfdf": {
+            "gameID": "",
+            "goals": [],
+            "id": "be7c313dfa20c",
+            "name": "asfasfdf",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$eBHNp4RUvXfxO5DeB1M8Hw$t7lFl87c+iu7qyru21+0EN0tCSVOdmwQufQBuzYaWpI",
+            "proposed": [],
+            "role": "admin"
+        },
+        "qwerty12": {
+            "gameID": "",
+            "goals": [],
+            "id": "33525192779d",
+            "name": "qwerty12",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$K3X+Q5dOn25B8Y0gpofVgw$b5xi0i7DNdQS7yRSGG1iByawE6H7VEwwwCHzQt0/Gf0",
+            "proposed": [],
+            "role": "admin"
+        },
+        "asdfdfasfsda": {
+            "gameID": "",
+            "goals": [],
+            "id": "7657fff6f3b38",
+            "name": "asdfdfasfsda",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$kS+cElF75fc7xRWcAXuW2w$vISmwu1pBtfkh5aLMK8vJO9p2PbulhiMbkRGC+XSQn8",
+            "proposed": [],
+            "role": "admin"
+        },
+        "qwerrty": {
+            "gameID": "",
+            "goals": [],
+            "id": "1cfc1ab3f32c9",
+            "name": "qwerrty",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$zqq5TZZTAZej/A6caBeN+w$+TQUgr6JyvldPN6Wv/mS81Dgy5JFN7vGD4woSbo0Pwk",
+            "proposed": [],
+            "role": "admin"
+        },
+        "asdfasf": {
+            "gameID": "",
+            "goals": [],
+            "id": "f5c3d93ed0125",
+            "name": "asdfasf",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$KsPiDyDYEpINSDnO9t+X1g$PjnJVwb8oAcjNaOkHejIkdDlV6mROcw3+BiTrhMMgU0",
+            "proposed": [],
+            "role": "admin"
+        },
+        "asdfasfd": {
+            "gameID": "",
+            "goals": [],
+            "id": "2be09ee55f67b",
+            "name": "asdfasfd",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$U7OopA36RbrO0MQ9A/ZhoQ$VMSH/K1gmRqTNGA+ebjPk8IqcgKucdeq/0n0G15UP1o",
+            "proposed": [],
+            "role": "admin"
+        },
+        "pistacchio": {
+            "gameID": "",
+            "goals": [],
+            "id": "e46ffec607f62",
+            "name": "pistacchio",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$+9HQcTj8G0Ru69IEEB5LHg$7UK0Or7d4+jYOof8T5jwEzjlWK0uZwelHaKV35wRDaU",
+            "proposed": [],
+            "role": "admin"
+        },
+        "asdfasdfasdf": {
+            "gameID": "",
+            "goals": [],
+            "id": "115347bdb880c",
+            "name": "asdfasdfasdf",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$DiTn28SfWUgk2Bohl4e/og$oEsgqiBTatKkpAt5iVJ6FtRS2vL3eDrby43y5wVxYp0",
+            "proposed": [],
+            "role": "admin"
+        },
+        "pistacchio11": {
+            "gameID": "",
+            "goals": [],
+            "id": "3c66c7b00634",
+            "name": "pistacchio11",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$vKiDI+yBA5Nf/36LEMMz9w$Qt59gxbBoUqFODIwj4is9vL4CVtDlnfBUrDYfiXuBfw",
+            "proposed": [],
+            "role": "admin"
+        },
+        "pistacchio333": {
+            "gameID": "",
+            "goals": [],
+            "id": "2dc7e7c92f59b",
+            "name": "pistacchio333",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$5a3gyk+01b7yr+vV+tgpmg$4gDm4oxjTgcNGubw33NNUq4Ix7gV0LhqFBrSHq+2EyE",
+            "proposed": [],
+            "role": "admin"
+        },
+        "pistacchio324534": {
+            "gameID": "",
+            "goals": [],
+            "id": "0bc94a34d0c52",
+            "name": "pistacchio324534",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$KQLR9DossyZeiHlfrBAOxQ$I5zxBjTlSdQGdYXBsl5QfqVfpZRy2op2UZlvpcVz7Qg",
+            "proposed": [],
+            "role": "admin"
+        },
+        "pistacchiowerqwe": {
+            "gameID": "",
+            "goals": [],
+            "id": "d73227e279323",
+            "name": "pistacchiowerqwe",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$peufywn+c2RBKVzkouoKbQ$Lv639ioLNt96Yhk33xZcgXLWCvyG6xWfRQKqENh8nwc",
+            "proposed": [],
+            "role": "admin"
+        },
+        "qwertyu": {
+            "gameID": "",
+            "goals": [],
+            "id": "77231b57b0319",
+            "name": "qwertyu",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$yd2kv3q+fBMLn5zoii9pZQ$c4YHwXpTDwzHNKJOdiZdFtCynyQNOZd0sJXaZolxhKU",
+            "proposed": [],
+            "role": "admin"
+        },
+        "pistacchio12123": {
+            "gameID": "",
+            "goals": [],
+            "id": "ba7ca634db952",
+            "name": "pistacchio12123",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$CilrvFEe8HXZLLVVx52PAA$tYFRQvpFX2rqLt7kiwXwnPIMX0nNrKZPvo/wvN0N6bM",
+            "proposed": [],
+            "role": "admin"
+        },
+        "pistacchio12341234": {
+            "gameID": "",
+            "goals": [],
+            "id": "32ad25ffe5fc3",
+            "name": "pistacchio12341234",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$XKL/QppH8XPGfXsejcgCVw$7tEyNvxn7T8Gy16+tkz0SWOTNXBvKQq69N8ZMTOgRqU",
+            "proposed": [],
+            "role": "admin"
+        },
+        "pistacchio2345325": {
+            "gameID": "",
+            "goals": [],
+            "id": "aa827c44a777d",
+            "name": "pistacchio2345325",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$awAItsSVpgsmHhvOkA6wBw$32+imPreRSLzTNvEMu04vO9KhxeATra2mAHrHRtnp7A",
+            "proposed": [],
+            "role": "admin"
+        },
+        "pistacchio34566": {
+            "gameID": "",
+            "goals": [],
+            "id": "a95d7e62e4d7c",
+            "name": "pistacchio34566",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$x/YITO6vRbUImT0QiK7wbA$75YC9UZgjJIbZqoRMslRZnQhHTUtc0zeKBhI1ZCXacU",
+            "proposed": [],
+            "role": "admin"
+        },
+        "pistacchio123412345": {
+            "gameID": "",
+            "goals": [],
+            "id": "d2bec835ae2d7",
+            "name": "pistacchio123412345",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$qH8cNWU+u5ZOXMCKwRlDdQ$r3oDo07mM4HQjED/Oo6YkL8OFq/kN6yHmBKYUaMGKjc",
+            "proposed": [],
+            "role": "admin"
+        },
+        "pistacchiosdadasadsffdsadfsa": {
+            "gameID": "",
+            "goals": [],
+            "id": "43821de01091c",
+            "name": "pistacchiosdadasadsffdsadfsa",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$p9vqLC5VaQCeATNdAbOQCA$GuYBrixOUbky34zfqDWICyNpfu/pXmr9DBoPTZipqeY",
+            "proposed": [],
+            "role": "admin"
+        },
+        "pistacchio1234789": {
+            "gameID": "",
+            "goals": [],
+            "id": "af4e967ce4164",
+            "name": "pistacchio1234789",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$kHW6EU/rurO0Azzn4MQWhQ$fcrFct7zxVWOgtCWGXjr+Q7PrZxiD/v9hnm0i9tQhAU",
+            "proposed": [],
+            "role": "admin"
+        },
+        "pistacchio123123": {
+            "gameID": "",
+            "goals": [],
+            "id": "ab9b588eaf4ab",
+            "name": "pistacchio123123",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$WNR/tH86sJc5vRls8EE1bA$gFpG7M+xExGNGiKLiwGU6kNUjd8d/nrM1ul7GjqGIIY",
+            "proposed": [],
+            "role": "admin"
+        },
+        "quokka squocca": {
+            "gameID": "",
+            "goals": [],
+            "id": "a061a54968d3f",
+            "name": "quokka squocca",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$VkWh1L1tgHL4WEaEPo0c+g$8r80qIxfmciGevuBrGr/yo68gg6glU4eK9W05OczhSE",
+            "proposed": [],
+            "role": "admin"
+        },
+        "matteo123": {
+            "gameID": "",
+            "goals": [],
+            "id": "d7eadb7148e5f",
+            "name": "matteo123",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$TOgd3HoCUpro/0JooOwZEg$0JXb5D5/u4TTzDaYxIyTa4QGJJ6x8lv1zQefUiBLkK8",
+            "proposed": [],
+            "role": "admin"
         }
     },
     "Games": {
@@ -89,6 +359,16 @@
                     "points": 200
                 }
             ],
+            "name": "GAME 1"
+        },
+        "90401ec5963f5": {
+            "description": "TRY THIS ONE",
+            "goals": [],
+            "id": "90401ec5963f5",
+            "players": [
+                "admin-1"
+            ],
+            "proposedGoals": [],
             "name": "GAME 1"
         }
     }

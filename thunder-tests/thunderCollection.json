@@ -4,7 +4,15 @@
     "colName": "1000Game",
     "created": "2023-06-09T09:08:03.459Z",
     "sortNum": 10000,
-    "folders": [],
+    "folders": [
+      {
+        "_id": "26a86e92-f41c-45fe-9856-530ea5c8ff2f",
+        "name": "USER",
+        "containerId": "",
+        "created": "2023-06-15T05:55:09.339Z",
+        "sortNum": 10000
+      }
+    ],
     "settings": {
       "options": {
         "baseUrl": "http://localhost:5000/api/v1"
