@@ -150,5 +150,19 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "dc724ae1-6a42-436f-b3e3-1073e86410da",
+    "colId": "0e58a88b-d946-4561-8afd-eef5694d0588",
+    "containerId": "",
+    "name": "health",
+    "url": "/health",
+    "method": "GET",
+    "sortNum": 80000,
+    "created": "2023-06-23T13:56:19.761Z",
+    "modified": "2023-06-23T13:56:34.234Z",
+    "headers": [],
+    "params": [],
+    "tests": []
   }
 ]

@@ -7,6 +7,7 @@ import gameRoutes from '../routes/game.route';
 import userRoutes from '../routes/user.route';
 import * as cors from 'cors';
 import { requestMonitorMiddleware } from "../middleware/request-monitor.middleware";
+import route from './config-routes';
 dotenv.config();
 const basepath = process.env.BASEPATH 
 
@@ -19,6 +20,7 @@ export function configServer(){
     }))
     app.use(`${basepath}${ROUTES.games.base}`,gameRoutes)
     app.use(`${basepath}${ROUTES.users.base}`,userRoutes)
+    app.use(`${basepath}${ROUTES.health}`,route);
     app.use(errorMiddleware)
     return app
 
