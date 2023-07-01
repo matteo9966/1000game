@@ -76,6 +76,11 @@ export class Model {
   }
 
   
+  /**
+   * @description find by name uses the  user name as an id
+   * @param id 
+   * @returns 
+   */
    async findByName<T>(id: string) {
     if (!this.db) {
       return null;

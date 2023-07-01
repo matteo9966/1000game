@@ -10,4 +10,4 @@ export interface Game {
   id: string;
 }
 
-export type GameLookupPlayers = Omit<Game, 'players'> & {players: User[]};
+export type GameLookupPlayers = Omit<Game, 'players'> & {players: Omit<User,'password'>[]};

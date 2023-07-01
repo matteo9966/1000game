@@ -40,7 +40,7 @@ const gameId = loggedInUser.gameID;
 let game=null;
 if(gameId){
     try { 
-        game = await gameModel.getGameById(gameId) //user is not necessarily associated with a game
+        game = await gameModel.getGameByIdLookupPlayers(gameId) //user is not necessarily associated with a game
     } catch (error) {
         logger2(error,basename(__filename))
         game=null;

@@ -5,5 +5,5 @@ export interface Goal{
     description:string;
     id:string;
     points:number;
-    categories:Category[]
+    categories:string[]
 }

@@ -314,6 +314,239 @@
             "password": "$argon2id$v=19$m=65536,t=3,p=4$TOgd3HoCUpro/0JooOwZEg$0JXb5D5/u4TTzDaYxIyTa4QGJJ6x8lv1zQefUiBLkK8",
             "proposed": [],
             "role": "admin"
+        },
+        "qqq": {
+            "gameID": "",
+            "goals": [],
+            "id": "5916ca135bd7b",
+            "name": "qqq",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$Az1+megsBQ9zDwyONoFTfA$gLwnaHxhtzTM9aFq3KHxFecwsJ+W6zLTADLSGzDqG3U",
+            "proposed": [],
+            "role": "admin"
+        },
+        "User1": {
+            "gameID": "203e4edeb775e",
+            "goals": [],
+            "id": "c2e1d73f3d41c",
+            "name": "User1",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$Hqf1N/45Pt1iUPA3QeG3qw$h87YuGsOWJVDptBDBNu+SzXYn7exnauNwR+KQFlWG3U",
+            "proposed": [],
+            "role": "admin"
+        },
+        "User2": {
+            "gameID": "dbdc987dea041",
+            "goals": [],
+            "id": "bb9145e602125",
+            "name": "User2",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$dfQCKplebI2/xxwHmUKxcw$NgYzOZ39exrS6IbuimDL/XiZmZmLuL3iNFnpk+4oY7U",
+            "proposed": [],
+            "role": "admin"
+        },
+        "User3": {
+            "gameID": "5c64565e2da4f",
+            "goals": [],
+            "id": "b94dbeaa540ea",
+            "name": "User3",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$otmWKL8BpSc1CcJxr64uVw$H99bjySJeddp5Qukdi9TQzrpFC4RO38e1IWtnZBIXmE",
+            "proposed": [],
+            "role": "admin"
+        },
+        "User5": {
+            "gameID": "dbdc987dea041",
+            "goals": [],
+            "id": "11280e231d8e4",
+            "name": "User5",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$qFQ5Y40HI6XwrFFC6Ze1Qg$0PJqIDAswz2isEuYYQzTMxYTteE5zxz6l93ui286UyA",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "7efe9fe27a64b"
+        },
+        "User6": {
+            "gameID": "dbdc987dea041",
+            "goals": [],
+            "id": "670afa66f38e8",
+            "name": "User6",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$ScEfp+Vzv/gqBorBOyjUFg$OBf/jzowlkMp+j+QkPHAj5IJW1UttOaFqd4aKKOyPCc",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "d4ede8d69bb88"
+        },
+        "User7": {
+            "gameID": "dbdc987dea041",
+            "goals": [],
+            "id": "ba1c3ea33f077",
+            "name": "User7",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$3Hn5q2QiLfxOvfKP4qUZdA$mOhoIlRI/CvbuwqUcRJOnSNa6hrBIFZCidoNNLRz/Ek",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "a2b409f00569e"
+        },
+        "User8": {
+            "gameID": "dbdc987dea041",
+            "goals": [],
+            "id": "867ee0c536f42",
+            "name": "User8",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$zEvlDAlO5eAQJk1k4ruY/A$1GGL6n08GPQRIfou+E2UtYSeIMlfwEcQsBxsr9HQgNM",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "dad22b4767c34"
+        },
+        "User9": {
+            "gameID": "dbdc987dea041",
+            "goals": [],
+            "id": "d9b62333f1535",
+            "name": "User9",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$r1RHjDjidCoo9PZcRYpP4Q$8HdZxpKq2sRDc+2XzGtkZ3n6VRjJZDQj0r3XMGUlgr4",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "1ecb980e5770e"
+        },
+        "User100": {
+            "gameID": "dbdc987dea041",
+            "goals": [],
+            "id": "7afe60894bf9d",
+            "name": "User100",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$5oi1CL5TKtqnTlFcTRUs9w$wVkIwjXuAmG2B3iEmcslxIK2qvpGruZoETSPfJibQOA",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "e7eda04120f1e"
+        },
+        "User200": {
+            "gameID": "dbdc987dea041",
+            "goals": [],
+            "id": "bf3e5d47724ce",
+            "name": "User200",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$+MZF1j2j7JcnyCWwk9Hkzw$Ad9gIGPOmr8iaBuBnOuG1KtEqhqlWeyglVY5X1C2eLM",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "b3a954a7dbe4"
+        },
+        "User31": {
+            "gameID": "94b4429e7e4d",
+            "goals": [],
+            "id": "3a4193c2ecd34",
+            "name": "User31",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$l9JUPharlphDxQ+exu+Zbw$Va8yh0QwCY1jDaRcRqeYkDxM7jwx437SNKdmCxYrF5Q",
+            "proposed": [],
+            "role": "admin"
+        },
+        "superadmin": {
+            "gameID": "a5f18765c1d82",
+            "goals": [],
+            "id": "71685a620a018",
+            "name": "superadmin",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$OeFgpuREQKkny6xZ0SerAw$2cIM5FkKC9CNahNJo/3avhK91cD6imNvPdQ4+G97Byw",
+            "proposed": [],
+            "role": "admin"
+        },
+        "User20ss0": {
+            "gameID": "dbdc987dea041",
+            "goals": [],
+            "id": "ae7ed67d15555",
+            "name": "User20ss0",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$+mkWS4y7aUfi3OlRaaqhNw$Tc1XZneyYwoN5wsphwqmxmZKPrxuF1zGDfOeoWSNPXU",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "3505b3c338094"
+        },
+        "pablito": {
+            "gameID": "a5f18765c1d82",
+            "goals": [],
+            "id": "469e6a04cb91b",
+            "name": "pablito",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$nunKCErFfj+IqfZXnDiogA$t7dO3C5ydfPaSTImRZYIdIcpHI/BX/WNZoKRY+Gk+jE",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "ea8556e3fcfd9"
+        },
+        "gioacchino": {
+            "gameID": "a5f18765c1d82",
+            "goals": [],
+            "id": "975a259fe8195",
+            "name": "gioacchino",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$Gr6nqbfJYetlPuxIeuvpbw$TxPJYTxJL4Om89mUDkBNyVPETasxcZ1boyLVCN4S7/Q",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "1e306f64560b3"
+        },
+        "varano1": {
+            "gameID": "a5f18765c1d82",
+            "goals": [],
+            "id": "7578cde576e55",
+            "name": "varano1",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$QqWIEEyiWgl3CFm+ufEttQ$sjRqc8ZyFa2jSi+zg9dJBRSx6dKz7OxZfjjH7ZUEvTw",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "1099d933e7aeb"
+        },
+        "fernando": {
+            "gameID": "a5f18765c1d82",
+            "goals": [],
+            "id": "04a8648c80396",
+            "name": "fernando",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$3DWOwRg0VpGpoWLvLKTprg$Mk8Oz/oKB8rFpTwRdNqbYJOFUh7YIFCOo2AvmgJTM4k",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "379094a4e3653"
+        },
+        "gigi": {
+            "gameID": "a5f18765c1d82",
+            "goals": [],
+            "id": "948285069c985",
+            "name": "gigi",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$eVVr9KnrK3l8ETEMjFNO3A$qPafff9vbuGhMwxS+OTJNEZ6bbtH+fjQSKh8IO4FN7A",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "1364a640b89fe"
+        },
+        "Giovannino": {
+            "gameID": "a5f18765c1d82",
+            "goals": [],
+            "id": "b25184a22a4ff",
+            "name": "Giovannino",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$y5JfF05jcguLA3cJNXN7Kw$i14CCI6c+ViL13p8XHXYnutpUA+WirvlLUY1i3hwB2I",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "77c657e0406ee"
+        },
+        "superadmin1": {
+            "gameID": "432b7be1bedf5",
+            "goals": [],
+            "id": "fbeaf8c096d6a",
+            "name": "superadmin1",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$RGscDA1nEbVkQr+NVMKhBQ$1h3Mc41p5YRMJ3n0mj5gKImYEMg/wAtAI+LbuNRDdNw",
+            "proposed": [],
+            "role": "admin"
+        },
+        "giovanni": {
+            "gameID": "432b7be1bedf5",
+            "goals": [],
+            "id": "5fbb2c8f3f31f",
+            "name": "giovanni",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$wc78z//umzYyzzhnbQMzrg$p+6rzajQbQelMTQkJiNFG2b3ib3iWVlCxLOCN7qV1A0",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "5b0fc393bc25"
+        },
+        "chiaro": {
+            "gameID": "432b7be1bedf5",
+            "goals": [],
+            "id": "22287e0a122fe",
+            "name": "chiaro",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$/jyRXIG5nbFdGKU9l07Dow$61rBbygTXdqS8tJRu7u7qJp/BgpomjAVHqnOjFPznr0",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "789a56f85d775"
+        },
+        "filippide": {
+            "gameID": "432b7be1bedf5",
+            "goals": [],
+            "id": "815c8e7aeb45b",
+            "name": "filippide",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$EYGaDQ7QZRzeMfl7JuIi7g$0gP2dEPptZe305AvnOhPejwsIoDRL/Znlg9j/Ve1RwA",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "77ab6d04f20d7"
         }
     },
     "Games": {
@@ -370,6 +603,768 @@
             ],
             "proposedGoals": [],
             "name": "GAME 1"
+        },
+        "203e4edeb775e": {
+            "description": "This is the first game created",
+            "goals": [],
+            "id": "203e4edeb775e",
+            "players": [
+                "User1"
+            ],
+            "proposedGoals": [],
+            "name": "GAME 1"
+        },
+        "5c64565e2da4f": {
+            "description": "This is the first game created",
+            "goals": [],
+            "id": "5c64565e2da4f",
+            "players": [
+                "User3"
+            ],
+            "proposedGoals": [],
+            "name": "GAME 1"
+        },
+        "dbdc987dea041": {
+            "description": "Description of the survival game!",
+            "goals": [],
+            "id": "dbdc987dea041",
+            "players": [
+                "User2",
+                "User5",
+                "User6",
+                "User7",
+                "User8",
+                "User9",
+                "User100",
+                "User200",
+                "User20ss0"
+            ],
+            "proposedGoals": [],
+            "name": "Survival game"
+        },
+        "94b4429e7e4d": {
+            "description": "This is the first game created",
+            "goals": [],
+            "id": "94b4429e7e4d",
+            "players": [
+                "User31"
+            ],
+            "proposedGoals": [],
+            "name": "GAME 11"
+        },
+        "a5f18765c1d82": {
+            "description": "This is the game for all the players",
+            "goals": [],
+            "id": "a5f18765c1d82",
+            "players": [
+                "superadmin",
+                "pablito",
+                "gioacchino",
+                "varano1",
+                "fernando",
+                "gigi",
+                "Giovannino"
+            ],
+            "proposedGoals": [],
+            "name": "Superadmin Game"
+        },
+        "432b7be1bedf5": {
+            "description": "This is the first game created",
+            "goals": [
+                {
+                    "name": "birth",
+                    "description": "",
+                    "id": "9974737271e0c",
+                    "points": 20,
+                    "categories": [
+                        "age"
+                    ]
+                },
+                {
+                    "name": "10 years",
+                    "description": "",
+                    "id": "8f424e3e458da",
+                    "points": 10,
+                    "categories": [
+                        "age"
+                    ]
+                },
+                {
+                    "name": "18 years",
+                    "description": "",
+                    "id": "0b47943ae3449",
+                    "points": 20,
+                    "categories": [
+                        "age"
+                    ]
+                },
+                {
+                    "name": "20 years",
+                    "description": "",
+                    "id": "1f56cf36a6ae6",
+                    "points": 10,
+                    "categories": [
+                        "age"
+                    ]
+                },
+                {
+                    "name": "30 years",
+                    "description": "",
+                    "id": "bffcfd57db58a",
+                    "points": 10,
+                    "categories": [
+                        "age"
+                    ]
+                },
+                {
+                    "name": "40 years",
+                    "description": "",
+                    "id": "bd09803b47c44",
+                    "points": 10,
+                    "categories": [
+                        "age"
+                    ]
+                },
+                {
+                    "name": "50 years",
+                    "description": "",
+                    "id": "0be68c1227e05",
+                    "points": 20,
+                    "categories": [
+                        "age"
+                    ]
+                },
+                {
+                    "name": "55 years",
+                    "description": "",
+                    "id": "5a4883d94fa9",
+                    "points": 5,
+                    "categories": [
+                        "age"
+                    ]
+                },
+                {
+                    "name": "60 years",
+                    "description": "",
+                    "id": "e36ed16581ecd",
+                    "points": 5,
+                    "categories": [
+                        "age"
+                    ]
+                },
+                {
+                    "name": "65 years",
+                    "description": "",
+                    "id": "33a2f31509fa",
+                    "points": 5,
+                    "categories": [
+                        "age"
+                    ]
+                },
+                {
+                    "name": "70 years",
+                    "description": "",
+                    "id": "12b35984fe273",
+                    "points": 5,
+                    "categories": [
+                        "age"
+                    ]
+                },
+                {
+                    "name": "75 years",
+                    "description": "",
+                    "id": "490db8d038059",
+                    "points": 5,
+                    "categories": [
+                        "age"
+                    ]
+                },
+                {
+                    "name": "80 years",
+                    "description": "",
+                    "id": "0fae0ca821806",
+                    "points": 5,
+                    "categories": [
+                        "age"
+                    ]
+                },
+                {
+                    "name": "85 years",
+                    "description": "",
+                    "id": "20315ecd2593c",
+                    "points": 5,
+                    "categories": [
+                        "age"
+                    ]
+                },
+                {
+                    "name": "90 years",
+                    "description": "",
+                    "id": "ac258f0775954",
+                    "points": 5,
+                    "categories": [
+                        "age"
+                    ]
+                },
+                {
+                    "name": "95 years",
+                    "description": "",
+                    "id": "4ad91f8d9b10c",
+                    "points": 5,
+                    "categories": [
+                        "age"
+                    ]
+                },
+                {
+                    "name": "100 years",
+                    "description": "",
+                    "id": "49bcbb5e80b17",
+                    "points": 5,
+                    "categories": [
+                        "age"
+                    ]
+                },
+                {
+                    "name": "105 years",
+                    "description": "",
+                    "id": "14887e2fdbb6b",
+                    "points": 5,
+                    "categories": [
+                        "age"
+                    ]
+                },
+                {
+                    "name": "110 years",
+                    "description": "",
+                    "id": "7b38dc4c186f4",
+                    "points": 5,
+                    "categories": [
+                        "age"
+                    ]
+                },
+                {
+                    "name": "first comunion",
+                    "description": "",
+                    "id": "ae018b83623c4",
+                    "points": 10,
+                    "categories": [
+                        "grouth"
+                    ]
+                },
+                {
+                    "name": "confirmation",
+                    "description": "",
+                    "id": "1fb43b951a0dd",
+                    "points": 10,
+                    "categories": [
+                        "grouth"
+                    ]
+                },
+                {
+                    "name": "diploma",
+                    "description": "",
+                    "id": "64d245aacf5ac",
+                    "points": 20,
+                    "categories": [
+                        "grouth"
+                    ]
+                },
+                {
+                    "name": "bachelor's degree",
+                    "description": "",
+                    "id": "954345dc4a0c9",
+                    "points": 30,
+                    "categories": [
+                        "grouth"
+                    ]
+                },
+                {
+                    "name": "master's degree",
+                    "description": "",
+                    "id": "18ca5dd2b64a9",
+                    "points": 40,
+                    "categories": [
+                        "grouth"
+                    ]
+                },
+                {
+                    "name": "stable job contract",
+                    "description": "",
+                    "id": "3a8ec56e0f374",
+                    "points": 50,
+                    "categories": [
+                        "grouth"
+                    ]
+                },
+                {
+                    "name": "first kiss",
+                    "description": "",
+                    "id": "c2934bc1af84a",
+                    "points": 10,
+                    "categories": [
+                        "relations"
+                    ]
+                },
+                {
+                    "name": "first entercourse",
+                    "description": "",
+                    "id": "ca9326651da9e",
+                    "points": 20,
+                    "categories": [
+                        "relations"
+                    ]
+                },
+                {
+                    "name": "first girlfriend",
+                    "description": "",
+                    "id": "338dfe771b2fc",
+                    "points": 30,
+                    "categories": [
+                        "relations"
+                    ]
+                },
+                {
+                    "name": "first marriage",
+                    "description": "",
+                    "id": "eaae3c2761316",
+                    "points": 100,
+                    "categories": [
+                        "relations"
+                    ]
+                },
+                {
+                    "name": "first child",
+                    "description": "",
+                    "id": "adfc98e9be6c2",
+                    "points": 50,
+                    "categories": [
+                        "relations"
+                    ]
+                },
+                {
+                    "name": "second or morechildren",
+                    "description": "",
+                    "id": "a1f429cd4d5d",
+                    "points": 30,
+                    "categories": [
+                        "relations"
+                    ]
+                },
+                {
+                    "name": "devorce",
+                    "description": "",
+                    "id": "478a689705bf3",
+                    "points": 20,
+                    "categories": [
+                        "relations"
+                    ]
+                },
+                {
+                    "name": "first car",
+                    "description": "",
+                    "id": "4c00d354fdc24",
+                    "points": 20,
+                    "categories": [
+                        "materialistic"
+                    ]
+                },
+                {
+                    "name": "first house",
+                    "description": "",
+                    "id": "df31dfa976c37",
+                    "points": 30,
+                    "categories": [
+                        "materialistic"
+                    ]
+                },
+                {
+                    "name": "first pet",
+                    "description": "",
+                    "id": "d220aa8223dfa",
+                    "points": 10,
+                    "categories": [
+                        "materialistic"
+                    ]
+                },
+                {
+                    "name": "first trip in italy",
+                    "description": "",
+                    "id": "b4154d72087dc",
+                    "points": 10,
+                    "categories": [
+                        "materialistic"
+                    ]
+                },
+                {
+                    "name": "first trip in europe",
+                    "description": "",
+                    "id": "b0b01dad0b92d",
+                    "points": 30,
+                    "categories": [
+                        "materialistic"
+                    ]
+                },
+                {
+                    "name": "first trip outside of europe",
+                    "description": "",
+                    "id": "79b04efa2a38b",
+                    "points": 50,
+                    "categories": [
+                        "materialistic"
+                    ]
+                },
+                {
+                    "name": "play a soccer game",
+                    "description": "",
+                    "id": "7073d972e7dd7",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "play a basket game",
+                    "description": "",
+                    "id": "f77a07fd73291",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "play a volley game",
+                    "description": "",
+                    "id": "aaec2a5bcb6ed",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "play a padel game",
+                    "description": "",
+                    "id": "49643429e46ed",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "100kg bench press",
+                    "description": "",
+                    "id": "fad98032a3df2",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "rissa?",
+                    "description": "",
+                    "id": "51f3bbc49cac7",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "threesome",
+                    "description": "",
+                    "id": "16f1fd7bb7261",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "homosexual exprience",
+                    "description": "",
+                    "id": "e06a914ed1e8e",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "entercourse with older woman",
+                    "description": "",
+                    "id": "e02f322d684ad",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "hangover",
+                    "description": "",
+                    "id": "3e2d0a7cd152",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "doping/trt",
+                    "description": "",
+                    "id": "016badbed3f5c",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "first time in an hospital",
+                    "description": "",
+                    "id": "069a4673b9fc2",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "first visit by a psychologist",
+                    "description": "",
+                    "id": "847da90718826",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "buy crypto",
+                    "description": "",
+                    "id": "5c4cadbd56073",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "10k in a bank account",
+                    "description": "",
+                    "id": "b021d2d02174c",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "20k in a bank account",
+                    "description": "",
+                    "id": "7a9e972de73cb",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "30k in a bank account",
+                    "description": "",
+                    "id": "67c5f95af5b3c",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "40k in a bank account",
+                    "description": "",
+                    "id": "5d23a880f1908",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "50k in a bank account",
+                    "description": "",
+                    "id": "f25dc79177165",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "car crash",
+                    "description": "",
+                    "id": "6887a78ff33e3",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "first tattoo",
+                    "description": "",
+                    "id": "79e397c673755",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "finished reading One piece",
+                    "description": "",
+                    "id": "7a7596d6235c6",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "finished playing Sekiro",
+                    "description": "",
+                    "id": "fbb497f0452e6",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "dive from more then five 5meters",
+                    "description": "",
+                    "id": "8482540a862be",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "first time at the stadium",
+                    "description": "",
+                    "id": "6ff4a42184b0c",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "esperienza fuorisede",
+                    "description": "",
+                    "id": "d2c4fe7364f7f",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "first cigarette",
+                    "description": "",
+                    "id": "117f2ce80a371",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "first joint",
+                    "description": "",
+                    "id": "9a897d5b169e",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "first psychedelic",
+                    "description": "",
+                    "id": "f92a74e5b8c11",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "heavy drug",
+                    "description": "",
+                    "id": "ecb68d1e2b6a9",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "firt time to a prostitute",
+                    "description": "",
+                    "id": "79c3b4d8be8fa",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "getting a fine",
+                    "description": "",
+                    "id": "6ed2aff74fb92",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "denuncia",
+                    "description": "",
+                    "id": "8e0e71323ec31",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "first time in prison",
+                    "description": "",
+                    "id": "2ee9ff9c6aa22",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "played videogames for more than 10 hours straight",
+                    "description": "",
+                    "id": "bf11643fed75d",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "finished watching a complete TV series",
+                    "description": "",
+                    "id": "91c448007936e",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "first time at a concert",
+                    "description": "",
+                    "id": "f5ac4fb6f2e98",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                },
+                {
+                    "name": "learned to play an hinstrument",
+                    "description": "",
+                    "id": "6454fc0079937",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                }
+            ],
+            "id": "432b7be1bedf5",
+            "players": [
+                "superadmin1",
+                "giovanni",
+                "chiaro",
+                "filippide"
+            ],
+            "proposedGoals": [],
+            "name": "GAME 144"
         }
     }
 }

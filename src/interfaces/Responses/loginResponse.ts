@@ -1,8 +1,8 @@
-import { Game } from "../Game.interface";
+import {  GameLookupPlayers } from "../Game.interface";
 import { User } from "../User.interface";
 import { Response } from "./Response";
 export interface LoginResponseBody {
-    game:Game|null;
+    game:GameLookupPlayers|null;
     user:Omit<User,'password'>;
 }
 

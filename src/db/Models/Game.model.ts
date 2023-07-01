@@ -34,11 +34,14 @@ class GameModel extends Model {
     try {
       const game = await this.getGameById(gameId);
       const players = game.players;
-      const playersList: User[] = [];
+      const playersList: Omit<User,'password'>[] = [];
       for (let playerId of players) {
         const player = await userModel.findById<User>(playerId);
+   
         if (player) {
-          playersList.push(player);
+          const playerWOpass:Omit<User,'password'> & {password?:string } = {...player} 
+          delete playerWOpass.password
+          playersList.push(playerWOpass);
         }
       }
       const lookupGame:GameLookupPlayers = {...game,players:playersList}

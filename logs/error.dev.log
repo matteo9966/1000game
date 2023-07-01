@@ -24,3 +24,40 @@
 [12-06-23 10:07:13] 	errorMiddleware ==> SyntaxError: Unexpected end of JSON input
 [12-06-23 10:07:13] 	errorMiddleware ==> Error: Invalid Game,doesnt exist
 [12-06-23 10:07:18] 	errorMiddleware ==> SyntaxError: Unexpected end of JSON input
+[24-06-23 12:05:40] 	signupAdmin.controller.js ==> ERRORE!
+[25-06-23 19:10:10] 	errorMiddleware ==> Error: Admin already created a game
+[25-06-23 19:10:10] 	signupAdmin.controller.js ==> ERRORE!
+[25-06-23 19:10:27] 	errorMiddleware ==> Error: Admin already created a game
+[25-06-23 19:11:12] 	errorMiddleware ==> Error: Admin already created a game
+[25-06-23 19:11:18] 	errorMiddleware ==> Error: Admin already created a game
+[25-06-23 19:18:47] 	signupAdmin.controller.js ==> ERRORE!
+[25-06-23 20:20:44] 	errorMiddleware ==> Error: Admin already created a game
+[25-06-23 20:20:52] 	errorMiddleware ==> Error: Admin already created a game
+[25-06-23 20:20:52] 	signupAdmin.controller.js ==> ERRORE!
+[25-06-23 20:33:06] 	errorMiddleware ==> Error: Admin already created a game
+[25-06-23 20:35:32] 	errorMiddleware ==> Error: Admin already created a game
+[25-06-23 20:35:32] 	errorMiddleware ==> Error: username already in use
+[25-06-23 20:35:42] 	errorMiddleware ==> Error: Admin already created a game
+[25-06-23 20:44:41] 	errorMiddleware ==> Error: Admin already created a game
+[26-06-23 07:51:11] 	errorMiddleware ==> Error: Admin already created a game
+[26-06-23 07:53:20] 	errorMiddleware ==> Error: Admin already created a game
+[26-06-23 07:55:58] 	errorMiddleware ==> Error: Admin already created a game
+[26-06-23 07:57:11] 	errorMiddleware ==> Error: Admin already created a game
+[26-06-23 07:58:55] 	errorMiddleware ==> Error: Admin already created a game
+[26-06-23 08:04:08] 	errorMiddleware ==> Error: Admin already created a game
+[26-06-23 08:35:19] 	errorMiddleware ==> Error: Admin already created a game
+[26-06-23 08:35:19] 	signupAdmin.controller.js ==> ERRORE!
+[26-06-23 08:39:18] 	errorMiddleware ==> Error: Invalid credentials
+[28-06-23 07:20:54] 	signupAdmin.controller.js ==> ERRORE!
+[28-06-23 07:32:59] 	errorMiddleware ==> Error: Admin already created a game
+[28-06-23 15:01:28] 	errorMiddleware ==> Error: User with provided name is already in the game, choose another username
+[28-06-23 15:01:50] 	errorMiddleware ==> Error: User with provided name is already in the game, choose another username
+[30-06-23 15:29:00] 	errorMiddleware ==> Error: Admin already created a game
+[30-06-23 15:29:00] 	signupAdmin.controller.js ==> ERRORE!
+[30-06-23 15:29:20] 	errorMiddleware ==> Error: error while initializing the game
+[30-06-23 15:30:45] 	errorMiddleware ==> Error: error while initializing the game
+[30-06-23 15:31:56] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\src\controllers\game-controllers\insertGame.controller.js ==> Error: ENOENT: no such file or directory, open 'C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\src\assets\goals.json'
+[30-06-23 15:31:56] 	errorMiddleware ==> Error: error while initializing the game
+[30-06-23 15:34:30] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\src\controllers\game-controllers\insertGame.controller.js ==> Error: ENOENT: no such file or directory, open 'C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\assets\goals.json'
+[30-06-23 15:34:30] 	errorMiddleware ==> Error: error while initializing the game
+[30-06-23 15:52:49] 	errorMiddleware ==> Error: username already in use

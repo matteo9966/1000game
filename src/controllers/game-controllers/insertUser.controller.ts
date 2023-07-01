@@ -10,8 +10,8 @@ import {hashPassword} from '../../utils/hashPassword';
 import {idGenerator} from '../../utils/idGenerator';
 import {parseNewUser} from '../../utils/parseObject';
 import {InsertUserResponse} from '../../interfaces/Responses/InsertUserResponse';
-import { logger2 } from '../../logger/winston.logger';
-import { basename } from 'path';
+import {logger2} from '../../logger/winston.logger';
+import {basename} from 'path';
 
 export const insertUserController: RequestHandler = async (req, res, next) => {
   //get adminID get user id
@@ -68,7 +68,7 @@ export const insertUserController: RequestHandler = async (req, res, next) => {
   }
   parsedUser.password = hashedPassword;
   parsedUser.gameID = body.gameId;
-  parsedUser.tempPassword = temporaryUserPassword; 
+  parsedUser.tempPassword = temporaryUserPassword;
 
   const inserted = await userModel.insertUser(parsedUser);
   if (!inserted) {
@@ -86,15 +86,17 @@ export const insertUserController: RequestHandler = async (req, res, next) => {
       500
     );
   }
-
+  const {password,...userNoPass} = parsedUser;
+  const parsedUserWOPassword:Omit<User,'password'> = userNoPass;
+  game.players.push(parsedUserWOPassword)
+ 
   const responseBody: InsertUserResponse = {
     error: null,
     data: {
-      name: parsedUser.name,
-      password: temporaryUserPassword,
+      user: {name: parsedUser.name, password: temporaryUserPassword},
+      game:game
     },
   };
 
   res.json(responseBody);
-
 };

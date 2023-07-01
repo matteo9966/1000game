@@ -2,5 +2,5 @@ import { Game } from "../Game.interface";
 
 export interface InsertGameRequest{
     username:string;
-    game:Game;
+    game:Pick<Game,'name'|'description'>;
 }

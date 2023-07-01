@@ -1,0 +1,57 @@
+import {RequestHandler} from 'express';
+import {insertReachedGoalRequest} from '../../interfaces/Requests/InsertRechedGoalRequest';
+import {CustomServerError} from '../../errors/CustomServerError';
+import {logger2} from '../../logger/winston.logger';
+import {gameModel} from '../../db/Models/Game.model';
+import {Game} from '../../interfaces/Game.interface';
+import {userModel} from '../../db/Models/User.model';
+import {InsertReachedGoalResponse} from '../../interfaces/Responses/InsertReachedGoalResponse';
+
+//TODO: test this function with supertest / sinon / chai
+
+export const insertReachedGoalController: RequestHandler = async (
+  req,
+  res,
+  next
+) => {
+  const body: insertReachedGoalRequest = req.body;
+  if (!(body?.goalId && body?.name && body?.gameId)) {
+    logger2(
+      'missing goalId or userId or gameID in insertReachedGoalController',
+      __filename
+    );
+    throw new CustomServerError('invalid body request', 400);
+  }
+
+  let game: Game | null = null;
+  try {
+    game = await gameModel.getGameById(body.gameId);
+  } catch (error) {
+    logger2(error, __filename);
+    throw new CustomServerError('internal server error', 500);
+  }
+
+  if (!game) {
+    throw new CustomServerError('no game with the provided id', 400);
+  }
+  const hasPlayer = game.players?.includes(body.name);
+  if (!hasPlayer) {
+    throw new CustomServerError(
+      'No user with the provided id in the game',
+      400
+    );
+  }
+  //lest find the user to add the id
+  const user = await userModel.findByName(body.name);
+  if (!user) throw new CustomServerError('No user with the provided name', 400);
+
+  const inserted = await userModel.addGameIdToUser(body.name, body.gameId);
+  if (!inserted) {
+    throw new CustomServerError('error while saving the goal', 500);
+  }
+  const responseBody: InsertReachedGoalResponse = {
+    data: {inserted: true},
+    error: null,
+  };
+  res.json(responseBody)
+};
