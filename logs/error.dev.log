@@ -111,3 +111,20 @@
 [06-07-23 12:27:28] 	errorMiddleware ==> Error: Admin already created a game
 [06-07-23 12:28:02] 	errorMiddleware ==> Error: Admin already created a game
 [06-07-23 14:13:30] 	errorMiddleware ==> Error: Admin already created a game
+[06-07-23 14:27:40] 	errorMiddleware ==> Error: Admin already created a game
+[06-07-23 14:44:08] 	signupAdmin.controller.js ==> ERRORE!
+[06-07-23 14:50:04] 	errorMiddleware ==> Error: username already in use
+[06-07-23 14:59:49] 	signupAdmin.controller.js ==> ERRORE!
+[06-07-23 15:02:46] 	errorMiddleware ==> Error: username already in use
+[06-07-23 15:05:10] 	signupAdmin.controller.js ==> ERRORE!
+[06-07-23 15:07:22] 	errorMiddleware ==> Error: username already in use
+[06-07-23 15:16:50] 	signupAdmin.controller.js ==> ERRORE!
+[06-07-23 15:17:32] 	errorMiddleware ==> Error: username already in use
+[06-07-23 15:18:38] 	errorMiddleware ==> Error: username already in use
+[06-07-23 15:21:30] 	signupAdmin.controller.js ==> ERRORE!
+[06-07-23 15:27:36] 	signupAdmin.controller.js ==> ERRORE!
+[06-07-23 15:39:20] 	signupAdmin.controller.js ==> ERRORE!
+[06-07-23 15:39:37] 	errorMiddleware ==> Error: No user with provided ID
+[06-07-23 15:41:00] 	errorMiddleware ==> Error: username already in use
+[06-07-23 15:46:30] 	signupAdmin.controller.js ==> ERRORE!
+[06-07-23 15:55:16] 	signupAdmin.controller.js ==> ERRORE!

@@ -23,7 +23,7 @@ class UserModel extends Model {
     }
 
     if(!users || !(Object.keys(users).includes(user.name))){
-       
+       console.log("inserted user:",user)
        return this.insert(`/${user.name}`,user);
 
     }else{

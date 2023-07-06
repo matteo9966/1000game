@@ -61,7 +61,10 @@ export const insertUserController: RequestHandler = async (req, res, next) => {
     name: body.username,
     password: temporaryUserPassword,
   };
+
+  console.log({newUser})
   const parsedUser = parseNewUser(newUser, idGenerator());
+  console.log({parsedUser})
   const hashedPassword = await hashPassword(temporaryUserPassword);
   if (!hashedPassword) {
     throw new CustomServerError('Error while creating the user', 500);
@@ -69,6 +72,8 @@ export const insertUserController: RequestHandler = async (req, res, next) => {
   parsedUser.password = hashedPassword;
   parsedUser.gameID = body.gameId;
   parsedUser.tempPassword = temporaryUserPassword;
+
+
 
   const inserted = await userModel.insertUser(parsedUser);
   if (!inserted) {

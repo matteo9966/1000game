@@ -57,7 +57,14 @@ export const insertGameController: RequestHandler = async (req, res, next) => {
   const {players, ...gameWOPlayers} = game;
   const gameWithEmptyPlayers: GameLookupPlayers = {
     ...gameWOPlayers,
-    players: [],
+    players: [{
+      gameID:game.id,
+      goals:user.goals,
+      id:user.id,
+      name:user.name,
+      proposed:user.proposed,
+      role:user.role,
+    }],
   };
 
   if (!updatedUser) {
