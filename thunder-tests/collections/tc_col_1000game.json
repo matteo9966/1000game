@@ -170,12 +170,12 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2023-06-12T07:47:55.240Z",
-            "modified": "2023-06-25T18:33:06.869Z",
+            "modified": "2023-07-02T16:11:23.773Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"User2\",\n  \"password\":\"Secret1\"\n}",
+                "raw": "{\n  \"name\":\"superadmin1\",\n  \"password\":\"Secret1\"\n}",
                 "form": []
             },
             "tests": []
@@ -193,6 +193,37 @@
             "headers": [],
             "params": [],
             "tests": []
+        },
+        {
+            "_id": "53fbb74b-d648-45e6-a5b9-54d91470e279",
+            "colId": "0e58a88b-d946-4561-8afd-eef5694d0588",
+            "containerId": "26a86e92-f41c-45fe-9856-530ea5c8ff2f",
+            "name": "INSERT REACHED GOAL",
+            "url": "/users/reached-goal",
+            "method": "PATCH",
+            "sortNum": 90000,
+            "created": "2023-07-02T16:12:56.404Z",
+            "modified": "2023-07-03T09:01:47.399Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"goalId\":\"8f424e3e458da\",\n  \"name\":\"superadmin1\",\n  \"gameId\":\"432b7be1bedf5\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "92980a33-78c8-449e-8fa3-ff3fa91ff59f",
+            "colId": "0e58a88b-d946-4561-8afd-eef5694d0588",
+            "containerId": "26a86e92-f41c-45fe-9856-530ea5c8ff2f",
+            "name": "CHANGE PASSWORD",
+            "url": "",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2023-07-05T15:11:47.214Z",
+            "modified": "2023-07-05T15:11:47.215Z",
+            "headers": []
         }
     ]
 }

@@ -61,3 +61,27 @@
 [30-06-23 15:34:30] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\src\controllers\game-controllers\insertGame.controller.js ==> Error: ENOENT: no such file or directory, open 'C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\assets\goals.json'
 [30-06-23 15:34:30] 	errorMiddleware ==> Error: error while initializing the game
 [30-06-23 15:52:49] 	errorMiddleware ==> Error: username already in use
+[02-07-23 18:11:23] 	errorMiddleware ==> Error: Admin already created a game
+[02-07-23 18:15:37] 	errorMiddleware ==> Error: Admin already created a game
+[02-07-23 18:21:08] 	errorMiddleware ==> Error: Admin already created a game
+[02-07-23 18:21:28] 	errorMiddleware ==> Error: Admin already created a game
+[02-07-23 18:21:28] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\controllers\user-controllers\insertGoal.controller.js ==> missing goalId or userId or gameID in insertReachedGoalController
+[02-07-23 18:21:28] 	errorMiddleware ==> Error: invalid body request
+[02-07-23 18:22:05] 	errorMiddleware ==> Error: Admin already created a game
+[02-07-23 18:22:05] 	errorMiddleware ==> Error: no game with the provided id
+[02-07-23 18:22:35] 	errorMiddleware ==> Error: Admin already created a game
+[02-07-23 18:22:35] 	errorMiddleware ==> Error: no goal with the provided id
+[02-07-23 18:23:06] 	errorMiddleware ==> Error: Admin already created a game
+[03-07-23 09:11:29] 	errorMiddleware ==> Error: Admin already created a game
+[03-07-23 10:56:47] 	errorMiddleware ==> Error: Admin already created a game
+[03-07-23 10:56:52] 	errorMiddleware ==> Error: Admin already created a game
+[03-07-23 11:01:03] 	errorMiddleware ==> Error: Admin already created a game
+[03-07-23 11:01:07] 	errorMiddleware ==> Error: Admin already created a game
+[03-07-23 11:01:47] 	errorMiddleware ==> Error: Admin already created a game
+[03-07-23 11:35:23] 	errorMiddleware ==> Error: Admin already created a game
+[03-07-23 11:35:26] 	errorMiddleware ==> Error: Admin already created a game
+[03-07-23 17:15:16] 	errorMiddleware ==> Error: Admin already created a game
+[05-07-23 07:52:03] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController
+[05-07-23 07:55:25] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController
+[05-07-23 07:57:25] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController
+[05-07-23 07:59:35] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController

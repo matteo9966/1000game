@@ -3,7 +3,25 @@ import {initDB} from './db/DB';
 import {testModel} from './db/Models/Test.model';
 import {configServer} from './server/config-server';
 import * as dotenv from 'dotenv';
-dotenv.config();
+
+let pth = '';
+switch (process.env.NODE_ENV) {
+  case 'dev':
+    pth = './development.env';
+    break;
+  case 'test':
+    pth = './test.env';
+    break;
+  case 'prod':
+    pth = './.env';
+    break;
+
+  default:
+    break;
+}
+
+dotenv.config({path: pth});
+console.log('NodeEnvironment:', process.env.NODE_ENV);
 const port = process.env.PORT || 6000;
 function main() {
   const initialized = initDB();

@@ -16,7 +16,7 @@ export function configServer(){
     app.use(e.json());
     app.use(requestMonitorMiddleware)
     app.use(cors({
-        origin:['http://192.168.1.178:4200']
+        origin:['http://192.168.1.178:4200','https://192.168.1.178:4200']
     }))
     app.use(`${basepath}${ROUTES.games.base}`,gameRoutes)
     app.use(`${basepath}${ROUTES.users.base}`,userRoutes)

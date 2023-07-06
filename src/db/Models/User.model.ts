@@ -37,6 +37,17 @@ class UserModel extends Model {
     return this.insert(`/${username}/gameID`,gameId,true);
   }
 
+  async addGoalIdToUser(username:string,goalId:string){
+    return this.insert(`/${username}/goals[]`,goalId,true)
+  }
+
+  async changeUserPassword(username:string,password:string){
+    return this.insert(`/${username}/password`,password,true)
+  }
+  async removeTempPassword(username:string){
+    return this.insert(`/${username}/tempPassword`,null)
+  }
+
 
 
 //   insertGame(game: Game) {

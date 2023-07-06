@@ -7,8 +7,6 @@ import {Game} from '../../interfaces/Game.interface';
 import {userModel} from '../../db/Models/User.model';
 import {InsertReachedGoalResponse} from '../../interfaces/Responses/InsertReachedGoalResponse';
 
-//TODO: test this function with supertest / sinon / chai
-
 export const insertReachedGoalController: RequestHandler = async (
   req,
   res,
@@ -45,7 +43,13 @@ export const insertReachedGoalController: RequestHandler = async (
   const user = await userModel.findByName(body.name);
   if (!user) throw new CustomServerError('No user with the provided name', 400);
 
-  const inserted = await userModel.addGameIdToUser(body.name, body.gameId);
+  const goal = game.goals.find(g=>g?.id===body.goalId);
+  
+  if(!goal){
+    throw new CustomServerError('no goal with the provided id',400);
+  }
+
+  const inserted = await userModel.addGoalIdToUser(body.name, body.goalId);
   if (!inserted) {
     throw new CustomServerError('error while saving the goal', 500);
   }

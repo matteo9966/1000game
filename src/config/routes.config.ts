@@ -11,7 +11,9 @@ export const ROUTES = {
     users:{
         base:'/users',
         signupUser:'/signup-user',
-        login:'/login'
+        login:'/login',
+        reachedGoal:'/reached-goal',
+        changePassword:'/change-password'
         
     }
 }
