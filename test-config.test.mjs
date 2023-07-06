@@ -1,7 +1,12 @@
 import dotenv from 'dotenv';
+import * as sinon from 'sinon';
 export const mochaHooks = {
-    beforeEach(){
-       dotenv.config({path:'test.env'})
-       console.log("process.env.ENV",process.env.ENV)
-    }
-  };
+  beforeEach() {
+    dotenv.config({path: 'test.env'});
+  },
+  afterEach() {
+
+    sinon.restore();
+    sinon.reset();
+  },
+};

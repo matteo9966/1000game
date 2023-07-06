@@ -37,7 +37,7 @@ export const changePasswordController: RequestHandler = async (
 
   const result = await userModel.changeUserPassword(
     body.username,
-    body.newPassword
+    hashed
   );
   if (!result) {
     throw new CustomServerError('Error while updating password', 500);

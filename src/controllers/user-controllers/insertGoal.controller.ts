@@ -7,11 +7,9 @@ import {Game} from '../../interfaces/Game.interface';
 import {userModel} from '../../db/Models/User.model';
 import {InsertReachedGoalResponse} from '../../interfaces/Responses/InsertReachedGoalResponse';
 
-export const insertReachedGoalController: RequestHandler = async (
-  req,
-  res,
-  next
-) => {
+export const insertReachedGoalController: (
+  ...args: Parameters<RequestHandler>
+) => Promise<ReturnType<RequestHandler>> = async (req, res, next) => {
   const body: insertReachedGoalRequest = req.body;
   if (!(body?.goalId && body?.name && body?.gameId)) {
     logger2(
@@ -43,10 +41,10 @@ export const insertReachedGoalController: RequestHandler = async (
   const user = await userModel.findByName(body.name);
   if (!user) throw new CustomServerError('No user with the provided name', 400);
 
-  const goal = game.goals.find(g=>g?.id===body.goalId);
-  
-  if(!goal){
-    throw new CustomServerError('no goal with the provided id',400);
+  const goal = game.goals.find(g => g?.id === body.goalId);
+
+  if (!goal) {
+    throw new CustomServerError('no goal with the provided id', 400);
   }
 
   const inserted = await userModel.addGoalIdToUser(body.name, body.goalId);
@@ -57,5 +55,5 @@ export const insertReachedGoalController: RequestHandler = async (
     data: {inserted: true},
     error: null,
   };
-  res.json(responseBody)
+  res.json(responseBody);
 };

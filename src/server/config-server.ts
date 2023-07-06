@@ -8,8 +8,19 @@ import userRoutes from '../routes/user.route';
 import * as cors from 'cors';
 import { requestMonitorMiddleware } from "../middleware/request-monitor.middleware";
 import route from './config-routes';
+import * as fs from 'fs';
+import * as path from 'path';
+import * as https from 'https';
+
 dotenv.config();
 const basepath = process.env.BASEPATH 
+let key = fs.readFileSync(path.join(__dirname,'../','ssl/server.key'),'utf-8')
+let cert = fs.readFileSync(path.join(__dirname,'../','ssl/server.crt'),'utf-8')
+
+const parameters = {
+  key: key,
+  cert: cert
+}
 
 export function configServer(){
     const app = e()
@@ -22,6 +33,11 @@ export function configServer(){
     app.use(`${basepath}${ROUTES.users.base}`,userRoutes)
     app.use(`${basepath}${ROUTES.health}`,route);
     app.use(errorMiddleware)
+    if(process.env.HTTPS){
+        console.log('running HTTPS server')
+        const httpsServer = https.createServer(parameters,app);
+        return httpsServer
+    }
     return app
 
 }

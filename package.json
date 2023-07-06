@@ -7,9 +7,12 @@
     "test": "SET NODE_ENV=test & mocha --require test-config.test.mjs",
     "lint": "gts lint",
     "clean": "gts clean",
-    "compile": "SET NODE_ENV=prod & tsc",
+    "compile": "SET NODE_ENV=prod & npm run delete-build && tsc && npm run copy-files",
+    "delete-build":"sh ./delete-build.sh",
+    "copy-files":"sh ./copy-assets.sh",
     "fix": "gts fix",
-    "nodemon-run": "SET NODE_ENV=dev & nodemon build"
+    "nodemon-run": "SET NODE_ENV=dev & nodemon build",
+    "nodemon-run-https": "SET NODE_ENV=dev & SET HTTPS=true & nodemon build"
   },
   "keywords": [],
   "author": "",

@@ -600,10 +600,10 @@
             "goals": [],
             "id": "5fbb2c8f3f31f",
             "name": "giovanni",
-            "password": "$argon2id$v=19$m=65536,t=3,p=4$wc78z//umzYyzzhnbQMzrg$p+6rzajQbQelMTQkJiNFG2b3ib3iWVlCxLOCN7qV1A0",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$2XVG2HjYQoRuGsZqJYtRmg$W6igxeP0Q670Jg6JQbEsA2vi7ANZrf2OxyR7R44Lt0E",
             "proposed": [],
             "role": "user",
-            "tempPassword": "5b0fc393bc25"
+            "tempPassword": null
         },
         "chiaro": {
             "gameID": "432b7be1bedf5",

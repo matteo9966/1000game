@@ -14,7 +14,7 @@
     ],
     "settings": {
         "options": {
-            "baseUrl": "http://localhost:5000/api/v1"
+            "baseUrl": "https://localhost:5000/api/v1"
         },
         "preReq": {
             "runRequests": [
@@ -218,12 +218,19 @@
             "colId": "0e58a88b-d946-4561-8afd-eef5694d0588",
             "containerId": "26a86e92-f41c-45fe-9856-530ea5c8ff2f",
             "name": "CHANGE PASSWORD",
-            "url": "",
-            "method": "GET",
+            "url": "/users/change-password",
+            "method": "PATCH",
             "sortNum": 100000,
             "created": "2023-07-05T15:11:47.214Z",
-            "modified": "2023-07-05T15:11:47.215Z",
-            "headers": []
+            "modified": "2023-07-06T10:27:28.135Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\":\"giovanni\",\n  \"newPassword\":\"Secret1\"\n}",
+                "form": []
+            },
+            "tests": []
         }
     ]
 }
