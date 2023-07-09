@@ -1,10 +1,10 @@
 import {Router} from 'express';
 import {ROUTES} from '../config/routes.config';
 import {insertGameController} from '../controllers/game-controllers/insertGame.controller';
-import {
-  insertGoalsController,
-  insertProposedGoalsController,
-} from '../controllers/game-controllers/insertGoals.controller';
+// import {
+//   insertGoalsController,
+//   insertProposedGoalsController,
+// } from '../controllers/game-controllers/insertGoals.controller';
 import {signupAdminController} from '../controllers/user-controllers/signupAdmin.controller';
 import {loginController} from '../controllers/user-controllers/login.controller';
 import {insertReachedGoalController} from '../controllers/user-controllers/insertGoal.controller';

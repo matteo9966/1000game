@@ -36,6 +36,9 @@ class UserModel extends Model {
   async addGameIdToUser (username:string,gameId:string){
     return this.insert(`/${username}/gameID`,gameId,true);
   }
+  async addProposedGoalIdToUser(username:string,goalId:string){
+     return this.insert(`/${username}/proposed[]`,goalId,true)
+  }
 
   async addGoalIdToUser(username:string,goalId:string){
     return this.insert(`/${username}/goals[]`,goalId,true)

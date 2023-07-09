@@ -599,7 +599,9 @@
                 "67c5f95af5b3c",
                 "7a9e972de73cb",
                 "5d23a880f1908",
-                "79c3b4d8be8fa"
+                "79c3b4d8be8fa",
+                "f92a74e5b8c11",
+                "117f2ce80a371"
             ],
             "id": "fbeaf8c096d6a",
             "name": "superadmin1",
@@ -1094,6 +1096,136 @@
             "proposed": [],
             "role": "user",
             "tempPassword": "3ff6785ead6da"
+        },
+        "aaa": {
+            "gameID": "",
+            "goals": [],
+            "id": "5c6bc8c0ffafe",
+            "name": "aaa",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$1b7+yp+VbsjPh/7J1ZCbIw$HRlQlIkTt7LR+s1AbZeRRXEydV46eMTsm7xFUwSLFSI",
+            "proposed": [],
+            "role": "admin"
+        },
+        "cicorella": {
+            "gameID": "432b7be1bedf5",
+            "goals": [
+                "9974737271e0c",
+                "8f424e3e458da",
+                "0b47943ae3449",
+                "1f56cf36a6ae6",
+                "ae018b83623c4",
+                "1fb43b951a0dd",
+                "64d245aacf5ac",
+                "954345dc4a0c9",
+                "3a8ec56e0f374",
+                "ca9326651da9e",
+                "338dfe771b2fc",
+                "d220aa8223dfa",
+                "b4154d72087dc",
+                "b0b01dad0b92d",
+                "7073d972e7dd7",
+                "f77a07fd73291",
+                "aaec2a5bcb6ed",
+                "49643429e46ed",
+                "fad98032a3df2"
+            ],
+            "id": "962952601b0d8",
+            "name": "cicorella",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$DtHPbjOETDXKNomEDHiLng$66umEUIlM0qD6IhkqA1nRBvPROCOFf4tPcvEyFfwdWY",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": null
+        },
+        "gamberone": {
+            "gameID": "432b7be1bedf5",
+            "goals": [
+                "20315ecd2593c",
+                "ac258f0775954",
+                "4ad91f8d9b10c",
+                "490db8d038059",
+                "0fae0ca821806",
+                "49bcbb5e80b17",
+                "338dfe771b2fc"
+            ],
+            "id": "45e416b53025",
+            "name": "gamberone",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$NPhuwTP8jVaBCmEM5zu/2A$LUi6rrtHkbTsiCBzeZvHSy8rPTF8FLm++ZyYGw0QvMM",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": null
+        },
+        "matteo-2": {
+            "gameID": "432b7be1bedf5",
+            "goals": [
+                "9974737271e0c",
+                "1f56cf36a6ae6",
+                "490db8d038059",
+                "7b38dc4c186f4",
+                "c2934bc1af84a",
+                "eaae3c2761316",
+                "b4154d72087dc",
+                "16f1fd7bb7261",
+                "e02f322d684ad",
+                "5c4cadbd56073",
+                "79e397c673755",
+                "8f424e3e458da",
+                "0b47943ae3449",
+                "bffcfd57db58a",
+                "954345dc4a0c9",
+                "3a8ec56e0f374",
+                "ca9326651da9e",
+                "338dfe771b2fc",
+                "d220aa8223dfa",
+                "b0b01dad0b92d",
+                "7073d972e7dd7",
+                "f77a07fd73291",
+                "6454fc0079937",
+                "0fae0ca821806"
+            ],
+            "id": "73d73ce5e78b4",
+            "name": "matteo-2",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$Y15Zu7vhRQB5Zxw1AfJv6Q$msNn3radjZOcdL5UdmtUs1dMfFrR+k5yQkrbg8gF64Y",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": null
+        },
+        "giggi": {
+            "gameID": "",
+            "goals": [],
+            "id": "505181b9b57dd",
+            "name": "giggi",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$gtr9KKAkCnruVGCjvMgTeQ$VBAjnUz+/EYHBrN/UnIICUwNg4hvyerjw3JNF/IsPys",
+            "proposed": [],
+            "role": "admin"
+        },
+        "giggee": {
+            "gameID": "",
+            "goals": [],
+            "id": "198c7d647c4ad",
+            "name": "giggee",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$ampthjzz5sbRRIbGQdnmKA$ixwmjZCEhxQ7y1W2DBrRv3ogQN21wvqMJpDwM5HeeL8",
+            "proposed": [],
+            "role": "admin"
+        },
+        "Geppetto": {
+            "gameID": "432b7be1bedf5",
+            "goals": [],
+            "id": "470d4160f38d9",
+            "name": "Geppetto",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$h6YIy4PYXlbb7RFyxKcQUQ$9iqwkPCL8Vzi52XrCkPeRl3Yg1IjkazamkZ8LGHrFcs",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "eef8814e4ab2f"
+        },
+        "Giovanni": {
+            "gameID": "432b7be1bedf5",
+            "goals": [],
+            "id": "0d33d3f20ff52",
+            "name": "Giovanni",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$AlTdqFwltfTU12RZQreXPQ$ePSnl9eTvVAUUOFBHqKtcbemOelzGejTI6BZMOQaqXY",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "b3391235990de"
         }
     },
     "Games": {
@@ -1909,7 +2041,12 @@
                 "giovanni",
                 "chiaro",
                 "filippide",
-                "fernandoalonzo1"
+                "fernandoalonzo1",
+                "cicorella",
+                "gamberone",
+                "matteo-2",
+                "Geppetto",
+                "Giovanni"
             ],
             "proposedGoals": [],
             "name": "GAME 144"

@@ -1,4 +1,5 @@
 import {Goal} from './Goal.interface';
+import { ProposedGoal } from './ProposedGoal.interface';
 import {User} from './User.interface';
 
 export interface Game {
@@ -6,7 +7,7 @@ export interface Game {
   description: string;
   players: string[]; //PlayersIds
   goals: Goal[];
-  proposedGoals: Goal[];
+  proposedGoals: ProposedGoal[];
   id: string;
 }
 
