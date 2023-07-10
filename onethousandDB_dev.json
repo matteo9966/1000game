@@ -2048,7 +2048,30 @@
                 "Geppetto",
                 "Giovanni"
             ],
-            "proposedGoals": [],
+            "proposedGoals": [
+                {
+                    "proposedBy": "superadmin1",
+                    "votedBy": [],
+                    "goal": {
+                        "categories": [],
+                        "description": "",
+                        "id": "1ecb681fbfa5f",
+                        "name": "giocare a calcio con cristiano ronaldo",
+                        "points": 20
+                    }
+                },
+                {
+                    "proposedBy": "superadmin1",
+                    "votedBy": [],
+                    "goal": {
+                        "categories": [],
+                        "description": "",
+                        "id": "1a5aae3e98ea2",
+                        "name": "vedere messi dal vivo",
+                        "points": 200
+                    }
+                }
+            ],
             "name": "GAME 144"
         },
         "9a3d4e3c380be": {

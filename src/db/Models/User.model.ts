@@ -1,9 +1,5 @@
-import { basename } from 'path';
 import { CustomServerError } from '../../errors/CustomServerError';
-import {Game} from '../../interfaces/Game.interface';
-import {Goal} from '../../interfaces/Goal.interface';
 import { User } from '../../interfaces/User.interface';
-import { logger2 } from '../../logger/winston.logger';
 import {DB, dbClient} from '../DB';
 import {Model} from './Model';
 

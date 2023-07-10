@@ -14,7 +14,7 @@
     ],
     "settings": {
         "options": {
-            "baseUrl": "https://localhost:5000/api/v1"
+            "baseUrl": "http://localhost:5000/api/v1"
         },
         "preReq": {
             "runRequests": [
@@ -71,16 +71,16 @@
             "colId": "0e58a88b-d946-4561-8afd-eef5694d0588",
             "containerId": "",
             "name": "INSERT PROPOSED GOAL",
-            "url": "/games//proposed-goals",
+            "url": "/games/proposed-goals",
             "method": "PATCH",
             "sortNum": 30000,
             "created": "2023-06-09T13:23:43.132Z",
-            "modified": "2023-06-12T08:07:18.331Z",
+            "modified": "2023-07-10T08:44:26.839Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"gameId\": \"eb5453fd9b54b\",\n    \"adminId\":\"admin-1\",\n  \"goals\": [\n    {\n      \"name\": \"giocare a calcio con cristiano ronaldo\",\n      \"points\": 2000\n    },\n    {\"name\":\"vedere messi dal vivo\",\"points\":200}\n  ]\n}",
+                "raw": "{\n  \"gameId\": \"432b7be1bedf5\",\n    \"username\":\"superadmin1\",\n  \"goals\": [\n    {\n      \"name\": \"giocare a calcio con cristiano ronaldo\",\n      \"points\": 20\n    },\n    {\"name\":\"vedere messi dal vivo\",\"points\":200}\n  ]\n}",
                 "form": []
             },
             "tests": []

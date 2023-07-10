@@ -20,7 +20,7 @@ export const insertProposedGoalsController: asyncRequestHandler = async (
 ) => {
   const body: InsertProposedGoalsRequest = req.body;
 
-  if (!body?.goals || !body?.gameId || !body?.userid)
+  if (!body?.goals || !body?.gameId || !body?.username)
     throw new CustomServerError('missing goals or gameId or adminId', 400);
 
   if (body?.goals && body.goals?.length === 0) {
@@ -46,7 +46,7 @@ export const insertProposedGoalsController: asyncRequestHandler = async (
     throw new CustomServerError('Invalid Game,doesnt exist', 400);
   }
 
-  const hasUser = foundGame.players.indexOf(body.userid);
+  const hasUser = foundGame.players.indexOf(body.username);
 
   if (hasUser < 0) {
     throw new CustomServerError(
@@ -63,7 +63,7 @@ export const insertProposedGoalsController: asyncRequestHandler = async (
     });
 
   const goalsForDB = dbGoals.map(goal => {
-    const proposedBy = body.userid;
+    const proposedBy = body.username;
     const votedBy: string[] = [];
 
     return {
