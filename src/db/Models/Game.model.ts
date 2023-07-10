@@ -6,6 +6,7 @@ import { logger2 } from '../../logger/winston.logger';
 import {DB, dbClient} from '../DB';
 import {Model} from './Model';
 import {userModel} from './User.model';
+import { ProposedGoal } from '../../interfaces/ProposedGoal.interface';
 
 class GameModel extends Model {
   constructor(db: DB, name: string) {
@@ -22,7 +23,7 @@ class GameModel extends Model {
     return this.insert(`/${gameId}/goals`, goals, false);
   }
 
-  appendProposedGoals(goals: Goal[], gameId: string) {
+  appendProposedGoals(goals: ProposedGoal[], gameId: string) {
     return this.insert(`/${gameId}/proposedGoals`, goals, false);
   }
 
@@ -59,4 +60,4 @@ class GameModel extends Model {
 
 export const gameModel = dbClient.createModel<GameModel>(GameModel, 'Games');
 
-export type appendGoalType = typeof gameModel.appendGoals;
+export type appendGoalType = typeof gameModel.appendProposedGoals;

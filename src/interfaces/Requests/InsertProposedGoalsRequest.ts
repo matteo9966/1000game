@@ -1,6 +1,7 @@
 import {Goal} from '../Goal.interface';
 
-export interface InsertGoalsRequest {
+
+export interface InsertProposedGoalsRequest {
   goals: Goal[];
   gameId: string;
   userid:string;
