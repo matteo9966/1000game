@@ -8,6 +8,7 @@ import {appendGoalType, gameModel} from '../../db/Models/Game.model';
 import {InsertGoalResponse} from '../../interfaces/Responses/insertGoalsResponse';
 import {InsertProposedGoalsRequest} from '../../interfaces/Requests/InsertProposedGoalsRequest';
 import {parseNewGoal} from '../../utils/parseObject';
+import { validateProposedGoal } from '../../utils/validateProposedGoal';
 
 type asyncRequestHandler = (
   ...args: Parameters<RequestHandler>
@@ -35,10 +36,12 @@ export const insertProposedGoalsController: asyncRequestHandler = async (
 
   if (!Array.isArray(body.goals)) {
     throw new CustomServerError(
-      'Invalid Body request, provide a list of goals of at least one element',
+      'Invalid Body request, provide a list of goals of at least one goal',
       400
     );
   }
+
+
 
   const foundGame = await gameModel.findById<Game>(body.gameId);
 
@@ -56,7 +59,7 @@ export const insertProposedGoalsController: asyncRequestHandler = async (
   }
 
   const dbGoals = body.goals
-    .filter(goal => !!goal?.name && goal?.points > 0)
+.filter(goal => !!goal?.name).filter(goal=>validateProposedGoal(goal,{nameRegex:/^[a-z0-9\ ]*$/i}))
     .map(goal => {
       const newGoal = parseNewGoal(goal, idGenerator());
       return newGoal;

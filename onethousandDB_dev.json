@@ -1226,6 +1226,36 @@
             "proposed": [],
             "role": "user",
             "tempPassword": "b3391235990de"
+        },
+        "Gervaso fiore": {
+            "gameID": "432b7be1bedf5",
+            "goals": [],
+            "id": "77301d4c73f82",
+            "name": "Gervaso fiore",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$g8Hn90uf3ygljSM2BoDY5g$BnrOQt2ljctF/SKJtbFGT7mSfdhTqDAqMFyUeGr6+3s",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "64a9add86064c"
+        },
+        "aaa1\\": {
+            "gameID": "432b7be1bedf5",
+            "goals": [],
+            "id": "09ef6a0987d71",
+            "name": "aaa1\\",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$BHVb9fpqitdpStsN7eSY+w$6lYInpVyW4dBy0ceYtXuu51xFy/IgQCJF0lDymiZghU",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "5e4baac95b5ef"
+        },
+        "aaaaa": {
+            "gameID": "432b7be1bedf5",
+            "goals": [],
+            "id": "7768bcc670b4e",
+            "name": "aaaaa",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$fBJJKeIFF4SF2sX4Irmtqg$UgpSGlh9Gc5k084B7giGE1u1+lWWM9EokbL2tkCGmg4",
+            "proposed": [],
+            "role": "user",
+            "tempPassword": "1dbf869436db"
         }
     },
     "Games": {
@@ -2046,7 +2076,10 @@
                 "gamberone",
                 "matteo-2",
                 "Geppetto",
-                "Giovanni"
+                "Giovanni",
+                "Gervaso fiore",
+                "aaa1\\",
+                "aaaaa"
             ],
             "proposedGoals": [
                 {
@@ -2069,6 +2102,83 @@
                         "id": "1a5aae3e98ea2",
                         "name": "vedere messi dal vivo",
                         "points": 200
+                    }
+                },
+                {
+                    "proposedBy": "superadmin1",
+                    "votedBy": [],
+                    "goal": {
+                        "categories": [],
+                        "description": "Giocare a dardi con un campione di dardi",
+                        "id": "e99e8f1940c09",
+                        "name": "Giocare a dardi con un campione",
+                        "points": 0
+                    }
+                },
+                {
+                    "proposedBy": "superadmin1",
+                    "votedBy": [],
+                    "goal": {
+                        "categories": [],
+                        "description": "win the lottery",
+                        "id": "74df8fff6eee",
+                        "name": "Earn gold ",
+                        "points": 0
+                    }
+                },
+                {
+                    "proposedBy": "superadmin1",
+                    "votedBy": [],
+                    "goal": {
+                        "categories": [],
+                        "description": "Andato in cielo",
+                        "id": "9c1e7e02be60b",
+                        "name": "Andato in cielo",
+                        "points": 0
+                    }
+                },
+                {
+                    "proposedBy": "superadmin1",
+                    "votedBy": [],
+                    "goal": {
+                        "categories": [],
+                        "description": "Toccato il cielo con un dito",
+                        "id": "387f63a17dcc3",
+                        "name": "Visto il cielo",
+                        "points": 0
+                    }
+                },
+                {
+                    "proposedBy": "superadmin1",
+                    "votedBy": [],
+                    "goal": {
+                        "categories": [],
+                        "description": "",
+                        "id": "de8852f5d23ad",
+                        "name": "Toccato il pallone d oro di messi",
+                        "points": 0
+                    }
+                },
+                {
+                    "proposedBy": "superadmin1",
+                    "votedBy": [],
+                    "goal": {
+                        "categories": [],
+                        "description": "Fatto conoscenza con un capy",
+                        "id": "6981351eecee",
+                        "name": "Fatto conoscenza con un Capybara",
+                        "points": 0
+                    }
+                },
+                {
+                    "proposedBy": "superadmin1",
+                    "votedBy": [],
+                    "goal": {
+                        "categories": [],
+                        "description": "Fatto conoscenza con il mondo",
+                        "id": "53672dc8dc237",
+                        "name": "girovagato per il mondo",
+                        "points": 0
                     }
                 }
             ],

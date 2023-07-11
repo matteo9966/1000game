@@ -42,7 +42,7 @@ describe('insertProposedGoalsController', function () {
     try {
       await insertProposedGoalsController(
         {
-          body: {goals: [], gameId: 'gameid', userid: 'userid'},
+          body: {goals: [], gameId: 'gameid', username: 'userid'},
         } as unknown as Request,
         {status: status, end: end} as Response,
         () => {}
@@ -80,7 +80,7 @@ describe('insertProposedGoalsController', function () {
           points: 20,
         },
       ],
-      userid: 'userid',
+      username: 'userid',
     };
 
     await insertProposedGoalsController(
@@ -92,7 +92,7 @@ describe('insertProposedGoalsController', function () {
     );
 
     const expectedGoalsArg = reqBody.goals.map(g => ({
-      proposedBy: reqBody.userid,
+      proposedBy: reqBody.username,
       votedBy: [],
       goal: sinon.match.any
     }));
