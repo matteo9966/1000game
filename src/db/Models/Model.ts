@@ -117,9 +117,20 @@ export class Model {
     }
   }
 
+  /**
+   *
+   * @param path a path starting with /
+   */
   protected async delete(path: string) {
     const fullPath = `/${this.name}${path}`;
-    //TODO
+    if (!this.db) return false;
+    try {
+      await this.db.delete(fullPath);
+      return true;
+    } catch (error) {
+      logger2(error, __filename);
+      return false;
+    }
   }
 
   protected get db() {

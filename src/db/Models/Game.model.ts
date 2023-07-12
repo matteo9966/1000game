@@ -82,6 +82,23 @@ class GameModel extends Model {
       return false;
     }
   }
+
+  async getProposedGoalIndex(gameId: string, goalId: string) {
+    try {
+      const indexOfProposedGoal = await this.getIndex(
+        `/${gameId}/proposedGoals`,
+        goalId
+      );
+      return indexOfProposedGoal;
+    } catch (error) {
+      logger2(error, __filename);
+      return -1;
+    }
+  }
+
+   deleteProposedGoal(index: number, gameId: string) {
+    return this.delete(`/${gameId}/proposedGoals[${index}]`);
+  }
 }
 
 export const gameModel = dbClient.createModel<GameModel>(GameModel, 'Games');

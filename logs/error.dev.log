@@ -234,3 +234,13 @@
 [12-07-23 09:16:27] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController
 [12-07-23 09:20:46] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController
 [12-07-23 09:21:19] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController
+[12-07-23 12:07:34] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController
+[12-07-23 16:51:04] 	errorMiddleware ==> Error: Admin already created a game
+[12-07-23 16:51:04] 	errorMiddleware ==> Error: no game with this provided Id
+[12-07-23 16:52:08] 	errorMiddleware ==> Error: Admin already created a game
+[12-07-23 16:52:08] 	errorMiddleware ==> Error: you already voted for this goal
+[12-07-23 16:52:14] 	errorMiddleware ==> Error: Admin already created a game
+[12-07-23 16:52:14] 	errorMiddleware ==> Error: You don't have the authorization to edit this game
+[12-07-23 16:52:29] 	errorMiddleware ==> Error: Admin already created a game
+[12-07-23 16:53:21] 	errorMiddleware ==> Error: Admin already created a game
+[12-07-23 16:53:21] 	errorMiddleware ==> Error: you already voted for this goal

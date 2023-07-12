@@ -1219,13 +1219,20 @@
         },
         "Giovanni": {
             "gameID": "432b7be1bedf5",
-            "goals": [],
+            "goals": [
+                "0be68c1227e05",
+                "bffcfd57db58a",
+                "9974737271e0c",
+                "1f56cf36a6ae6",
+                "bd09803b47c44",
+                "33a2f31509fa"
+            ],
             "id": "0d33d3f20ff52",
             "name": "Giovanni",
-            "password": "$argon2id$v=19$m=65536,t=3,p=4$AlTdqFwltfTU12RZQreXPQ$ePSnl9eTvVAUUOFBHqKtcbemOelzGejTI6BZMOQaqXY",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$4oVR7XYNDVIhSXRrrva8GQ$zWAwlrPZ34tn1zcU6alS3FRH+jLbvVYLOfnudOYk2yM",
             "proposed": [],
             "role": "user",
-            "tempPassword": "b3391235990de"
+            "tempPassword": null
         },
         "Gervaso fiore": {
             "gameID": "432b7be1bedf5",
@@ -2085,7 +2092,8 @@
                 {
                     "proposedBy": "superadmin1",
                     "votedBy": [
-                        "fernandoalonzo1"
+                        "fernandoalonzo1",
+                        "chiaro"
                     ],
                     "goal": {
                         "categories": [],
@@ -2095,6 +2103,78 @@
                         "points": 20
                     },
                     "id": "3474dcab57d19"
+                },
+                {
+                    "proposedBy": "Giovanni",
+                    "votedBy": [],
+                    "goal": {
+                        "categories": [],
+                        "description": "Gioco di tennis",
+                        "id": "e7a2a923cb728",
+                        "name": "Giocare a tennis con nadal",
+                        "points": 0
+                    },
+                    "id": "e7a2a923cb728"
+                },
+                {
+                    "proposedBy": "Giovanni",
+                    "votedBy": [],
+                    "goal": {
+                        "categories": [],
+                        "description": "assdfsdf",
+                        "id": "0066bec67bb45",
+                        "name": "aaaa",
+                        "points": 0
+                    },
+                    "id": "0066bec67bb45"
+                },
+                {
+                    "proposedBy": "Giovanni",
+                    "votedBy": [],
+                    "goal": {
+                        "categories": [],
+                        "description": "",
+                        "id": "4da7d154c76aa",
+                        "name": "Played mario kart",
+                        "points": 0
+                    },
+                    "id": "4da7d154c76aa"
+                },
+                {
+                    "proposedBy": "Giovanni",
+                    "votedBy": [],
+                    "goal": {
+                        "categories": [],
+                        "description": "",
+                        "id": "6db9165bd68e4",
+                        "name": "Giocare a padel con un canguro",
+                        "points": 0
+                    },
+                    "id": "6db9165bd68e4"
+                },
+                {
+                    "proposedBy": "superadmin1",
+                    "votedBy": [],
+                    "goal": {
+                        "categories": [],
+                        "description": "",
+                        "id": "bc6ae6d5ff30d",
+                        "name": "Giocare a padel in campagna",
+                        "points": 0
+                    },
+                    "id": "bc6ae6d5ff30d"
+                },
+                {
+                    "proposedBy": "superadmin1",
+                    "votedBy": [],
+                    "goal": {
+                        "categories": [],
+                        "description": "",
+                        "id": "3d672c16116e",
+                        "name": "Fare una partita a scacchi in marea alta ",
+                        "points": 0
+                    },
+                    "id": "3d672c16116e"
                 }
             ],
             "name": "GAME 144"

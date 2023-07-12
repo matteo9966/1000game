@@ -241,12 +241,12 @@
             "method": "PATCH",
             "sortNum": 110000,
             "created": "2023-07-12T06:00:07.530Z",
-            "modified": "2023-07-12T06:28:06.759Z",
+            "modified": "2023-07-12T14:52:29.775Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"gameId\":\"432b7be11bedf5\",\n  \"goalId\":\"3474dcab57d19\",\n  \"username\":\"fernandoalonzo1\"\n}",
+                "raw": "{\n  \"gameId\":\"432b7be1bedf5\",\n  \"goalId\":\"3474dcab57d19\",\n  \"username\":\"chiaro\"\n}",
                 "form": []
             },
             "tests": []

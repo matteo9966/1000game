@@ -4,6 +4,7 @@ import {CustomServerError} from '../../errors/CustomServerError';
 import {gameModel} from '../../db/Models/Game.model';
 import {Game} from '../../interfaces/Game.interface';
 import {UpvoteGoalResponse} from '../../interfaces/Responses/upvoteGoalResponse';
+import {reachedVoteThreshold} from '../../utils/reachedVoteCounter';
 
 type asyncRequestHandler = (
   ...args: Parameters<RequestHandler>
@@ -51,13 +52,48 @@ export const upvoteGoalController: asyncRequestHandler = async (
     throw new CustomServerError('you already voted for this goal', 400);
   }
 
-  const inserted = await gameModel.upvoteProposedGoal(
-    body.gameId,
-    body.goalId,
-    body.username
-  );
+  const players = game.players.length;
+  const upvoted = proposedGoal.votedBy.length;
+
+  //
+
+  const reachedvotecount = reachedVoteThreshold(players, upvoted);
+
+  if (reachedvotecount) {
+    const goal = proposedGoal.goal;
+    const addedNewGoal = await gameModel.appendGoals([goal], body.gameId);
+    if (!addedNewGoal) {
+      throw new CustomServerError('error while upgrading the goal', 500);
+    }
+
+    const goalIndex = await gameModel.getProposedGoalIndex(
+      body.gameId,
+      body.goalId
+    );
+
+    const deleded = await gameModel.deleteProposedGoal(goalIndex, body.gameId);
+    if(!deleded){
+      throw new CustomServerError('error while deliting the proposed goal',500);
+    }
+
+  }
+  else{
+    
+     await gameModel.upvoteProposedGoal(
+      body.gameId,
+      body.goalId,
+      body.username
+    );
+
+  }
+
+  const updatedGame = await gameModel.getGameById(body.gameId);
+
   const response: UpvoteGoalResponse = {
-    data: {success: inserted},
+    data: {
+      goals:updatedGame.goals,
+      proposedGoals:updatedGame.proposedGoals,  
+    },
     error: null,
   };
   res.json(response);
