@@ -8,7 +8,8 @@ import {appendGoalType, gameModel} from '../../db/Models/Game.model';
 import {InsertGoalResponse} from '../../interfaces/Responses/insertGoalsResponse';
 import {InsertProposedGoalsRequest} from '../../interfaces/Requests/InsertProposedGoalsRequest';
 import {parseNewGoal} from '../../utils/parseObject';
-import { validateProposedGoal } from '../../utils/validateProposedGoal';
+import {validateProposedGoal} from '../../utils/validateProposedGoal';
+import {ProposedGoal} from '../../interfaces/ProposedGoal.interface';
 
 type asyncRequestHandler = (
   ...args: Parameters<RequestHandler>
@@ -41,8 +42,6 @@ export const insertProposedGoalsController: asyncRequestHandler = async (
     );
   }
 
-
-
   const foundGame = await gameModel.findById<Game>(body.gameId);
 
   if (!foundGame) {
@@ -59,7 +58,8 @@ export const insertProposedGoalsController: asyncRequestHandler = async (
   }
 
   const dbGoals = body.goals
-.filter(goal => !!goal?.name).filter(goal=>validateProposedGoal(goal,{nameRegex:/^[a-z0-9\ ]*$/i}))
+    .filter(goal => !!goal?.name)
+    .filter(goal => validateProposedGoal(goal, {nameRegex: /^[a-z0-9\ ]*$/i}))
     .map(goal => {
       const newGoal = parseNewGoal(goal, idGenerator());
       return newGoal;
@@ -69,11 +69,13 @@ export const insertProposedGoalsController: asyncRequestHandler = async (
     const proposedBy = body.username;
     const votedBy: string[] = [];
 
-    return {
+    const proposedGoal: ProposedGoal = {
       proposedBy,
       votedBy,
       goal,
+      id: goal.id,
     };
+    return proposedGoal;
   });
 
   if (dbGoals.length > 0) {

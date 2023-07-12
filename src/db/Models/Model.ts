@@ -1,7 +1,7 @@
 import {JsonDB} from 'node-json-db';
 import {DB} from '../DB';
-import { logger2 } from '../../logger/winston.logger';
-import { basename } from 'path';
+import {logger, logger2} from '../../logger/winston.logger';
+import {basename} from 'path';
 export class Model {
   private _db: DB | null = null;
   constructor(db: DB, private name: string) {
@@ -36,7 +36,7 @@ export class Model {
       return true;
     } catch (error) {
       //log error
-      logger2(error,basename(__filename))
+      logger2(error, basename(__filename));
       return false;
     }
   }
@@ -57,7 +57,7 @@ export class Model {
     }
   }
 
-   async findById<T>(id: string) {
+  async findById<T>(id: string) {
     if (!this.db) {
       return null;
     }
@@ -75,13 +75,12 @@ export class Model {
     }
   }
 
-  
   /**
    * @description find by name uses the  user name as an id
-   * @param id 
-   * @returns 
+   * @param id
+   * @returns
    */
-   async findByName<T>(id: string) {
+  async findByName<T>(id: string) {
     if (!this.db) {
       return null;
     }
@@ -96,6 +95,25 @@ export class Model {
       return result;
     } catch (error) {
       return null;
+    }
+  }
+
+  /**
+   *
+   * @param path a path starting with /
+   */
+  async getIndex(path: string, searchValue: string, propertyName?: string) {
+    if (!this.db) {
+      return -1;
+    }
+
+    try {
+      const fullpath = `/${this.name}${path}`;
+      const index = await this.db.getIndex(fullpath, searchValue, propertyName);
+      return index;
+    } catch (error) {
+      logger2(error, __filename);
+      return -1;
     }
   }
 

@@ -5,7 +5,10 @@ export const mochaHooks = {
     dotenv.config({path: 'test.env'});
   },
   afterEach() {
-
+    sinon.restore();
+    sinon.reset();
+  },
+  after() {
     sinon.restore();
     sinon.reset();
   },

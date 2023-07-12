@@ -24,6 +24,11 @@ describe('insertProposedGoalsController', function () {
     return {findById, appendPropgoalsStub, getGameById, end, status, json};
   }
 
+  this.afterEach(() => {
+    sinon.reset();
+    sinon.restore();
+  });
+
   it('should throw if missing goals or gameId or userid properties', async function () {
     try {
       await insertProposedGoalsController(
@@ -94,11 +99,12 @@ describe('insertProposedGoalsController', function () {
     const expectedGoalsArg = reqBody.goals.map(g => ({
       proposedBy: reqBody.username,
       votedBy: [],
-      goal: sinon.match.any
+      goal: sinon.match.any,
+      id: sinon.match.any,
     }));
 
     // console.log(expectedGoalsArg)
-   
+
     sinon.assert.calledWithMatch(
       appendPropgoalsStub,
       expectedGoalsArg,

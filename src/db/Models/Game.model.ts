@@ -1,12 +1,12 @@
-import { basename } from 'path';
+import {basename} from 'path';
 import {Game, GameLookupPlayers} from '../../interfaces/Game.interface';
 import {Goal} from '../../interfaces/Goal.interface';
 import {User} from '../../interfaces/User.interface';
-import { logger2 } from '../../logger/winston.logger';
+import {logger2} from '../../logger/winston.logger';
 import {DB, dbClient} from '../DB';
 import {Model} from './Model';
 import {userModel} from './User.model';
-import { ProposedGoal } from '../../interfaces/ProposedGoal.interface';
+import {ProposedGoal} from '../../interfaces/ProposedGoal.interface';
 
 class GameModel extends Model {
   constructor(db: DB, name: string) {
@@ -35,26 +35,52 @@ class GameModel extends Model {
     try {
       const game = await this.getGameById(gameId);
       const players = game.players;
-      const playersList: Omit<User,'password'>[] = [];
+      const playersList: Omit<User, 'password'>[] = [];
       for (let playerId of players) {
         const player = await userModel.findById<User>(playerId);
-   
+
         if (player) {
-          const playerWOpass:Omit<User,'password'> & {password?:string } = {...player} 
-          delete playerWOpass.password
+          const playerWOpass: Omit<User, 'password'> & {password?: string} = {
+            ...player,
+          };
+          delete playerWOpass.password;
           playersList.push(playerWOpass);
         }
       }
-      const lookupGame:GameLookupPlayers = {...game,players:playersList}
-      return lookupGame
+      const lookupGame: GameLookupPlayers = {...game, players: playersList};
+      return lookupGame;
     } catch (error) {
-      logger2(error,basename(__filename))
-      return null
+      logger2(error, basename(__filename));
+      return null;
     }
   }
 
   insertPlayer(gameId: string, playerId: string) {
     return this.insert(`/${gameId}/players[]`, playerId, false);
+  }
+
+  async upvoteProposedGoal(gameId: string, goalId: string, username: string) {
+    try {
+      const indexOfProposedGoal = await this.getIndex(
+        `/${gameId}/proposedGoals`,
+        goalId
+      );
+
+      if (indexOfProposedGoal < 0) {
+        throw new Error('not found index -1');
+      }
+
+      const inserted = await this.insert(
+        `/${gameId}/proposedGoals[${indexOfProposedGoal}]/votedBy[]`,
+        username,
+        true
+      );
+
+      return inserted;
+    } catch (error) {
+      logger2(error, __filename);
+      return false;
+    }
   }
 }
 

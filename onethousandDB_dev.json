@@ -2084,102 +2084,17 @@
             "proposedGoals": [
                 {
                     "proposedBy": "superadmin1",
-                    "votedBy": [],
+                    "votedBy": [
+                        "fernandoalonzo1"
+                    ],
                     "goal": {
                         "categories": [],
                         "description": "",
-                        "id": "1ecb681fbfa5f",
+                        "id": "3474dcab57d19",
                         "name": "giocare a calcio con cristiano ronaldo",
                         "points": 20
-                    }
-                },
-                {
-                    "proposedBy": "superadmin1",
-                    "votedBy": [],
-                    "goal": {
-                        "categories": [],
-                        "description": "",
-                        "id": "1a5aae3e98ea2",
-                        "name": "vedere messi dal vivo",
-                        "points": 200
-                    }
-                },
-                {
-                    "proposedBy": "superadmin1",
-                    "votedBy": [],
-                    "goal": {
-                        "categories": [],
-                        "description": "Giocare a dardi con un campione di dardi",
-                        "id": "e99e8f1940c09",
-                        "name": "Giocare a dardi con un campione",
-                        "points": 0
-                    }
-                },
-                {
-                    "proposedBy": "superadmin1",
-                    "votedBy": [],
-                    "goal": {
-                        "categories": [],
-                        "description": "win the lottery",
-                        "id": "74df8fff6eee",
-                        "name": "Earn gold ",
-                        "points": 0
-                    }
-                },
-                {
-                    "proposedBy": "superadmin1",
-                    "votedBy": [],
-                    "goal": {
-                        "categories": [],
-                        "description": "Andato in cielo",
-                        "id": "9c1e7e02be60b",
-                        "name": "Andato in cielo",
-                        "points": 0
-                    }
-                },
-                {
-                    "proposedBy": "superadmin1",
-                    "votedBy": [],
-                    "goal": {
-                        "categories": [],
-                        "description": "Toccato il cielo con un dito",
-                        "id": "387f63a17dcc3",
-                        "name": "Visto il cielo",
-                        "points": 0
-                    }
-                },
-                {
-                    "proposedBy": "superadmin1",
-                    "votedBy": [],
-                    "goal": {
-                        "categories": [],
-                        "description": "",
-                        "id": "de8852f5d23ad",
-                        "name": "Toccato il pallone d oro di messi",
-                        "points": 0
-                    }
-                },
-                {
-                    "proposedBy": "superadmin1",
-                    "votedBy": [],
-                    "goal": {
-                        "categories": [],
-                        "description": "Fatto conoscenza con un capy",
-                        "id": "6981351eecee",
-                        "name": "Fatto conoscenza con un Capybara",
-                        "points": 0
-                    }
-                },
-                {
-                    "proposedBy": "superadmin1",
-                    "votedBy": [],
-                    "goal": {
-                        "categories": [],
-                        "description": "Fatto conoscenza con il mondo",
-                        "id": "53672dc8dc237",
-                        "name": "girovagato per il mondo",
-                        "points": 0
-                    }
+                    },
+                    "id": "3474dcab57d19"
                 }
             ],
             "name": "GAME 144"

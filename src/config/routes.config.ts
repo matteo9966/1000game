@@ -6,7 +6,8 @@ export const ROUTES = {
         insertGame:'/game',
         insertGoals:'/goals',
         insertProposedGoals:'/proposed-goals',
-        insertUser:'/insert-user'
+        insertUser:'/insert-user',
+        upvoteGoal:'/upvote-goal'
     },
     users:{
         base:'/users',
