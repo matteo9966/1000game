@@ -250,6 +250,20 @@
                 "form": []
             },
             "tests": []
+        },
+        {
+            "_id": "cc375bf1-4dda-4a2e-96b5-1110a20b78be",
+            "colId": "0e58a88b-d946-4561-8afd-eef5694d0588",
+            "containerId": "26a86e92-f41c-45fe-9856-530ea5c8ff2f",
+            "name": "REFRESH",
+            "url": "/users/refresh/432b7be1bedf5",
+            "method": "GET",
+            "sortNum": 120000,
+            "created": "2023-07-13T06:53:56.945Z",
+            "modified": "2023-07-13T06:55:02.927Z",
+            "headers": [],
+            "params": [],
+            "tests": []
         }
     ]
 }
