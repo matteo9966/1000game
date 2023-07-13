@@ -53,7 +53,7 @@ export const upvoteGoalController: asyncRequestHandler = async (
   }
 
   const players = game.players.length;
-  const upvoted = proposedGoal.votedBy.length;
+  const upvoted = proposedGoal.votedBy.length + 1; //add the last one that voted
 
   //
 
