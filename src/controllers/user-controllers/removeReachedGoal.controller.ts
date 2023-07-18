@@ -7,19 +7,12 @@ import {Game} from '../../interfaces/Game.interface';
 import {userModel} from '../../db/Models/User.model';
 import {InsertReachedGoalResponse} from '../../interfaces/Responses/InsertReachedGoalResponse';
 
-/**
- * @description this controller can remove or add a goal depending on the request method, if the method is a delete it searches for the goal and 
- * removes it, if the method.
- * @param req 
- * @param res 
- * @param next 
- */
 export const insertReachedGoalController: (
   ...args: Parameters<RequestHandler>
 ) => Promise<ReturnType<RequestHandler>> = async (req, res, next) => {
   const body: insertReachedGoalRequest = req.body;
   console.error(req.method);
-
+  
   const method = req.method;
   if (!(body?.goalId && body?.name && body?.gameId)) {
     logger2(
@@ -56,26 +49,11 @@ export const insertReachedGoalController: (
     throw new CustomServerError('no goal with the provided id', 400);
   }
 
-  console.log({methodname: req.method});
-
   if (method.toLowerCase() === 'delete') {
     const goalIndex = await userModel.getGoalIndexById(body.name, body.goalId);
-    if (goalIndex < 0) {
-      throw new CustomServerError('no goal found', 400);
-    }
-    const deleted = await userModel.removeGoalByIndex(body.name, goalIndex);
-    if (deleted) {
-      const responseBody: InsertReachedGoalResponse = {
-        data: {deleted: true},
-        error: null,
-      };
-      res.json(responseBody);
-    }
+    res.json({goalIndex,methodname:req.method});
+    
   } else {
-    const goalIndex = await userModel.getGoalIndexById(body.name, body.goalId);
-    if(goalIndex>=0){
-      throw new CustomServerError('You already inserted this goal',400);
-    }
     const inserted = await userModel.addGoalIdToUser(body.name, body.goalId);
     if (!inserted) {
       throw new CustomServerError('error while saving the goal', 500);

@@ -264,6 +264,25 @@
             "headers": [],
             "params": [],
             "tests": []
+        },
+        {
+            "_id": "81ed6fc0-23b2-4bad-9ace-2adf230da31e",
+            "colId": "0e58a88b-d946-4561-8afd-eef5694d0588",
+            "containerId": "26a86e92-f41c-45fe-9856-530ea5c8ff2f",
+            "name": "DELETE REACHED GOAL",
+            "url": "/users/reached-goal",
+            "method": "DELETE",
+            "sortNum": 95000,
+            "created": "2023-07-15T16:46:04.642Z",
+            "modified": "2023-07-15T16:50:45.409Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"goalId\":\"8f424e3e458da\",\n  \"name\":\"superadmin1\",\n  \"gameId\":\"432b7be1bedf5\"\n}",
+                "form": []
+            },
+            "tests": []
         }
     ]
 }

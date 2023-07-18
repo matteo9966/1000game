@@ -7,8 +7,6 @@ import {Request, Response} from 'express';
 import {CustomServerError} from '../../errors/CustomServerError';
 import {Game} from '../../interfaces/Game.interface';
 import {fail} from 'assert';
-import { Goal } from '../../interfaces/Goal.interface';
-import { ProposedGoal } from '../../interfaces/ProposedGoal.interface';
 describe('upvoteGoalController', () => {
   function setup() {
     const findById = sinon.stub(gameModel, 'findById');
