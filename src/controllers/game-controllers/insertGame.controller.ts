@@ -12,6 +12,34 @@ import {join} from 'path';
 import {Goal} from '../../interfaces/Goal.interface';
 import { logger2 } from '../../logger/winston.logger';
 import { gamedata } from './gamedata';
+
+/**
+ * 
+ * @param req express request
+ * @param res express response
+ * @param next next function
+ * @description this is the controller that is called when the admin add a game, 
+ * you need to provide a valid username and a valid game to create the game. 
+ * if the game already exists, it will throw an error.
+ * 
+ * The game will be created with the following structure:
+ * 
+ * `
+ * {
+ *  id:string
+ *  name:string
+ *  description:string
+ *  players:string[]
+ *  proposedGoals:string[]
+ *  goals:Goal[]
+ * }
+ * `
+ * 
+ * if  the user does not exist it will throw an error.
+ * if the user already has a game, it will throw an error.
+ *
+ * 
+ */
 export const insertGameController: RequestHandler = async (req, res, next) => {
   const body: InsertGameRequest = req.body;
 
@@ -42,7 +70,7 @@ export const insertGameController: RequestHandler = async (req, res, next) => {
     id: idGenerator(),
     players: [body.username],
     proposedGoals: [],
-    name: body.game?.name || `100 Points Game`,
+    name: body.game?.name || `1000 Points Game`,
   };
 
   const inserted = await gameModel.insertGame(game);

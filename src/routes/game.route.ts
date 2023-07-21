@@ -4,6 +4,10 @@ import { insertGameController } from "../controllers/game-controllers/insertGame
 import { insertProposedGoalsController } from "../controllers/game-controllers/insertGoals.controller";
 import { insertUserController } from "../controllers/game-controllers/insertUser.controller";
 import { upvoteGoalController } from "../controllers/game-controllers/upvoteGoal.controller";
+
+/**
+ * @constant {Router} router - Express router instance. used for the game routes
+ */
 const router = Router();
 
 router.route(ROUTES.games.insertGame).post(insertGameController);

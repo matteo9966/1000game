@@ -1,6 +1,7 @@
 import * as sinon from 'sinon';
 import {createJWT, fsUtils, keys, verifyJWT} from './JWT';
 import {expect} from 'chai';
+import { fail } from 'assert';
 
 const privateKey = `-----BEGIN RSA PRIVATE KEY-----
 MIIEpAIBAAKCAQEAzGMqtP5EHuGcp8y+mCXCHaHROyS/aBAq30pd3cP3D9ta/wgG
@@ -83,4 +84,18 @@ describe('verifyJWT', () => {
     const result = await verifyJWT('test');
     expect(result).to.be.null;
   });
+
+  it('should return the payload if the token is valid', async () => {
+    const {publickeyStub,privatekeyStub} = setup();
+    publickeyStub.value(publicKey);
+    privatekeyStub.value(privateKey);
+    const payload = {payload: 'stest'};
+    const token = await createJWT(payload);
+    if(!token){
+      fail('the token was not creted');
+    }
+    const result:any = await verifyJWT(token);
+    expect(result).to.have.property('payload');
+    expect((result?.['payload'])).to.equal('stest');
+  })
 });

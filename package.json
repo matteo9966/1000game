@@ -12,7 +12,8 @@
     "copy-files": "sh ./copy-assets.sh",
     "fix": "gts fix",
     "nodemon-run": "SET NODE_ENV=dev & nodemon build",
-    "nodemon-run-https": "SET NODE_ENV=dev & SET HTTPS=true & nodemon build"
+    "nodemon-run-https": "SET NODE_ENV=dev & SET HTTPS=true & nodemon build",
+    "docs": "jsdoc -d docs --configure jsdocConf.json"
   },
   "keywords": [],
   "author": "",
@@ -25,12 +26,14 @@
     "@types/mocha": "^10.0.1",
     "@types/node": "^14.11.2",
     "@types/sinon": "^10.0.15",
+    "@types/supertest": "^2.0.12",
     "chai": "^4.3.7",
     "dotenv": "^16.1.4",
     "gts": "^3.1.1",
     "mocha": "^10.2.0",
     "nodemon": "^2.0.22",
     "sinon": "^15.2.0",
+    "supertest": "^6.3.3",
     "tsc-watch": "^6.0.4",
     "typescript": "~4.7.0"
   },

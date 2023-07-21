@@ -29,6 +29,11 @@ function main() {
   if (!app) {
     process.exit(1);
   }
+
+  /**
+   * @constant {Express.Application} server this is the server object listening to the requests,
+   * when it starts it will print the port number where the server is listening to the requests.
+   */
   const server = app.listen(port, () => {
     console.log(`Listening on port ${(<any>server?.address())?.port}`);
     console.log(`Basepath: ${environment.basepath}`);
