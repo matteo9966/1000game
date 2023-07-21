@@ -425,3 +425,16 @@
 [21-07-23 16:22:57] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController
 [21-07-23 16:23:02] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController
 [21-07-23 16:23:08] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController
+[21-07-23 16:33:47] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController
+[21-07-23 16:35:28] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController
+[21-07-23 16:36:36] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController
+[21-07-23 16:49:58] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController
+[21-07-23 16:55:24] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController
+[21-07-23 16:56:39] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController
+[21-07-23 16:56:53] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController
+[21-07-23 17:18:20] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController
+[21-07-23 17:18:46] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController
+[21-07-23 17:46:55] 	errorMiddleware ==> Error: Admin already created a game
+[21-07-23 17:46:55] 	signupAdmin.controller.js ==> ERRORE!
+[21-07-23 17:47:09] 	errorMiddleware ==> Error: Admin already created a game
+[21-07-23 17:48:11] 	errorMiddleware ==> Error: Admin already created a game

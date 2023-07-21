@@ -1,19 +1,11 @@
 import * as jwt from 'jsonwebtoken';
-import * as path from 'path';
-import * as fs from 'fs';
+import { environment } from '../config/environment';
 
-const privateKeyUrl = path.join(__dirname, '../../private.pem');
-const publicKeyUrl = path.join(__dirname, '../../public.pem');
-export const fsUtils = {
-  readFileSync: fs.readFileSync,
-};
-const publicKey = fsUtils.readFileSync(publicKeyUrl, {encoding: 'utf8'});
-const privateKey = fsUtils.readFileSync(privateKeyUrl, {encoding: 'utf8'});
 
-export const keys = {
-  publicKey,
-  privateKey,
-};
+const publicKey =environment.publickey!
+const privateKey = environment.privatekey!;
+
+
 
 export const createJWT: (
   payload: any,
@@ -26,7 +18,7 @@ export const createJWT: (
     try {
       jwt.sign(
         payload,
-        keys.privateKey,
+        environment.privatekey!,
         {algorithm: 'RS256', expiresIn},
         (err, token) => {
           if (err) {
@@ -49,7 +41,7 @@ export const verifyJWT: <T>(token: string) => Promise<null | T> = <T = any>(
   token: string
 ) => {
   return new Promise<T | null>((res, rej) => {
-    jwt.verify(token, keys.publicKey, (err, payload) => {
+    jwt.verify(token, environment.publickey!, (err, payload) => {
   
       if (err) {
         res(null);

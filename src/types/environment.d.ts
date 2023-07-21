@@ -7,6 +7,8 @@ declare global {
       PORT: string;
       BASEPATH:string;
       DBNAME: string;
+      PRIVATEKEY:string;
+      PUBLICKEY:string;
 
     }
   }

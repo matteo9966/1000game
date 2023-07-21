@@ -59,3 +59,10 @@ inside .vscode:
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 source ~/.nvm/nvm.sh
+
+
+
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+ when adding the private and public key use the utility 
+ convert-key-to-base-64.js to convert the generated public key to a base 64 version
+ |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||

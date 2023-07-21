@@ -1318,6 +1318,15 @@
             "proposed": [],
             "role": "user",
             "tempPassword": null
+        },
+        "qwerty": {
+            "gameID": "",
+            "goals": [],
+            "id": "301629254e8aa",
+            "name": "qwerty",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$g6zxngrGsy6b6osTZjqwQw$elNlivhMLdu/AWSTqPOPPdjDQoeIaPLhMd2IEtw7B/4",
+            "proposed": [],
+            "role": "admin"
         }
     },
     "Games": {

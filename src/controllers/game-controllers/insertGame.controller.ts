@@ -10,20 +10,20 @@ import {User} from '../../interfaces/User.interface';
 import {readFile} from 'fs/promises';
 import {join} from 'path';
 import {Goal} from '../../interfaces/Goal.interface';
-import { logger2 } from '../../logger/winston.logger';
-import { gamedata } from './gamedata';
+import {logger2} from '../../logger/winston.logger';
+import {gamedata} from './gamedata';
 
 /**
- * 
+ *
  * @param req express request
  * @param res express response
  * @param next next function
- * @description this is the controller that is called when the admin add a game, 
- * you need to provide a valid username and a valid game to create the game. 
+ * @description this is the controller that is called when the admin add a game,
+ * you need to provide a valid username and a valid game to create the game.
  * if the game already exists, it will throw an error.
- * 
+ *
  * The game will be created with the following structure:
- * 
+ *
  * `
  * {
  *  id:string
@@ -34,11 +34,11 @@ import { gamedata } from './gamedata';
  *  goals:Goal[]
  * }
  * `
- * 
+ *
  * if  the user does not exist it will throw an error.
  * if the user already has a game, it will throw an error.
  *
- * 
+ *
  */
 export const insertGameController: RequestHandler = async (req, res, next) => {
   const body: InsertGameRequest = req.body;
@@ -61,12 +61,11 @@ export const insertGameController: RequestHandler = async (req, res, next) => {
     throw new CustomServerError('Admin already created a game', 400);
   }
 
-  let goals:Goal[]=[];
-
+  let goals: Goal[] = [];
 
   const game: Game = {
     description: body.game?.description || '',
-    goals:gamedata,
+    goals: gamedata,
     id: idGenerator(),
     players: [body.username],
     proposedGoals: [],
@@ -85,14 +84,16 @@ export const insertGameController: RequestHandler = async (req, res, next) => {
   const {players, ...gameWOPlayers} = game;
   const gameWithEmptyPlayers: GameLookupPlayers = {
     ...gameWOPlayers,
-    players: [{
-      gameID:game.id,
-      goals:user.goals,
-      id:user.id,
-      name:user.name,
-      proposed:user.proposed,
-      role:user.role,
-    }],
+    players: [
+      {
+        gameID: game.id,
+        goals: user.goals,
+        id: user.id,
+        name: user.name,
+        proposed: user.proposed,
+        role: user.role,
+      },
+    ],
   };
 
   if (!updatedUser) {
@@ -105,8 +106,12 @@ export const insertGameController: RequestHandler = async (req, res, next) => {
     error: null,
   };
 
-  res.status(200);
-  res.json(responseBody);
+  res.locals.payload = responseBody;
+  res.locals.authorizationPayload = {
+    gameId: game?.id, //if the user loggs in and doesnt have the game i must provide a usertoken with the new game
+    username: user.name,
+    role: user.role,
+  };
+
+  next();
 };
-
-
