@@ -5,13 +5,14 @@ import { insertProposedGoalsController } from "../controllers/game-controllers/i
 import { insertUserController } from "../controllers/game-controllers/insertUser.controller";
 import { upvoteGoalController } from "../controllers/game-controllers/upvoteGoal.controller";
 import { addAccessTokenMiddleware } from "../middleware/addAccessToken.middleware";
+import { authorizationMiddleware } from "../middleware/authorization.middelware";
 
 /**
  * @constant {Router} router - Express router instance. used for the game routes
  */
 const router = Router();
 
-router.route(ROUTES.games.insertGame).post(insertGameController,addAccessTokenMiddleware);
+router.route(ROUTES.games.insertGame).post(authorizationMiddleware(['admin']),insertGameController,addAccessTokenMiddleware);
 // router.route(ROUTES.games.insertGoals).patch(insertGoalsController);
 router.route(ROUTES.games.insertProposedGoals).patch(insertProposedGoalsController);
 router.route(ROUTES.games.insertUser).patch(insertUserController);

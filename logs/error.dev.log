@@ -438,3 +438,13 @@
 [21-07-23 17:46:55] 	signupAdmin.controller.js ==> ERRORE!
 [21-07-23 17:47:09] 	errorMiddleware ==> Error: Admin already created a game
 [21-07-23 17:48:11] 	errorMiddleware ==> Error: Admin already created a game
+[22-07-23 16:27:02] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController
+[22-07-23 17:23:15] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\src\controllers\user-controllers\insertGoal.controller.ts ==> missing goalId or userId or gameID in insertReachedGoalController
+[22-07-23 18:00:51] 	errorMiddleware ==> Error: You are not authorized
+[22-07-23 18:00:51] 	signupAdmin.controller.js ==> ERRORE!
+[22-07-23 18:01:05] 	errorMiddleware ==> Error: You are not authorized
+[22-07-23 18:02:47] 	errorMiddleware ==> Error: You are not authorized
+[22-07-23 18:04:04] 	errorMiddleware ==> Error: You are not authorized
+[22-07-23 18:04:11] 	errorMiddleware ==> Error: You are not authorized
+[22-07-23 18:06:15] 	errorMiddleware ==> Error: You are not authorized
+[22-07-23 18:06:46] 	errorMiddleware ==> Error: You are not authorized

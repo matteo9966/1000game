@@ -29,6 +29,7 @@ export const addAccessTokenMiddleware: Promisified<RequestHandler> = async (
   res,
   next
 ) => {
+  
   const authorizationPayload = res.locals?.authorizationPayload;
   const payload = res.locals?.payload;
   if (!authorizationPayload) {

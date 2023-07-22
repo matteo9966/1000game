@@ -7,7 +7,6 @@ import { environment } from '../config/environment';
 
 describe('createJWT', () => {
 
-  console.log(environment);
 
   afterEach(() => {
     sinon.reset();

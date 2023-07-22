@@ -7,20 +7,18 @@ import {gameModel} from '../../db/Models/Game.model';
 import {InsertGameResponse} from '../../interfaces/Responses/InsertGameResponse';
 import {userModel} from '../../db/Models/User.model';
 import {User} from '../../interfaces/User.interface';
-import {readFile} from 'fs/promises';
-import {join} from 'path';
 import {Goal} from '../../interfaces/Goal.interface';
-import {logger2} from '../../logger/winston.logger';
 import {gamedata} from './gamedata';
 
 /**
- *
+ * 
  * @param req express request
  * @param res express response
  * @param next next function
  * @description this is the controller that is called when the admin add a game,
  * you need to provide a valid username and a valid game to create the game.
  * if the game already exists, it will throw an error.
+ * When creating a new game a new session token is returned with an updated payload - the game id
  *
  * The game will be created with the following structure:
  *
@@ -37,12 +35,15 @@ import {gamedata} from './gamedata';
  *
  * if  the user does not exist it will throw an error.
  * if the user already has a game, it will throw an error.
- *
- *
+ * ################################################################
+ * # You need authorization to access this route! (role='admin'); #
+ * ################################################################
  */
-export const insertGameController: RequestHandler = async (req, res, next) => {
-  const body: InsertGameRequest = req.body;
+export const insertGameController: (...args:Parameters<RequestHandler>)=>Promise<void> = async (req, res, next) => {
+  
 
+  const body: InsertGameRequest = req.body;
+  
   if (!body?.username) {
     throw new CustomServerError('Missing userId', 400);
   }
@@ -55,7 +56,7 @@ export const insertGameController: RequestHandler = async (req, res, next) => {
   if (!user) {
     throw new CustomServerError('Invalid username', 400);
   }
-
+  
   //one game per user, so admin can create only one game, if he wants to create multiple games i must have multiple accounts
   if (user.gameID) {
     throw new CustomServerError('Admin already created a game', 400);
@@ -73,6 +74,7 @@ export const insertGameController: RequestHandler = async (req, res, next) => {
   };
 
   const inserted = await gameModel.insertGame(game);
+
   if (!inserted) {
     throw new CustomServerError('Error while inserting game', 500);
   }
@@ -95,10 +97,12 @@ export const insertGameController: RequestHandler = async (req, res, next) => {
       },
     ],
   };
-
+ 
   if (!updatedUser) {
     throw new CustomServerError('Error while updating user with new game', 500);
   }
+
+  
 
   const {password, ...userWOPasswrod} = user;
   const responseBody: InsertGameResponse = {
