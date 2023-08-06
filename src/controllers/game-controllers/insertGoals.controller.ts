@@ -15,6 +15,13 @@ type asyncRequestHandler = (
   ...args: Parameters<RequestHandler>
 ) => Promise<ReturnType<RequestHandler>>;
 
+/**
+ * @description 
+ * @param req 
+ * @param res 
+ * @param next 
+ * @returns 
+ */
 export const insertProposedGoalsController: asyncRequestHandler = async (
   req,
   res,

@@ -41,7 +41,7 @@ export const addAccessTokenMiddleware: Promisified<RequestHandler> = async (
     logger2('authorization error, the token was not created', __filename);
     throw new CustomServerError('error while creating the access token!', 500);
   }
-
+  res.setHeader("Access-Control-Expose-Headers", "Authorization")
   res.setHeader('Authorization', `bearer ${token}`);
   if (payload) {
     res.json(payload);

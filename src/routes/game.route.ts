@@ -9,6 +9,9 @@ import { authorizationMiddleware } from "../middleware/authorization.middelware"
 
 /**
  * @constant {Router} router - Express router instance. used for the game routes
+ * @description routes that need authorization are:
+ * - insertGameController
+ * 
  */
 const router = Router();
 
