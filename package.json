@@ -8,8 +8,8 @@
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "SET NODE_ENV=prod & npm run delete-build && tsc && npm run copy-files",
-    "delete-build":"sh ./delete-build.sh",
-    "copy-files":"sh ./copy-assets.sh",
+    "delete-build": "sh ./delete-build.sh",
+    "copy-files": "sh ./copy-assets.sh",
     "fix": "gts fix",
     "nodemon-run": "SET NODE_ENV=dev & nodemon build",
     "nodemon-run-https": "SET NODE_ENV=dev & SET HTTPS=true & nodemon build"
@@ -38,6 +38,7 @@
     "cors": "^2.8.5",
     "express": "^4.18.2",
     "express-async-errors": "^3.1.1",
+    "firebase": "^10.1.0",
     "node-json-db": "^2.2.0",
     "ts-node": "^10.9.1",
     "winston": "^3.9.0"
