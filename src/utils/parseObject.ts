@@ -7,7 +7,6 @@ export const parseObject = <T extends Record<string, any>>(
 ) => {
   const copy = JSON.parse(JSON.stringify(template))
   const newObj = Object.assign(copy, obj);
-  console.log(template)
   const clearObj = Object.keys(template).reduce<Record<string, any>>(
     (acc, key) => {
       acc[key] = newObj[key];
