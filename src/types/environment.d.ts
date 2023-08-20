@@ -3,7 +3,7 @@ export {};
 declare global {
   namespace NodeJS {
     interface ProcessEnv {
-      ENV: 'dev' | 'prod';
+      ENV: 'dev' | 'prod'|'test';
       PORT: string;
       BASEPATH:string;
       DBNAME: string;

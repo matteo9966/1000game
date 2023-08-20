@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "SET NODE_ENV=test & mocha --verbose",
+    "test": "SET NODE_ENV=test & SET DBNAME=test_db & mocha --verbose",
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "SET NODE_ENV=prod & npm run delete-build && tsc && npm run copy-files",

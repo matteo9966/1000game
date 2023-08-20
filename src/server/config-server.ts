@@ -1,7 +1,7 @@
 import "express-async-errors";
 import * as e from 'express';
 import { ROUTES } from '../config/routes.config';
-import * as dotenv from 'dotenv';
+// import * as dotenv from 'dotenv';
 import { errorMiddleware } from "../middleware/error.middleware";
 import gameRoutes from '../routes/game.route';
 import userRoutes from '../routes/user.route';
@@ -12,7 +12,7 @@ import route from './config-routes';
 // import * as path from 'path';
 // import * as https from 'https';
 
-dotenv.config();
+// dotenv.config();
 const basepath = process.env.BASEPATH 
 // let key = fs.readFileSync(path.join(__dirname,'../','ssl/server.key'),'utf-8')
 // let cert = fs.readFileSync(path.join(__dirname,'../','ssl/server.crt'),'utf-8')
@@ -27,7 +27,7 @@ export function configServer(){
     app.use(e.json());
     app.use(requestMonitorMiddleware)
     app.use(cors({
-        origin:['http://192.168.1.178:4200','https://192.168.1.178:4200','https://192.168.56.1:4200']
+        origin:['http://192.168.1.178:4200','https://192.168.1.178:4200','https://192.168.56.1:4200','https://192.168.1.179','http://192.168.1.179']
     }))
     app.use(`${basepath}${ROUTES.games.base}`,gameRoutes)
     app.use(`${basepath}${ROUTES.users.base}`,userRoutes)

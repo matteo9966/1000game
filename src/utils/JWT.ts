@@ -2,8 +2,7 @@ import * as jwt from 'jsonwebtoken';
 import { environment } from '../config/environment';
 
 
-const publicKey =environment.publickey!
-const privateKey = environment.privatekey!;
+
 
 
 

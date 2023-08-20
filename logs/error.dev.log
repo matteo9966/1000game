@@ -448,3 +448,17 @@
 [22-07-23 18:04:11] 	errorMiddleware ==> Error: You are not authorized
 [22-07-23 18:06:15] 	errorMiddleware ==> Error: You are not authorized
 [22-07-23 18:06:46] 	errorMiddleware ==> Error: You are not authorized
+[17-08-23 18:21:45] 	errorMiddleware ==> Error: you already voted for this goal
+[17-08-23 18:21:51] 	errorMiddleware ==> Error: you already voted for this goal
+[17-08-23 18:22:11] 	errorMiddleware ==> Error: you already voted for this goal
+[17-08-23 18:47:31] 	errorMiddleware ==> Error: you already voted for this goal
+[17-08-23 18:47:40] 	errorMiddleware ==> Error: you already voted for this goal
+[18-08-23 09:04:15] 	errorMiddleware ==> Error: you already voted for this goal
+[18-08-23 09:29:50] 	errorMiddleware ==> Error: you already voted for this goal
+[18-08-23 09:31:21] 	errorMiddleware ==> Error: you already voted for this goal
+[19-08-23 18:45:55] 	signupAdmin.controller.js ==> ERRORE!
+[19-08-23 18:46:40] 	errorMiddleware ==> Error: You are not authorized
+[19-08-23 18:55:23] 	errorMiddleware ==> Error: You are not authorized
+[19-08-23 18:58:37] 	errorMiddleware ==> Error: You are not authorized
+[19-08-23 18:58:54] 	errorMiddleware ==> Error: You are not authorized
+[19-08-23 19:00:59] 	errorMiddleware ==> Error: You are not authorized
