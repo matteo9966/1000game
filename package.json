@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "SET NODE_ENV=test & mocha --require test-config.test.mjs",
+    "test": "SET NODE_ENV=test & SET DBNAME=test_db & mocha --verbose",
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "SET NODE_ENV=prod & npm run delete-build && tsc && npm run copy-files",
@@ -12,24 +12,30 @@
     "copy-files": "sh ./copy-assets.sh",
     "fix": "gts fix",
     "nodemon-run": "SET NODE_ENV=dev & nodemon build",
-    "nodemon-run-https": "SET NODE_ENV=dev & SET HTTPS=true & nodemon build"
+    "nodemon-run-https": "SET NODE_ENV=dev & SET HTTPS=true & nodemon build",
+    "docs": "jsdoc -d docs --configure jsdocConf.json"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/chai": "^4.3.5",
+    "@types/chai-as-promised": "^7.1.5",
     "@types/cors": "^2.8.13",
     "@types/express": "^4.17.17",
+    "@types/jsonwebtoken": "^9.0.2",
     "@types/mocha": "^10.0.1",
     "@types/node": "^14.11.2",
     "@types/sinon": "^10.0.15",
+    "@types/supertest": "^2.0.12",
     "chai": "^4.3.7",
+    "chai-as-promised": "^7.1.1",
     "dotenv": "^16.1.4",
     "gts": "^3.1.1",
     "mocha": "^10.2.0",
     "nodemon": "^2.0.22",
     "sinon": "^15.2.0",
+    "supertest": "^6.3.3",
     "tsc-watch": "^6.0.4",
     "typescript": "~4.7.0"
   },
@@ -39,6 +45,7 @@
     "express": "^4.18.2",
     "express-async-errors": "^3.1.1",
     "firebase": "^10.1.0",
+    "jsonwebtoken": "^9.0.1",
     "node-json-db": "^2.2.0",
     "ts-node": "^10.9.1",
     "winston": "^3.9.0"

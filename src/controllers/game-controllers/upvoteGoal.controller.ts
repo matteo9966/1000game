@@ -48,8 +48,30 @@ export const upvoteGoalController: asyncRequestHandler = async (
     );
   }
 
+  //removing the username from proposedGoal if 
   if (proposedGoal?.votedBy?.includes(body.username)) {
-    throw new CustomServerError('you already voted for this goal', 400);
+    //remove userIndex from the goal
+    const deleted =
+      await gameModel.removeUsernameFromProposedGoalUserUpvoteList(
+        body.gameId,
+        body.goalId,
+        body.username
+      );
+
+    if (!deleted)
+      throw new CustomServerError('Error while removing your vote', 500);
+    const updatedGame = await gameModel.getGameById(body.gameId);
+
+    const response: UpvoteGoalResponse = {
+      data: {
+        goals: updatedGame.goals,
+        proposedGoals: updatedGame.proposedGoals,
+      },
+      error: null,
+    };
+    res.json(response);
+
+    return;
   }
 
   const players = game.players.length;
@@ -66,33 +88,27 @@ export const upvoteGoalController: asyncRequestHandler = async (
       throw new CustomServerError('error while upgrading the goal', 500);
     }
 
-    const goalIndex = await gameModel.getProposedGoalIndex(
+    const deleded = await gameModel.deleteProposedGoalByGoalId(
       body.gameId,
       body.goalId
     );
 
-    const deleded = await gameModel.deleteProposedGoal(goalIndex, body.gameId);
-    if(!deleded){
-      throw new CustomServerError('error while deliting the proposed goal',500);
+    if (!deleded) {
+      throw new CustomServerError(
+        'error while deliting the proposed goal',
+        500
+      );
     }
-
-  }
-  else{
-    
-     await gameModel.upvoteProposedGoal(
-      body.gameId,
-      body.goalId,
-      body.username
-    );
-
+  } else {
+    await gameModel.upvoteProposedGoal(body.gameId, body.goalId, body.username);
   }
 
   const updatedGame = await gameModel.getGameById(body.gameId);
 
   const response: UpvoteGoalResponse = {
     data: {
-      goals:updatedGame.goals,
-      proposedGoals:updatedGame.proposedGoals,  
+      goals: updatedGame.goals,
+      proposedGoals: updatedGame.proposedGoals,
     },
     error: null,
   };

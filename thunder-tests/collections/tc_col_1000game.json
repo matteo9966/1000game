@@ -37,24 +37,41 @@
             "method": "POST",
             "sortNum": 10000,
             "created": "2023-06-09T09:08:17.105Z",
-            "modified": "2023-07-13T07:01:45.416Z",
+            "modified": "2023-07-22T16:12:39.670Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"username\":\"mattetommasi\",\n  \"game\":{\n    \"name\":\"GAME 144\",\n    \"description\":\"This is the first game created\"\n  }\n}",
+                "raw": "{\n  \"username\":\"qwerty2\",\n  \"game\":{\n    \"name\":\"GAME 144\",\n    \"description\":\"This is the first game created\"\n  }\n}",
                 "form": []
             },
-            "tests": []
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": [
+                {
+                    "type": "set-env-var",
+                    "custom": "header.authorization",
+                    "action": "setto",
+                    "value": "{{token}}"
+                },
+                {
+                    "type": "custom-header",
+                    "custom": "",
+                    "action": "contains",
+                    "value": "authorization"
+                }
+            ]
         },
         {
             "_id": "87a29290-cf43-4f10-bd2d-f8fc8f7448d5",
             "colId": "0e58a88b-d946-4561-8afd-eef5694d0588",
-            "containerId": "",
+            "containerId": "26a86e92-f41c-45fe-9856-530ea5c8ff2f",
             "name": "INSERT GOALS",
             "url": "/games/goals",
             "method": "PATCH",
-            "sortNum": 20000,
+            "sortNum": 130000,
             "created": "2023-06-09T09:57:32.272Z",
             "modified": "2023-06-12T08:07:07.433Z",
             "headers": [],
@@ -94,12 +111,12 @@
             "method": "POST",
             "sortNum": 30000,
             "created": "2023-06-10T08:06:20.775Z",
-            "modified": "2023-07-13T07:01:19.747Z",
+            "modified": "2023-07-22T16:12:12.486Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"mattetommasi\",\n  \"password\":\"Secret1\"\n}",
+                "raw": "{\n  \"name\":\"qwerty2\",\n  \"password\":\"Secret1\"\n}",
                 "form": []
             },
             "tests": []
@@ -170,15 +187,22 @@
             "method": "POST",
             "sortNum": 20000,
             "created": "2023-06-12T07:47:55.240Z",
-            "modified": "2023-07-02T16:11:23.773Z",
+            "modified": "2023-07-22T16:12:17.750Z",
             "headers": [],
             "params": [],
             "body": {
                 "type": "json",
-                "raw": "{\n  \"name\":\"superadmin1\",\n  \"password\":\"Secret1\"\n}",
+                "raw": "{\n  \"name\":\"qwerty2\",\n  \"password\":\"Secret1\"\n}",
                 "form": []
             },
-            "tests": []
+            "tests": [
+                {
+                    "type": "set-env-var",
+                    "custom": "header.authorization",
+                    "action": "setto",
+                    "value": "{{token}}"
+                }
+            ]
         },
         {
             "_id": "dc724ae1-6a42-436f-b3e3-1073e86410da",
@@ -263,6 +287,25 @@
             "modified": "2023-07-13T06:55:02.927Z",
             "headers": [],
             "params": [],
+            "tests": []
+        },
+        {
+            "_id": "81ed6fc0-23b2-4bad-9ace-2adf230da31e",
+            "colId": "0e58a88b-d946-4561-8afd-eef5694d0588",
+            "containerId": "26a86e92-f41c-45fe-9856-530ea5c8ff2f",
+            "name": "DELETE REACHED GOAL",
+            "url": "/users/reached-goal",
+            "method": "DELETE",
+            "sortNum": 95000,
+            "created": "2023-07-15T16:46:04.642Z",
+            "modified": "2023-07-15T16:50:45.409Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"goalId\":\"8f424e3e458da\",\n  \"name\":\"superadmin1\",\n  \"gameId\":\"432b7be1bedf5\"\n}",
+                "form": []
+            },
             "tests": []
         }
     ]

@@ -1,0 +1,206 @@
+{
+    "Games": {
+        "432b7be1bedf5": {
+            "description": "this is the game with minimal but complete data!!!! ",
+            "goals": [
+                {
+                    "name": "first kiss",
+                    "description": "",
+                    "id": "c2934bc1af84a",
+                    "points": 10,
+                    "categories": [
+                        "relations"
+                    ]
+                },
+                {
+                    "name": "first house",
+                    "description": "",
+                    "id": "df31dfa976c37",
+                    "points": 30,
+                    "categories": [
+                        "materialistic"
+                    ]
+                },
+                {
+                    "name": "first pet",
+                    "description": "",
+                    "id": "d220aa8223dfa",
+                    "points": 10,
+                    "categories": [
+                        "materialistic"
+                    ]
+                },
+                {
+                    "name": "first trip in italy",
+                    "description": "",
+                    "id": "b4154d72087dc",
+                    "points": 10,
+                    "categories": [
+                        "materialistic"
+                    ]
+                },
+                {
+                    "name": "first trip in europe",
+                    "description": "",
+                    "id": "b0b01dad0b92d",
+                    "points": 30,
+                    "categories": [
+                        "materialistic"
+                    ]
+                },
+                {
+                    "name": "first trip outside of europe",
+                    "description": "",
+                    "id": "79b04efa2a38b",
+                    "points": 50,
+                    "categories": [
+                        "materialistic"
+                    ]
+                },
+                {
+                    "name": "played videogames for more than 10 hours straight",
+                    "description": "",
+                    "id": "bf11643fed75d",
+                    "points": 2,
+                    "categories": [
+                        "misc"
+                    ]
+                }
+            ],
+            "id": "432b7be1bedf5",
+            "players": [
+                "superadmin1",
+                "giovanni",
+                "chiaro",
+                "filippide",
+                "fernandoalonzo1",
+                "cicorella",
+                "gamberone"
+            ],
+            "proposedGoals": [
+                {
+                    "proposedBy": "superadmin1",
+                    "votedBy": [
+                        "fernandoalonzo1",
+                        "chiaro",
+                        "cicorella",
+                        "Giovanni"
+                    ],
+                    "goal": {
+                        "categories": [],
+                        "description": "",
+                        "id": "3474dcab57d19",
+                        "name": "giocare a calcio con cristiano ronaldo",
+                        "points": 20
+                    },
+                    "id": "3474dcab57d19"
+                },
+                {
+                    "proposedBy": "Giovanni",
+                    "votedBy": [
+                        "superadmin1"
+                    ],
+                    "goal": {
+                        "categories": [],
+                        "description": "Gioco di tennis",
+                        "id": "e7a2a923cb728",
+                        "name": "Giocare a tennis con nadal",
+                        "points": 0
+                    },
+                    "id": "e7a2a923cb728"
+                },
+                {
+                    "proposedBy": "Giovanni",
+                    "votedBy": [
+                        "superadmin1"
+                    ],
+                    "goal": {
+                        "categories": [],
+                        "description": "assdfsdf",
+                        "id": "0066bec67bb45",
+                        "name": "aaaa",
+                        "points": 0
+                    },
+                    "id": "0066bec67bb45"
+                },
+                {
+                    "proposedBy": "Giovanni",
+                    "votedBy": [
+                        "superadmin1"
+                    ],
+                    "goal": {
+                        "categories": [],
+                        "description": "",
+                        "id": "4da7d154c76aa",
+                        "name": "Played mario kart",
+                        "points": 0
+                    },
+                    "id": "4da7d154c76aa"
+                },
+                {
+                    "proposedBy": "Giovanni",
+                    "votedBy": [
+                        "superadmin1"
+                    ],
+                    "goal": {
+                        "categories": [],
+                        "description": "",
+                        "id": "6db9165bd68e4",
+                        "name": "Giocare a padel con un canguro",
+                        "points": 0
+                    },
+                    "id": "6db9165bd68e4"
+                },
+                {
+                    "proposedBy": "superadmin1",
+                    "votedBy": [],
+                    "goal": {
+                        "categories": [],
+                        "description": "",
+                        "id": "bc6ae6d5ff30d",
+                        "name": "Giocare a padel in campagna",
+                        "points": 0
+                    },
+                    "id": "bc6ae6d5ff30d"
+                },
+                {
+                    "proposedBy": "superadmin1",
+                    "votedBy": [],
+                    "goal": {
+                        "categories": [],
+                        "description": "",
+                        "id": "3d672c16116e",
+                        "name": "Fare una partita a scacchi in marea alta ",
+                        "points": 0
+                    },
+                    "id": "3d672c16116e"
+                },
+                {
+                    "proposedBy": "superadmin1",
+                    "votedBy": [],
+                    "goal": {
+                        "categories": [],
+                        "description": "Mangiare tanta carbonara ",
+                        "id": "3ddb7672d89a",
+                        "name": "Mangiare un quintale di carbonara",
+                        "points": 0
+                    },
+                    "id": "3ddb7672d89a"
+                },
+                {
+                    "proposedBy": "superadmin1",
+                    "votedBy": [],
+                    "goal": {
+                        "categories": [],
+                        "description": "",
+                        "id": "8ddf3921a0a8c",
+                        "name": "Giocare A Beachvolley",
+                        "points": 0
+                    },
+                    "id": "8ddf3921a0a8c"
+                }
+            ],
+            "name": "GAME 144"
+        }
+    }
+}

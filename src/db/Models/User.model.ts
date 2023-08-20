@@ -40,6 +40,14 @@ class UserModel extends Model {
     return this.insert(`/${username}/goals[]`,goalId,true)
   }
 
+  async getGoalIndexById(username:string,goalId:string){
+    return this.getIndexValue(`/${username}/goals`,goalId)
+  }
+
+  async removeGoalByIndex(username:string,index:number){
+    return this.delete(`/${username}/goals[${index}]`);
+  }
+
   async changeUserPassword(username:string,password:string){
     return this.insert(`/${username}/password`,password,true)
   }

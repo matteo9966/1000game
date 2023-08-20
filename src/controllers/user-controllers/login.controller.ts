@@ -11,9 +11,10 @@ import { LoginResponse } from '../../interfaces/Responses/loginResponse';
 import { logger2 } from '../../logger/winston.logger';
 import { basename } from 'path';
 
+export  const util = {verifyPassword}
 
 export const loginController: RequestHandler = async (req, res, next) => {
-
+   
 const body:LoginRequest = req.body;
 //1 verify password 2 verify role verify username
 if(!body?.name || !body?.password){
@@ -22,12 +23,13 @@ if(!body?.name || !body?.password){
 }
 
 
+
 const user =  await userModel.findByName<User>(body.name);
 if(!user){
     throw new CustomServerError('No user with provided ID',401)
 }
 
-const validPassword = await verifyPassword(user.password,body.password);
+const validPassword = await util.verifyPassword(user.password,body.password);
 
 if(!validPassword){
     throw new CustomServerError('Invalid credentials',401);
@@ -46,7 +48,6 @@ if(gameId){
         game=null;
     }
 }
-
 const responseBody:LoginResponse = {
     error:null,
     data:{
@@ -55,6 +56,18 @@ const responseBody:LoginResponse = {
     }
 }
 
-res.json(responseBody)
+
+res.locals.payload = responseBody;
+res.locals.authorizationPayload = {
+    gameId:game?.id, //if the user loggs in and doesnt have the game i must provide a usertoken with the new game
+    username:loggedInUser.name,
+    role:loggedInUser.role,
+}
+
+
+
+next();
+
+// res.json(responseBody)
 
 };

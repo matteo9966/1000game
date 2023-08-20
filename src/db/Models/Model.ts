@@ -117,6 +117,20 @@ export class Model {
     }
   }
 
+  async getIndexValue(path: string, value: any) {
+    if (!this.db) {
+      return -1;
+    }
+    try {
+      const fullpath = `/${this.name}${path}`;
+      const index = this.db.getIndexValue(fullpath, value);
+      return index;
+    } catch (error) {
+      logger2(error, __filename);
+      return -1;
+    }
+  }
+
   /**
    *
    * @param path a path starting with /
