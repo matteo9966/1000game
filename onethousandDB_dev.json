@@ -1347,6 +1347,15 @@
             "password": "$argon2id$v=19$m=65536,t=3,p=4$zT65p1lMa77TFS1R+eK/kw$RiBuVbuptlbryeX+APce2uqBq9BSNhM7kSKDb6nAPiw",
             "proposed": [],
             "role": "admin"
+        },
+        "superadmin133": {
+            "gameID": "",
+            "goals": [],
+            "id": "e84107718748b",
+            "name": "superadmin133",
+            "password": "$argon2id$v=19$m=65536,t=3,p=4$XWZzxz5gg/sA+OMQGABBNA$emGAxnew92jzeQeUVzTP5pTDow0K+dJkMZsR0ccz4r0",
+            "proposed": [],
+            "role": "admin"
         }
     },
     "Games": {

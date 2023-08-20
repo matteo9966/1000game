@@ -2,10 +2,15 @@ import {JsonDB} from 'node-json-db';
 import {DB} from '../DB';
 import {logger, logger2} from '../../logger/winston.logger';
 import {basename} from 'path';
+import * as firebaseAdmin from 'firebase-admin';
 export class Model {
   private _db: DB | null = null;
-  constructor(db: DB, private name: string) {
+  constructor(
+    db: DB,
+    private name: string
+  ) {
     this._db = db;
+
   }
 
   /**

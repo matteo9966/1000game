@@ -1,52 +1,39 @@
-import {initializeApp} from 'firebase/app';
-import {getFirestore,collection,getDocs} from 'firebase/firestore/lite'
-const firebaseConfig = {
-    apiKey: "AIzaSyCD9Z6ZIOib16pi_6Jr6MZQ1XQd_84hRW8",
-    authDomain: "goals-database.firebaseapp.com",
-    projectId: "goals-database",
-    storageBucket: "goals-database.appspot.com",
-    messagingSenderId: "183941279468",
-    appId: "1:183941279468:web:5a4cc03933dac70cef3fc9"
-  };
-const firebaseApp = initializeApp(firebaseConfig);
-const db = getFirestore(firebaseApp);
+// Import the functions you need from the SDKs you need
+import * as admin from "firebase-admin";
+import * as firestore from "firebase-admin/firestore";
+import * as goal_database_key from './goals-database-firebase-adminsdk-5g0pg-31ce41ff6b.json';
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-/*
+// Your web app's Firebase configuration
+// const firebaseConfig = {
+//   apiKey: "AIzaSyCD9Z6ZIOib16pi_6Jr6MZQ1XQd_84hRW8",
+//   authDomain: "goals-database.firebaseapp.com",
+//   projectId: "goals-database",
+//   storageBucket: "goals-database.appspot.com",
+//   messagingSenderId: "183941279468",
+//   appId: "1:183941279468:web:5a4cc03933dac70cef3fc9"
+// };
 
-/ all the calls are async
+// Initialize Firebase
 
-# to get  a collection: 
-const todosCollection = collection(db,'todos');
-const snapshot = await getDocs(todosCollection);
+export function initializeFirestore(){
+    
+    if(admin.apps.length>0){
+        console.log('APP ALREADY INITIALIZED!')
+      const app =  admin.apps[0]!;
+      return firestore.getFirestore(app);
+    }
 
-# to create a document use doc function:
+    const app = admin.initializeApp({
+        credential:admin.credential.cert(goal_database_key as any),
+        projectId:'goals-database',
 
-cosnt game = doc(db,'dailySpecial/game');
-const gameData  = { some:'data' , age:22 };
- 
-to write to a document you should use setDoc command
-setDoc(game,gameData) // overwrites if exists
-setDoc(game,gameData,{merge:true}) // to update the values
-updateDoc(game,gameData) //throw error if exists
+    })
+    console.log('INITIALIZED THE FIRESTORE')
+    const db = firestore.getFirestore(app);
+    
+   return db;
+}
 
-# add a document to a collection without knowing the id 
-
-const newDoc = await addDoc(orderCollection,{
-    customer:'matteo',
-    drink:'latte',
-    total:22
-})
-
-# read a single document
-const mysnapshot = await getDoc(special) // object that has 
-
-create a query 
-
-const customerOrderQuery = query(
-    collection(firestore,'orders'),
-    where('drink','==','latte'),
-    limit(20)
-)
-
-*/
-
+export const firestoreDB = initializeFirestore();

@@ -9,6 +9,7 @@ declare global {
       DBNAME: string;
       PRIVATEKEY:string;
       PUBLICKEY:string;
+      FIRESTORE_EMULATOR_HOST:string;
 
     }
   }

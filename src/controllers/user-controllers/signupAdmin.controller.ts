@@ -11,7 +11,7 @@ import {SignupAdminResponse} from '../../interfaces/Responses/signupAdminRespons
 import {logger2} from '../../logger/winston.logger';
 import {basename} from 'path';
 import {validateUsername} from '../../utils/validateUsername';
-
+import { firestoreUserModel } from '../../db/DBFirestore';
 export const signupAdminController: RequestHandler = async (req, res, next) => {
   logger2('ERRORE!', basename(__filename));
   const body: SignupAdminRequest = req.body;
@@ -44,6 +44,7 @@ export const signupAdminController: RequestHandler = async (req, res, next) => {
   parsedUser.password = passwordHash;
 
   const inserted = await userModel.insertUser(parsedUser);
+  const insertedInFirebase = await firestoreUserModel.insertUser(parsedUser);
   if (!inserted) {
     throw new CustomServerError('Error while inserting the new user', 500);
   }

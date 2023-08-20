@@ -13,6 +13,7 @@ import {InsertUserResponse} from '../../interfaces/Responses/InsertUserResponse'
 import {logger2} from '../../logger/winston.logger';
 import {basename} from 'path';
 
+
 export const insertUserController: RequestHandler = async (req, res, next) => {
   //get adminID get user id
   const body: InsertUserRequest = req.body;

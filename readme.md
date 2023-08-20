@@ -66,3 +66,29 @@ source ~/.nvm/nvm.sh
  when adding the private and public key use the utility 
  convert-key-to-base-64.js to convert the generated public key to a base 64 version
  |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+ # FIRESTORE 
+
+ - install these dependencies: 
+  `npm i firebase-admin`
+  `npm i firebase`
+
+  follow this guide to setup the sdk for the firestore admin on nodejs server
+  https://firebase.google.com/docs/admin/setup#initialize-sdk
+
+  you can generate the private key inside 
+  firestore => project settings => service account => generate private key
+
+  emulators: 
+  follow the emulators guide on firebase, to setup the connection between project and emulator 
+  follow this guide
+
+# => before you start the emulators, in the CLI run `firebase use` in your working directory
+   
+
+  https://firebase.google.com/docs/emulator-suite/connect_firestore
+
+since i'm not using the google cloud environment i must set the project id inside the code
+
+`admin.initializeApp({ projectId: "your-project-id" });`

@@ -462,3 +462,5 @@
 [19-08-23 18:58:37] 	errorMiddleware ==> Error: You are not authorized
 [19-08-23 18:58:54] 	errorMiddleware ==> Error: You are not authorized
 [19-08-23 19:00:59] 	errorMiddleware ==> Error: You are not authorized
+[20-08-23 16:20:22] 	signupAdmin.controller.js ==> ERRORE!
+[20-08-23 16:20:25] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\db\DBFirestore.js ==> [object Object]

@@ -2,7 +2,7 @@ import { CustomServerError } from '../../errors/CustomServerError';
 import { User } from '../../interfaces/User.interface';
 import {DB, dbClient} from '../DB';
 import {Model} from './Model';
-
+import { firestoreDB } from '../firebase/firebase';
 class UserModel extends Model {
   constructor(db: DB, name: string) {
     super(db, name);
@@ -74,7 +74,6 @@ class UserModel extends Model {
 //   }
 
 }
-
 export const userModel = dbClient.createModel<UserModel>(UserModel, 'Users');
 
 // export type appendGoalType = typeof UserModel.appendGoals
