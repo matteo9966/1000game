@@ -92,3 +92,15 @@ source ~/.nvm/nvm.sh
 since i'm not using the google cloud environment i must set the project id inside the code
 
 `admin.initializeApp({ projectId: "your-project-id" });`
+
+
+# testing 
+### ATTENTION !!! 
+in order to test you need to setup the firestore emulators
+once you start the firestore emulators you can run the tests!
+
+If there is something running on the pors 10000 and 8080 you could kill the 
+processes using 
+npx kill-port --port 10000
+
+https://www.npmjs.com/package/kill-port
