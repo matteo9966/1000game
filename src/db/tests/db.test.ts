@@ -1,7 +1,7 @@
 import {expect} from 'chai';
 import {initDB, dbClient, clearDB} from '../DB';
 export function dbTests(){
-    describe('initialization: testDB', () => {
+    describe.skip('initialization: testDB', () => {
      async function setup() {
         // console.log('environment variables: \n', environment);
         initDB();

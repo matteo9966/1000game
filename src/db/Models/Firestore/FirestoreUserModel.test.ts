@@ -35,7 +35,7 @@ async function getAllUsers() {
 }
 
 export function firestoreUserModelTests() {
-  describe.only('FIRESTORE UserModel', () => {
+  describe('FIRESTORE UserModel', () => {
     // clear the firestore after all the tests
     after(async () => {
       await clearFirestore();
