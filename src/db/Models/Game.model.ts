@@ -99,7 +99,7 @@ class GameModel extends Model {
   async deleteProposedGoalByGoalId(gameId: string, goalId: string) {
     const goalIndex = await this.getProposedGoalIndex(gameId, goalId);
     if (goalIndex < 0) return false;
-    const deleted = await gameModel.deleteProposedGoal(goalIndex, gameId);
+    const deleted = await this.deleteProposedGoal(goalIndex, gameId);
     return deleted;
   }
 
@@ -113,11 +113,9 @@ class GameModel extends Model {
     username: string
   ) {
     const proposedGoalIndex = await this.getProposedGoalIndex(gameId, goalId);
-    console.log('proposedGoalIndex',proposedGoalIndex)
     if (proposedGoalIndex < 0) return false;
     const game = await this.getGameById(gameId)
     const votedByIndex = game.proposedGoals[proposedGoalIndex].votedBy.findIndex(user=>user==username);
-    console.log('votedByIndex',votedByIndex);
     if (votedByIndex < 0) return false;
     
     return this.delete(

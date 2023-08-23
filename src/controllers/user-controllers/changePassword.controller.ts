@@ -4,7 +4,7 @@ import {RequestHandler} from 'express';
 import {changePasswordRequest} from '../../interfaces/Requests/changePasswordRequest';
 import {CustomServerError} from '../../errors/CustomServerError';
 import {hashPassword} from '../../utils/hashPassword';
-import {userModel} from '../../db/Models/User.model';
+import {userModel} from '../../db/Models/modelInstances';
 import {ChangePasswordResponse} from '../../interfaces/Responses/changePasswordResponse';
 import { User } from '../../interfaces/User.interface';
 
@@ -22,7 +22,7 @@ export const changePasswordController: RequestHandler = async (
     );
 
   //hash the password
-  const user = await userModel.findByName<User>(body.username);
+  const user = await userModel.findByName(body.username);
   if(!user) throw new CustomServerError('Invalid user',400);
   const temppassword = user.tempPassword;
   if(temppassword){

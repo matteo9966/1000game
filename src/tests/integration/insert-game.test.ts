@@ -8,8 +8,8 @@ import {
   addAccessTokenMiddleware,
   utils,
 } from '../../middleware/addAccessToken.middleware';
-import {userModel} from '../../db/Models/User.model';
-import {gameModel} from '../../db/Models/Game.model';
+import {userModel} from '../../db/Models/modelInstances';
+import {gameModel} from '../../db/Models/modelInstances';
 
 chai.use(chaiAsPromised);
 const app = express();

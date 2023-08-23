@@ -1,8 +1,7 @@
 import {RequestHandler} from 'express';
 import {UpvoteGoalRequest} from '../../interfaces/Requests/upvoteGoalRequest';
 import {CustomServerError} from '../../errors/CustomServerError';
-import {gameModel} from '../../db/Models/Game.model';
-import {Game} from '../../interfaces/Game.interface';
+import {gameModel} from '../../db/Models/modelInstances';
 import {UpvoteGoalResponse} from '../../interfaces/Responses/upvoteGoalResponse';
 import {reachedVoteThreshold} from '../../utils/reachedVoteCounter';
 
@@ -22,10 +21,10 @@ export const upvoteGoalController: asyncRequestHandler = async (
     );
   }
 
-  const game = await gameModel.findById<Game>(body.gameId);
+  const game = await gameModel.getGameById(body.gameId);
   if (!game) throw new CustomServerError('no game with this provided Id', 400);
-
-  const user = game.players.find(p => p === body.username);
+  //  console.log(JSON.stringify(game,null,2))
+  const user = game.players?.find(p => p === body.username);
   if (!user) {
     throw new CustomServerError(
       "You don't have the authorization to edit this game",
@@ -48,7 +47,7 @@ export const upvoteGoalController: asyncRequestHandler = async (
     );
   }
 
-  //removing the username from proposedGoal if 
+  //removing the username from proposedGoal if
   if (proposedGoal?.votedBy?.includes(body.username)) {
     //remove userIndex from the goal
     const deleted =
@@ -61,6 +60,10 @@ export const upvoteGoalController: asyncRequestHandler = async (
     if (!deleted)
       throw new CustomServerError('Error while removing your vote', 500);
     const updatedGame = await gameModel.getGameById(body.gameId);
+
+    if (!updatedGame) {
+      throw new CustomServerError('Error while getting the updated game', 500);
+    }
 
     const response: UpvoteGoalResponse = {
       data: {
@@ -104,7 +107,9 @@ export const upvoteGoalController: asyncRequestHandler = async (
   }
 
   const updatedGame = await gameModel.getGameById(body.gameId);
-
+  if (!updatedGame) {
+    throw new CustomServerError('Error while getting the updated game', 500);
+  }
   const response: UpvoteGoalResponse = {
     data: {
       goals: updatedGame.goals,

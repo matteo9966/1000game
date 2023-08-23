@@ -4,9 +4,9 @@ import {RequestHandler, response} from 'express';
 import { LoginRequest } from '../../interfaces/Requests/loginAdminRequest';
 import { CustomServerError } from '../../errors/CustomServerError';
 import { verifyPassword } from '../../utils/verifyPassword';
-import { userModel } from '../../db/Models/User.model';
+import { userModel } from '../../db/Models/modelInstances';
 import { User } from '../../interfaces/User.interface';
-import { gameModel } from '../../db/Models/Game.model';
+import { gameModel } from '../../db/Models/modelInstances';
 import { LoginResponse } from '../../interfaces/Responses/loginResponse';
 import { logger2 } from '../../logger/winston.logger';
 import { basename } from 'path';
@@ -24,7 +24,7 @@ if(!body?.name || !body?.password){
 
 
 
-const user =  await userModel.findByName<User>(body.name);
+const user =  await userModel.findByName(body.name);
 if(!user){
     throw new CustomServerError('No user with provided ID',401)
 }

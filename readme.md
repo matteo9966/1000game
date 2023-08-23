@@ -103,4 +103,6 @@ If there is something running on the pors 10000 and 8080 you could kill the
 processes using 
 npx kill-port --port 10000
 
+USE NODE V 20
+
 https://www.npmjs.com/package/kill-port

@@ -39,6 +39,17 @@ const proposedGoal: ProposedGoal = {
   id: 'a-proposed-goal-id',
 };
 
+const mockUser: User = {
+  gameID: '',
+  goals: [],
+  id: 'userid',
+  name: 'random-username',
+  password: 'some-random-password',
+  proposed: [],
+  role: 'admin',
+  tempPassword: 'some-temp-password',
+};
+
 async function insertAGame() {
   const game: Game = {
     name: 'test-game-name',
@@ -52,6 +63,18 @@ async function insertAGame() {
   const newGame = JSON.parse(JSON.stringify({...game}));
   await firestoreGameModel.insertGame(newGame);
   return newGame as Game;
+}
+
+async function insertAGameAndUser(game: Game, user: User | null) {
+  try {
+    if (user) {
+      game.players = [user.name];
+      await firestoreUserModel.insertUser(user);
+    }
+    await firestoreGameModel.insertGame(game);
+  } catch (error) {
+    fail('error while inserting unser and game in the database');
+  }
 }
 
 async function clearFirestore() {
@@ -235,6 +258,242 @@ export function firestoreGameModelTests() {
       it('should not return anything if the game does', async () => {
         const game = await firestoreGameModel.getGameById('non-existing-id');
         expect(game).to.be.null;
+      });
+    });
+
+    describe('getGameByIdLookupPlayers', () => {
+      it('should return a game with looked up users based on their id', async () => {
+        await setup();
+        const fakeGame = JSON.parse(JSON.stringify(game));
+        const fakeUser = JSON.parse(JSON.stringify(mockUser));
+        await insertAGameAndUser(fakeGame, fakeUser);
+        const data = await firestoreGameModel.getGameByIdLookupPlayers(
+          fakeGame.id
+        );
+        expect(data).to.not.be.null;
+        expect(data?.players?.length).to.eq(1);
+        const player = data?.players[0];
+        expect(player?.name).to.eq(fakeUser.name);
+      });
+      it('should return the game with an empty array if there are no corresponding users to the username', async () => {
+        await setup();
+        const fakeGame = JSON.parse(JSON.stringify(game));
+        fakeGame.players = ['non-existing-user'];
+        await insertAGameAndUser(fakeGame, null);
+        const data = await firestoreGameModel.getGameByIdLookupPlayers(
+          fakeGame.id
+        );
+        expect(data).to.not.be.null;
+        expect(data?.players.length).to.eq(0);
+      });
+      it('should return null if there is no game with the provided id', async () => {
+        await setup();
+        const data = await firestoreGameModel.getGameByIdLookupPlayers(
+          'non-existing-game-id'
+        );
+        expect(data).to.be.null;
+      });
+      it('should return the looked up players without the password property', async () => {
+        await setup();
+        const fakeGame = JSON.parse(JSON.stringify(game));
+        const fakeUser = JSON.parse(JSON.stringify(mockUser));
+        await insertAGameAndUser(fakeGame, fakeUser);
+        const data = await firestoreGameModel.getGameByIdLookupPlayers(
+          fakeGame.id
+        );
+        const player = data?.players[0];
+        expect(player).to.not.be.null;
+        expect(player).to.not.be.undefined;
+        expect(player).to.not.haveOwnProperty('password');
+      });
+    });
+
+    describe('insertPlayer', () => {
+      it('should insert a player in an existing game and return true', async () => {
+        await setup();
+        const fakeGame = JSON.parse(JSON.stringify(game));
+        const username = 'some-username';
+        await insertAGameAndUser(fakeGame, null);
+        const result = await firestoreGameModel.insertPlayer(
+          fakeGame.id,
+          username
+        );
+        expect(result).to.be.true;
+        const gameInDB = (
+          await firestoreDB.collection('Games').doc(fakeGame.id).get()
+        ).data() as Game;
+        expect(gameInDB.players).to.contain(username);
+      });
+      it('should not insert a player if game does not exist and return false', async () => {
+        await setup();
+        const result = await firestoreGameModel.insertPlayer(
+          'non-existing-game',
+          'some-random-name'
+        );
+        expect(result).to.be.false;
+      });
+    });
+
+    describe('upvoteProposedGoal', () => {
+      it('should add username to votedBy list in the game if game exists and proposed goal exists', async () => {
+        await setup();
+        const fakeGame = JSON.parse(JSON.stringify(game)) as Game;
+        const fakeProposedGoal: ProposedGoal = {
+          proposedBy: '',
+          votedBy: [],
+          goal: JSON.parse(JSON.stringify(goal)),
+          id: 'a-proposed-goal-id',
+        };
+        const username = 'some-random-username';
+        await insertAGameAndUser(fakeGame, null);
+        await firestoreGameModel.appendProposedGoals(
+          [fakeProposedGoal],
+          fakeGame.id
+        );
+        const result = await firestoreGameModel.upvoteProposedGoal(
+          fakeGame.id,
+          fakeProposedGoal.id,
+          username
+        );
+
+        const expectedProposedGoal = {
+          ...proposedGoal,
+          votedBy: [username],
+        };
+
+        expect(result).to.be.true;
+        const proposedGoalData = (
+          await firestoreDB
+            .collection('Games')
+            .doc(fakeGame.id)
+            .collection('proposedGoals')
+            .doc(fakeProposedGoal.id)
+            .get()
+        ).data();
+
+        expect(proposedGoalData).to.not.be.undefined;
+
+        expect(proposedGoalData).to.deep.eq(expectedProposedGoal);
+      });
+
+      it('should not add username to votedBy if there is no proposedGoal', async () => {
+        await setup();
+        const fakeGame = JSON.parse(JSON.stringify(game)) as Game;
+        await insertAGameAndUser(fakeGame, null);
+        const result = await firestoreGameModel.upvoteProposedGoal(
+          fakeGame.id,
+          'non-existing',
+          'non-existin-username'
+        );
+        expect(result).to.be.false;
+      });
+      it('should not add username to votedBy if there is no game', async () => {
+        await setup();
+        const result = await firestoreGameModel.upvoteProposedGoal(
+          'fake.game-id',
+          'non-existing',
+          'non-existin-username'
+        );
+        expect(result).to.be.false;
+      });
+    });
+    describe('deleteProposedGoalByGoalId', () => {
+      it('should delete a proposed goal from the proposed goal collection', async () => {
+        await setup();
+        const fakeGame = JSON.parse(JSON.stringify(game)) as Game;
+        await insertAGameAndUser(fakeGame, null);
+        const fakeProposedGoal: ProposedGoal = {
+          proposedBy: '',
+          votedBy: [],
+          goal: JSON.parse(JSON.stringify(goal)),
+          id: 'a-proposed-goal-id',
+        };
+        await firestoreGameModel.appendProposedGoals(
+          [fakeProposedGoal],
+          fakeGame.id
+        );
+
+        const proposedGoalscount = (await firestoreDB
+          .collection('Games')
+          .doc(fakeGame.id)
+          .collection('proposedGoals')
+          .count()
+          .get()).data();
+        expect(proposedGoalscount.count,'there should be 1 proposed goal').to.eq(1);
+
+        const result = await firestoreGameModel.deleteProposedGoalByGoalId(
+          fakeGame.id,
+          fakeProposedGoal.id
+        );
+        expect(result,'result of deletion should be true').to.be.true;
+        const proposedGoalscountAfterDelete = (await firestoreDB
+          .collection('Games')
+          .doc(fakeGame.id)
+          .collection('proposedGoals')
+          .count()
+          .get()).data();
+        expect(proposedGoalscountAfterDelete.count).to.eq(0);
+      });
+
+      it('should return false if there is no game with provided id', async () => {
+        await setup();
+        const result = await firestoreGameModel.deleteProposedGoalByGoalId(
+          'game-that-does-not-exist',
+          'goal-that-does-not-exist'
+        );
+        expect(result).to.be.false;
+      });
+    });
+    describe('removeUsernameFromProposedGoalUserUpvoteList', () => {
+      it('should remove the username from votedBy list if game and collection exists', async () => {
+        await setup();
+        const fakeGame = JSON.parse(JSON.stringify(game)) as Game;
+        const username = 'a-user-that-voted';
+        await insertAGameAndUser(fakeGame, null);
+        const fakeProposedGoal: ProposedGoal = {
+          proposedBy: '',
+          votedBy: [username],
+          goal: JSON.parse(JSON.stringify(goal)),
+          id: 'a-proposed-goal-id',
+        };
+        const proposedGoalRef = firestoreDB
+          .collection('Games')
+          .doc(fakeGame.id)
+          .collection('proposedGoals')
+          .doc(fakeProposedGoal.id);
+
+        await firestoreGameModel.appendProposedGoals(
+          [fakeProposedGoal],
+          fakeGame.id
+        );
+
+        const dataBeforeUpdate = (
+          await proposedGoalRef.get()
+        ).data() as ProposedGoal;
+        expect(dataBeforeUpdate).to.not.be.undefined;
+        expect(dataBeforeUpdate.votedBy.length).to.eq(1);
+
+        const result =
+          await firestoreGameModel.removeUsernameFromProposedGoalUserUpvoteList(
+            fakeGame.id,
+            fakeProposedGoal.id,
+            username
+          );
+
+        const data = (await proposedGoalRef.get()).data() as ProposedGoal;
+        expect(result).to.be.true;
+        expect(data).to.not.be.undefined;
+        expect(data.votedBy.length).to.eq(0);
+      });
+      it('should return false if there is no game with provided id', async () => {
+        await setup();
+        const result =
+          await firestoreGameModel.removeUsernameFromProposedGoalUserUpvoteList(
+            'fake.-game',
+            'fake.-id',
+            'fake-username'
+          );
+        expect(result).to.be.false;
       });
     });
   });

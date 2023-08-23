@@ -3,7 +3,7 @@ import {Request, Response} from 'express';
 import {insertReachedGoalController} from './insertGoal.controller';
 import * as chai from 'chai';
 import {CustomServerError} from '../../errors/CustomServerError';
-import {gameModel} from '../../db/Models/Game.model';
+import {gameModel} from '../../db/Models/modelInstances';
 import * as sinon from 'sinon';
 import {Game} from '../../interfaces/Game.interface';
 const expect = chai.expect;

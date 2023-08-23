@@ -3,10 +3,10 @@ import {Game, GameLookupPlayers} from '../../interfaces/Game.interface';
 import {InsertGameRequest} from '../../interfaces/Requests/InsertGameRequest';
 import {CustomServerError} from '../../errors/CustomServerError';
 import {idGenerator} from '../../utils/idGenerator';
-import {gameModel} from '../../db/Models/Game.model';
+import {gameModel} from '../../db/Models/modelInstances';
 import {InsertGameResponse} from '../../interfaces/Responses/InsertGameResponse';
-import {userModel} from '../../db/Models/User.model';
-import {User} from '../../interfaces/User.interface';
+import {userModel} from '../../db/Models/modelInstances';
+// import {User} from '../../interfaces/User.interface';
 import {Goal} from '../../interfaces/Goal.interface';
 import {gamedata} from './gamedata';
 
@@ -52,7 +52,7 @@ export const insertGameController: (...args:Parameters<RequestHandler>)=>Promise
   }
 
   //same logic as the
-  const user = await userModel.findByName<User>(body.username);
+  const user = await userModel.findByName(body.username);
   if (!user) {
     throw new CustomServerError('Invalid username', 400);
   }

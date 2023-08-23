@@ -1,5 +1,5 @@
-import {gameModel} from '../db/Models/Game.model';
-import {userModel} from '../db/Models/User.model';
+import {gameModel} from '../db/Models/modelInstances';
+import {userModel} from '../db/Models/modelInstances';
 import {CustomServerError} from '../errors/CustomServerError';
 import {User} from '../interfaces/User.interface';
 import { logger2 } from '../logger/winston.logger';
@@ -10,7 +10,7 @@ export async function checkAdminPermission(adminId:string,gameId:string){
   
 
     try {
-      const user = await userModel.findByName<User>(adminId);
+      const user = await userModel.findByName(adminId);
       if (!user) {
         throw new CustomServerError('User with provided id does not exist', 400);
       }

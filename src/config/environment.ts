@@ -7,6 +7,7 @@ export const environment = {
   dbname: '',
   privatekey: '',
   publickey: '',
+  firebase:''
 };
 
 export function initEnvironment(parsed: DotenvParseOutput) {
@@ -16,5 +17,6 @@ export function initEnvironment(parsed: DotenvParseOutput) {
   environment.port = parsed.PORT;
   environment.privatekey = B64ToASCII(parsed.PRIVATEKEY)!;
   environment.publickey = B64ToASCII(parsed.PRIVATEKEY)!;
+  environment.firebase = parsed.FIRESTORE_EMULATOR_HOST;
 }
 

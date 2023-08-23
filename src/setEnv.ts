@@ -1,5 +1,5 @@
 import {config} from 'dotenv';
-import {initEnvironment} from './config/environment';
+import {environment, initEnvironment} from './config/environment';
 let pth = '';
 
 switch (process.env.NODE_ENV?.trim()) {
@@ -27,7 +27,8 @@ function setConfig() {
     process.exit(1);
   }
   initEnvironment(parsed);
-  console.log('environment parsed successfully!')
+  console.log('environment parsed successfully!',
+  JSON.stringify({env:environment.env,FIRESTORE_EMULATOR_HOST:environment.firebase}))
 }
 
 setConfig();

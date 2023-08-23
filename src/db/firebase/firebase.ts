@@ -16,7 +16,10 @@ import * as goal_database_key from './goals-database-firebase-adminsdk-5g0pg-31c
 // };
 
 // Initialize Firebase
-
+console.log(`|\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\|
+process.env.FIRESTORE_EMULATOR_HOST is:
+ ${process.env.FIRESTORE_EMULATOR_HOST}
+|\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\|`)
 export function initializeFirestore(){
     
     if(admin.apps.length>0){

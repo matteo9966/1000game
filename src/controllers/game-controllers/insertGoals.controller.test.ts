@@ -1,6 +1,6 @@
 import {insertProposedGoalsController} from './insertGoals.controller';
 import * as sinon from 'sinon';
-import {gameModel} from '../../db/Models/Game.model';
+import {gameModel} from '../../db/Models/modelInstances';
 import {Request, Response} from 'express';
 import * as chai from 'chai';
 import {CustomServerError} from '../../errors/CustomServerError';
@@ -9,19 +9,19 @@ import {Game} from '../../interfaces/Game.interface';
 const expect = chai.expect;
 describe('insertProposedGoalsController', function () {
   function setupFunction() {
-    let findById: sinon.SinonStub;
+    // let findById: sinon.SinonStub;
     let getGameById: sinon.SinonStub;
     let appendPropgoalsStub: sinon.SinonStub;
     const end = sinon.spy() as Response['end'];
     const status = sinon.spy() as Response['status'];
-    findById = sinon.stub(gameModel, 'findById');
-    sinon.stub(gameModel, 'findByName');
+    // findById = sinon.stub(gameModel, 'findById');
+    // sinon.stub(gameModel, 'findByName');
     sinon.stub(gameModel, 'appendGoals');
     getGameById = sinon.stub(gameModel, 'getGameById');
     appendPropgoalsStub = sinon.stub(gameModel, 'appendProposedGoals');
     const json = sinon.spy() as Response['json'];
 
-    return {findById, appendPropgoalsStub, getGameById, end, status, json};
+    return { appendPropgoalsStub, getGameById, end, status, json};
   }
 
   this.afterEach(() => {
@@ -58,7 +58,7 @@ describe('insertProposedGoalsController', function () {
   });
 
   it('should add proposed goal given an array of goals in the body request', async function () {
-    const {findById, appendPropgoalsStub, getGameById, end, status, json} =
+    const { appendPropgoalsStub, getGameById, end, status, json} =
       setupFunction();
 
     const foundGame: Game = {
@@ -70,9 +70,9 @@ describe('insertProposedGoalsController', function () {
       proposedGoals: [],
     };
 
-    findById.resolves(foundGame);
+    getGameById.resolves(foundGame);
     appendPropgoalsStub.resolves(true);
-    getGameById.resolves(true);
+    // getGameById.resolves(true);
 
     const reqBody: InsertProposedGoalsRequest = {
       gameId: 'gameid',

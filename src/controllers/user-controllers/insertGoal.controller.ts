@@ -2,9 +2,9 @@ import {RequestHandler} from 'express';
 import {insertReachedGoalRequest} from '../../interfaces/Requests/InsertRechedGoalRequest';
 import {CustomServerError} from '../../errors/CustomServerError';
 import {logger2} from '../../logger/winston.logger';
-import {gameModel} from '../../db/Models/Game.model';
+import {gameModel} from '../../db/Models/modelInstances';
 import {Game} from '../../interfaces/Game.interface';
-import {userModel} from '../../db/Models/User.model';
+import {userModel} from '../../db/Models/modelInstances';
 import {InsertReachedGoalResponse} from '../../interfaces/Responses/InsertReachedGoalResponse';
 
 /**
@@ -59,11 +59,12 @@ export const insertReachedGoalController: (
   console.log({methodname: req.method});
 
   if (method.toLowerCase() === 'delete') {
-    const goalIndex = await userModel.getGoalIndexById(body.name, body.goalId);
-    if (goalIndex < 0) {
-      throw new CustomServerError('no goal found', 400);
-    }
-    const deleted = await userModel.removeGoalByIndex(body.name, goalIndex);
+    // userModel
+    // const goalIndex = await userModel.getGoalIndexById(body.name, body.goalId);
+    // if (goalIndex < 0) {
+    //   throw new CustomServerError('no goal found', 400);
+    // }
+    const deleted = await userModel.removeGoalFromUser(body.name, body.goalId);
     if (deleted) {
       const responseBody: InsertReachedGoalResponse = {
         data: {deleted: true},
@@ -72,10 +73,10 @@ export const insertReachedGoalController: (
       res.json(responseBody);
     }
   } else {
-    const goalIndex = await userModel.getGoalIndexById(body.name, body.goalId);
-    if(goalIndex>=0){
-      throw new CustomServerError('You already inserted this goal',400);
-    }
+    // const goalIndex = await userModel.getGoalIndexById(body.name, body.goalId);
+    // if(goalIndex>=0){
+    //   throw new CustomServerError('You already inserted this goal',400);
+    // }
     const inserted = await userModel.addGoalIdToUser(body.name, body.goalId);
     if (!inserted) {
       throw new CustomServerError('error while saving the goal', 500);

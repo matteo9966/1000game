@@ -2,7 +2,7 @@
 
 import {RequestHandler} from 'express';
 import {CustomServerError} from '../../errors/CustomServerError';
-import {gameModel} from '../../db/Models/Game.model';
+import {gameModel} from '../../db/Models/modelInstances';
 import {RefreshResponse} from '../../interfaces/Responses/refreshResponse';
 
 export const refreshGameController: RequestHandler = async (req, res, next) => {

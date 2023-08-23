@@ -1,8 +1,8 @@
 // admin user can add user to a game, it makes two updates: insert user in userdb insert user in db
 
 import {RequestHandler, response} from 'express';
-import {gameModel} from '../../db/Models/Game.model';
-import {userModel} from '../../db/Models/User.model';
+import {gameModel} from '../../db/Models/modelInstances';
+import {userModel} from '../../db/Models/modelInstances';
 import {CustomServerError} from '../../errors/CustomServerError';
 import {InsertUserRequest} from '../../interfaces/Requests/InsertUserRequest';
 import {User} from '../../interfaces/User.interface';
@@ -10,8 +10,7 @@ import {hashPassword} from '../../utils/hashPassword';
 import {idGenerator} from '../../utils/idGenerator';
 import {parseNewUser} from '../../utils/parseObject';
 import {InsertUserResponse} from '../../interfaces/Responses/InsertUserResponse';
-import {logger2} from '../../logger/winston.logger';
-import {basename} from 'path';
+
 
 
 export const insertUserController: RequestHandler = async (req, res, next) => {
@@ -26,7 +25,7 @@ export const insertUserController: RequestHandler = async (req, res, next) => {
 
   //check if the game already has the same username
 
-  const user = await userModel.findByName<User>(body.adminId);
+  const user = await userModel.findByName(body.adminId);
   if (!user) {
     throw new CustomServerError('User with provided id does not exist', 400);
   }

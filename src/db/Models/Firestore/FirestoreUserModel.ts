@@ -12,22 +12,22 @@ class UserFirebaseModel extends FirebaseModel {
 
   async insertUser(user: User) {
     try {
-
-      const transactionResult = await this.db.runTransaction(async (transaction)=>{
-        try {
-          const userDocRef = this.collection
-          .doc(user.name);
-          const document = await transaction.get(userDocRef)
-          if(document.exists){
-            return false
+      const transactionResult = await this.db.runTransaction(
+        async transaction => {
+          try {
+            const userDocRef = this.collection.doc(user.name);
+            const document = await transaction.get(userDocRef);
+            if (document.exists) {
+              return false;
+            }
+            const transactionInstance = transaction.set(userDocRef, user);
+            return true;
+          } catch (error) {
+            console.log("ERROR:\n\n",{error});
+            return false;
           }
-         const transactionInstance =  transaction.set(userDocRef,user);
-         return true 
-        } catch (error) {
-          return false
         }
-
-      })
+      );
 
       // const result = await this.collection
       //   .doc(user.name)
@@ -60,11 +60,9 @@ class UserFirebaseModel extends FirebaseModel {
 
   async addGoalIdToUser(username: string, goalId: string) {
     try {
-      const result = await this.collection.doc(username).update(
-        {
-          goals: FieldValue.arrayUnion(goalId),
-        }
-      );
+      const result = await this.collection.doc(username).update({
+        goals: FieldValue.arrayUnion(goalId),
+      });
       logger2(result, __filename);
       return true;
     } catch (error) {
@@ -80,11 +78,9 @@ class UserFirebaseModel extends FirebaseModel {
    */
   async removeGoalFormUser(username: string, goalId: string) {
     try {
-      const result = await this.collection.doc(username).update(
-        {
-          goals: FieldValue.arrayRemove(goalId),
-        }
-      );
+      const result = await this.collection.doc(username).update({
+        goals: FieldValue.arrayRemove(goalId),
+      });
       return true;
     } catch (error) {
       logger2(error, __filename);
@@ -94,11 +90,9 @@ class UserFirebaseModel extends FirebaseModel {
 
   async changeUserPassword(username: string, password: string) {
     try {
-      const result = await this.collection.doc(username).update(
-        {
-          password: password,
-        }
-      );
+      const result = await this.collection.doc(username).update({
+        password: password,
+      });
       return true;
     } catch (error) {
       logger2(error, __filename);
@@ -108,11 +102,43 @@ class UserFirebaseModel extends FirebaseModel {
 
   async removeTempPassword(username: string) {
     try {
-      const result = await this.collection.doc(username).update(
-        {
-          tempPassword: null,
-        }
-      );
+      const result = await this.collection.doc(username).update({
+        tempPassword: null,
+      });
+      return true;
+    } catch (error) {
+      logger2(error, __filename);
+      return false;
+    }
+  }
+
+  async getUser(username: string) {
+    try {
+      const user = await this.collection.doc(username).get();
+      if (!user) {
+        return null;
+      }
+      return user.data() as User;
+    } catch (error) {
+      logger2(error, __filename);
+      return null;
+    }
+  }
+
+  /**
+   * @description alias for compatibility
+   * @param username
+   * @returns
+   */
+  findByName(username: string) {
+    return this.getUser(username);
+  }
+
+  async removeGoalFromUser(username: string, goalId: string) {
+    try {
+      await this.collection
+        .doc(username)
+        .update({goals: FieldValue.arrayRemove(goalId)});
       return true;
     } catch (error) {
       logger2(error, __filename);

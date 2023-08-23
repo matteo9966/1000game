@@ -1,7 +1,7 @@
 import {upvoteGoalController} from './upvoteGoal.controller';
 import * as gameMock from '../../../mocks/mockData.json';
 import * as sinon from 'sinon';
-import {gameModel} from '../../db/Models/Game.model';
+import {gameModel} from '../../db/Models/modelInstances';
 import {expect} from 'chai';
 import {Request, Response} from 'express';
 import {CustomServerError} from '../../errors/CustomServerError';
@@ -9,11 +9,11 @@ import {Game} from '../../interfaces/Game.interface';
 import {fail} from 'assert';
 describe('upvoteGoalController', () => {
   function setup() {
-    const findById = sinon.stub(gameModel, 'findById');
+    
     const appendGoals = sinon.stub(gameModel, 'appendGoals');
-    const getProposedGoalIndex = sinon.stub(gameModel, 'getProposedGoalIndex');
-    const deleteProposedGoal = sinon.stub(gameModel, 'deleteProposedGoal');
+
     const upvoteProposedGoal = sinon.stub(gameModel, 'upvoteProposedGoal');
+    const deleteProposedGoalByGoalId = sinon.stub(gameModel,'deleteProposedGoalByGoalId');
     const removeUsernameFromProposedGoalUserUpvoteList = sinon.stub(
       gameModel,
       'removeUsernameFromProposedGoalUserUpvoteList'
@@ -21,10 +21,9 @@ describe('upvoteGoalController', () => {
     const getGameById = sinon.stub(gameModel, 'getGameById');
     const json = sinon.spy() as Response['json'];
     return {
-      findById,
+      
       appendGoals,
-      getProposedGoalIndex,
-      deleteProposedGoal,
+      deleteProposedGoalByGoalId,
       upvoteProposedGoal,
       getGameById,
       removeUsernameFromProposedGoalUserUpvoteList,
@@ -37,8 +36,8 @@ describe('upvoteGoalController', () => {
     sinon.restore();
   });
   it('should throw if user is not part of game', async function () {
-    const {findById} = setup();
-    findById.resolves(gameMock);
+    const {getGameById} = setup();
+    getGameById.resolves(gameMock);
     const invalidId = 'invalid-user-id111111';
 
     try {
@@ -60,7 +59,7 @@ describe('upvoteGoalController', () => {
 
   it('should throw if user created the goal and tries to vote for it', async function () {
     try {
-      const {findById} = setup();
+      const {getGameById} = setup();
       const gameMockCopy = JSON.parse(JSON.stringify(gameMock)) as Game;
       const username = 'username-1';
       gameMockCopy.proposedGoals.push({
@@ -76,7 +75,7 @@ describe('upvoteGoalController', () => {
         votedBy: [],
       });
       gameMockCopy.players.push(username);
-      findById.resolves(gameMockCopy);
+      getGameById.resolves(gameMockCopy);
 
       await upvoteGoalController(
         {
@@ -102,10 +101,8 @@ describe('upvoteGoalController', () => {
 
   it('should append goal to goals if the voters are at least 50% of the players', async () => {
     const {
-      findById,
+      deleteProposedGoalByGoalId,
       appendGoals,
-      getProposedGoalIndex,
-      deleteProposedGoal,
       upvoteProposedGoal,
       getGameById,
       json,
@@ -128,13 +125,10 @@ describe('upvoteGoalController', () => {
       proposedBy: 'some-random-player',
       votedBy: [...['p1']],
     });
-
-    findById.resolves(gameMockCopy);
+    deleteProposedGoalByGoalId.resolves(true);
+    getGameById.resolves(gameMockCopy);
     appendGoals.resolves(true);
-    getProposedGoalIndex.resolves(1);
-    deleteProposedGoal.resolves(true);
     upvoteProposedGoal.resolves();
-    getGameById.resolves({} as Game);
 
     await upvoteGoalController(
       {
@@ -150,16 +144,13 @@ describe('upvoteGoalController', () => {
 
     sinon.assert.calledOnce(appendGoals);
     sinon.assert.notCalled(upvoteProposedGoal);
-    sinon.assert.calledOnce(getGameById);
   });
 
   describe('removing the vote from an upvoted proposedGoal', () => {
     it('should remove the username from the votedBy array', async () => {
       const {
-        findById,
         appendGoals,
-        getProposedGoalIndex,
-        deleteProposedGoal,
+        deleteProposedGoalByGoalId,
         upvoteProposedGoal,
         getGameById,
         json,
@@ -190,13 +181,12 @@ describe('upvoteGoalController', () => {
         },
       } as Request;
 
-      findById.resolves(gameMockCopy);
+      getGameById.resolves(gameMockCopy);
        
-      deleteProposedGoal.resolves(true);
+      removeUsernameFromProposedGoalUserUpvoteList.resolves(true);
       upvoteProposedGoal.resolves();
-      getGameById.resolves({} as Game);
       removeUsernameFromProposedGoalUserUpvoteList.resolves(true)
-      findById.resolves(gameMockCopy);
+      getGameById.resolves(gameMockCopy);
 
       await upvoteGoalController(request, {json} as Response, () => {});
       sinon.assert.calledOnce(removeUsernameFromProposedGoalUserUpvoteList);

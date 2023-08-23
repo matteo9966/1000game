@@ -37,9 +37,9 @@ async function getAllUsers() {
 export function firestoreUserModelTests() {
   describe('FIRESTORE UserModel', () => {
     // clear the firestore after all the tests
-    after(async () => {
-      await clearFirestore();
-    });
+    // after(async () => {
+    //   await clearFirestore();
+    // });
     async function setup() {
       return clearFirestore();
     }
@@ -47,6 +47,7 @@ export function firestoreUserModelTests() {
     describe('setup function', () => {
       it('should clear the firestore database and there should not be any data', async () => {
         const ok = await setup();
+        console.log({FIRESTORE_EMULATOR_HOST:process.env.FIRESTORE_EMULATOR_HOST})
         expect(ok).to.be.true;
         const collectionlist = await getAllUsers();
         console.log(collectionlist);
@@ -55,8 +56,8 @@ export function firestoreUserModelTests() {
     });
 
     describe('insertUser', () => {
-      it('should add a user to the firestore databae and there should be only one user in the Users collection', async () => {
-        await setup();
+      it.only('should add a user to the firestore databae and there should be only one user in the Users collection', async () => {
+        // await setup();
         const user = {...mockUser};
         const result = await firestoreUserModel.insertUser(user);
         expect(result).to.be.true;
@@ -64,6 +65,7 @@ export function firestoreUserModelTests() {
           .collection('Users')
           .doc(user.name)
           .get();
+         console.log('in test:\n\n\n\n',{user})
         expect(userindb.exists).to.be.true;
       });
 
@@ -233,5 +235,19 @@ export function firestoreUserModelTests() {
         expect(result).to.be.false;
       });
     });
+
+    describe('getUser',()=>{
+      it('should return a user if it exists',async()=>{
+        await setup(); 
+        await firestoreUserModel.insertUser({...mockUser})
+        const user = await firestoreUserModel.getUser(mockUser.name);
+        expect(user).to.not.be.null;
+        expect(user).to.deep.eq(mockUser);
+      })
+      it('should return null if no user with username',async()=>{
+        const user = await firestoreUserModel.getUser('non-existing-username');
+        expect(user).to.not.be.null;
+      })
+    })
   });
 }

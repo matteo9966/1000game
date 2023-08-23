@@ -4,7 +4,7 @@ import {RequestHandler} from 'express';
 import {Game} from '../../interfaces/Game.interface';
 import {CustomServerError} from '../../errors/CustomServerError';
 import {idGenerator} from '../../utils/idGenerator';
-import {appendGoalType, gameModel} from '../../db/Models/Game.model';
+import { gameModel} from '../../db/Models/modelInstances';
 import {InsertGoalResponse} from '../../interfaces/Responses/insertGoalsResponse';
 import {InsertProposedGoalsRequest} from '../../interfaces/Requests/InsertProposedGoalsRequest';
 import {parseNewGoal} from '../../utils/parseObject';
@@ -49,7 +49,7 @@ export const insertProposedGoalsController: asyncRequestHandler = async (
     );
   }
 
-  const foundGame = await gameModel.findById<Game>(body.gameId);
+  const foundGame = await gameModel.getGameById(body.gameId);
 
   if (!foundGame) {
     throw new CustomServerError('Invalid Game,doesnt exist', 400);

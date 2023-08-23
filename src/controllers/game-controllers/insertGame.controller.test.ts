@@ -1,13 +1,13 @@
 import {expect} from 'chai';
-import {gameModel} from '../../db/Models/Game.model';
-import {userModel} from '../../db/Models/User.model';
+import {gameModel} from '../../db/Models/modelInstances'
+import {userModel} from '../../db/Models/modelInstances';
 import {insertGameController} from './insertGame.controller';
 import * as sinon from 'sinon';
 import * as chaiAsPromised from 'chai-as-promised';
 import * as chai from 'chai';
 import {Request, Response} from 'express';
 chai.use(chaiAsPromised);
-
+//todo: check tests wit new models!!!
 describe('insertGameController', () => {
   let findByNameStub: sinon.SinonStub;
   let addGameIdToUserStub: sinon.SinonStub;

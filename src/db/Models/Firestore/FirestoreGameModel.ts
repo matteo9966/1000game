@@ -4,13 +4,11 @@ import {User} from '../../../interfaces/User.interface';
 import {logger2} from '../../../logger/winston.logger';
 import {firestoreDB} from '../../firebase/firebase';
 import {DocumentReference, FieldValue} from 'firebase-admin/firestore';
-import {Game} from '../../../interfaces/Game.interface';
+import {Game, GameLookupPlayers} from '../../../interfaces/Game.interface';
 import {Goal} from '../../../interfaces/Goal.interface';
 import {ProposedGoal} from '../../../interfaces/ProposedGoal.interface';
+import {firestoreUserModel} from './FirestoreUserModel';
 
-/**
- * TODO: add a GAMESID collection with a list of empty documents with only the ids so you can avoid reading the whole document when reading
- */
 /**
  * @description this is the Games model class,
  * this version uses the subcollection feature of firebase
@@ -108,13 +106,111 @@ class GameFirebaseModel extends FirebaseModel {
     }
   }
 
-  async getGameById(gameId:string){
+  async getGameById(gameId: string) {
     const data = (await this.collection.doc(gameId).get()).data();
-    if(!Boolean(data)) return null
-    return data  
-}
+    if (!Boolean(data)) return null;
+    return data as Game;
+  }
 
+  async getGameByIdLookupPlayers(gameId: string) {
+    try {
+      const game = await this.getGameById(gameId);
+      if (!game) return null;
+      const players = game.players;
+      let playerList: Omit<User, 'password'>[] = [];
+      for (let username of players) {
+        const player = await firestoreUserModel.getUser(username);
+        if (!player) {
+          continue;
+        }
+        const {password, ...playerNoPass} = player;
+        playerList.push(playerNoPass);
+      }
+      const proposedGoalsRef = this.collection
+        .doc(gameId)
+        .collection('proposedGoals');
+      const goalsRef = this.collection.doc(gameId).collection('goals');
 
+      const proposedGoalsData = (await proposedGoalsRef.get()).docs.map(d =>
+        d.data()
+      ) as ProposedGoal[];
+      const goals = (await goalsRef.get()).docs.map(d => d.data()) as Goal[];
+      const lookupGame: GameLookupPlayers = {
+        ...game,
+        players: playerList,
+        proposedGoals: proposedGoalsData || [],
+        goals: goals || [],
+      };
+      return lookupGame;
+    } catch (error) {
+      logger2(error, __filename);
+      return null;
+    }
+  }
+
+  async insertPlayer(gameId: string, playerId: string) {
+    try {
+      await this.collection
+        .doc(gameId)
+        .update({players: FieldValue.arrayUnion(playerId)});
+      return true;
+    } catch (error) {
+      logger2(error, __filename);
+      return false;
+    }
+  }
+
+  async upvoteProposedGoal(gameId: string, goalId: string, username: string) {
+    try {
+      const proposedGoalRef = this.collection
+        .doc(gameId)
+        .collection('proposedGoals')
+        .doc(goalId);
+      const proposedGoal = await proposedGoalRef.get();
+      if (!proposedGoal.exists) {
+        throw new Error(`Game ${gameId} proposedGoal ${goalId} does not exist`);
+      }
+      await proposedGoalRef.update({votedBy: FieldValue.arrayUnion(username)});
+      return true;
+    } catch (error) {
+      logger2(error, __filename);
+      return false;
+    }
+  }
+
+  async deleteProposedGoalByGoalId(gameId: string, goalId: string) {
+    try {
+      const proposedGoalRef = this.collection
+        .doc(gameId)
+        .collection('proposedGoals')
+        .doc(goalId);
+
+      await proposedGoalRef.delete({ exists: true });
+      return true;
+    } catch (error) {
+      logger2(error, __filename);
+      return false;
+    }
+  }
+
+  async removeUsernameFromProposedGoalUserUpvoteList(
+    gameId: string,
+    goalId: string,
+    username: string
+  ) {
+    try {
+      const proposedGoalRef = this.collection
+        .doc(gameId)
+        .collection('proposedGoals')
+        .doc(goalId);
+
+      await proposedGoalRef.update({votedBy: FieldValue.arrayRemove(username)});
+      return true;
+    } catch (error) {
+      logger2(error, __filename);
+      return false;
+    }
+  }
 }
 
 export const firestoreGameModel = new GameFirebaseModel(firestoreDB, 'Games');
