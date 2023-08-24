@@ -464,3 +464,30 @@
 [19-08-23 19:00:59] 	errorMiddleware ==> Error: You are not authorized
 [20-08-23 16:20:22] 	signupAdmin.controller.js ==> ERRORE!
 [20-08-23 16:20:25] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\db\DBFirestore.js ==> [object Object]
+[24-08-23 16:41:08] 	signupAdmin.controller.js ==> ERRORE!
+[24-08-23 16:41:09] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\db\DBFirestore.js ==> [object Object]
+[24-08-23 16:42:04] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\db\Models\Firestore\FirestoreUserModel.js ==> [object Object]
+[24-08-23 16:43:16] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\db\Models\Firestore\FirestoreUserModel.js ==> [object Object]
+[24-08-23 16:46:54] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\db\Models\Firestore\FirestoreUserModel.js ==> [object Object]
+[24-08-23 16:48:29] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\db\Models\Firestore\FirestoreUserModel.js ==> [object Object]
+[24-08-23 16:48:32] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\db\Models\Firestore\FirestoreUserModel.js ==> [object Object]
+[24-08-23 16:48:34] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\db\Models\Firestore\FirestoreUserModel.js ==> [object Object]
+[24-08-23 17:05:26] 	signupAdmin.controller.js ==> ERRORE!
+[24-08-23 17:05:27] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\db\DBFirestore.js ==> [object Object]
+[24-08-23 17:08:15] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\db\Models\Firestore\FirestoreUserModel.js ==> [object Object]
+[24-08-23 17:23:37] 	signupAdmin.controller.js ==> ERRORE!
+[24-08-23 17:23:38] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\db\DBFirestore.js ==> [object Object]
+[24-08-23 17:24:43] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\db\Models\Firestore\FirestoreUserModel.js ==> [object Object]
+[24-08-23 17:27:16] 	signupAdmin.controller.js ==> ERRORE!
+[24-08-23 17:27:17] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\db\DBFirestore.js ==> [object Object]
+[24-08-23 17:27:49] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\db\Models\Firestore\FirestoreUserModel.js ==> [object Object]
+[24-08-23 17:41:11] 	errorMiddleware ==> Error: no proposed goal  with this ID
+[24-08-23 17:42:01] 	errorMiddleware ==> TypeError: Cannot read properties of undefined (reading 'find')
+[24-08-23 17:42:16] 	errorMiddleware ==> TypeError: Cannot read properties of undefined (reading 'find')
+[24-08-23 17:42:20] 	errorMiddleware ==> TypeError: Cannot read properties of undefined (reading 'find')
+[24-08-23 17:42:28] 	errorMiddleware ==> TypeError: Cannot read properties of undefined (reading 'find')
+[24-08-23 17:48:40] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\db\Models\Firestore\FirestoreUserModel.js ==> [object Object]
+[24-08-23 17:48:43] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\db\Models\Firestore\FirestoreUserModel.js ==> [object Object]
+[24-08-23 17:58:01] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\db\Models\Firestore\FirestoreUserModel.js ==> [object Object]
+[24-08-23 17:58:04] 	C:\Users\mtommasi\Desktop\Progetti Matteo\1000goals\build\db\Models\Firestore\FirestoreUserModel.js ==> [object Object]
+[24-08-23 18:00:22] 	errorMiddleware ==> Error: User with provided name is already in the game, choose another username

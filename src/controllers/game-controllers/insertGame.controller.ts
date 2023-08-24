@@ -105,6 +105,7 @@ export const insertGameController: (...args:Parameters<RequestHandler>)=>Promise
   
 
   const {password, ...userWOPasswrod} = user;
+  userWOPasswrod.gameID=game.id
   const responseBody: InsertGameResponse = {
     data: {game: gameWithEmptyPlayers, user: userWOPasswrod},
     error: null,

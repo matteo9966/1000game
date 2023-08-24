@@ -56,8 +56,8 @@ export function firestoreUserModelTests() {
     });
 
     describe('insertUser', () => {
-      it.only('should add a user to the firestore databae and there should be only one user in the Users collection', async () => {
-        // await setup();
+      it('should add a user to the firestore databae and there should be only one user in the Users collection', async () => {
+        await setup();
         const user = {...mockUser};
         const result = await firestoreUserModel.insertUser(user);
         expect(result).to.be.true;

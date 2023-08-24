@@ -4,7 +4,7 @@ import { firestoreGameModelTests } from './FirestoreGameModel.test';
 import { firestoreUserModelTests } from './FirestoreUserModel.test';
 
 
-describe.only('firestore tests',()=>{
+describe('firestore tests',()=>{
     firestoreUserModelTests();
     firestoreGameModelTests();
 })

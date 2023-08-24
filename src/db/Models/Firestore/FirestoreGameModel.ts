@@ -67,7 +67,8 @@ class GameFirebaseModel extends FirebaseModel {
       if (gameExists) {
         return false;
       }
-      await gameDocRef.set(game);
+      const {goals, ...gameWOGoals} = game;
+      await gameDocRef.set(gameWOGoals);
       await this.insertGoalsBatch(game.goals, gameDocRef);
       return true;
     } catch (error) {
@@ -108,8 +109,20 @@ class GameFirebaseModel extends FirebaseModel {
 
   async getGameById(gameId: string) {
     const data = (await this.collection.doc(gameId).get()).data();
+    const proposedGoalsData = (
+      await this.collection.doc(gameId).collection('proposedGoals').get()
+    ).docs.map(d => d.data()) as ProposedGoal[];
+
+    const goals = (
+      await this.collection.doc(gameId).collection('goals').get()
+    ).docs.map(d => d.data()) as Goal[];
+
     if (!Boolean(data)) return null;
-    return data as Game;
+
+    const game = data as Game;
+    game.proposedGoals = proposedGoalsData;
+    game.goals = goals;
+    return game;
   }
 
   async getGameByIdLookupPlayers(gameId: string) {
@@ -185,7 +198,7 @@ class GameFirebaseModel extends FirebaseModel {
         .collection('proposedGoals')
         .doc(goalId);
 
-      await proposedGoalRef.delete({ exists: true });
+      await proposedGoalRef.delete({exists: true});
       return true;
     } catch (error) {
       logger2(error, __filename);

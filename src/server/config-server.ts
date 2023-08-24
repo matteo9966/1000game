@@ -22,8 +22,11 @@ const basepath = process.env.BASEPATH
 //   cert: cert
 // }
 
+
+
 export function configServer(){
-    const app = e()
+    const app = e();
+    app.use(e.static('public'))
     app.use(e.json());
     app.use(requestMonitorMiddleware)
     app.use(cors({
