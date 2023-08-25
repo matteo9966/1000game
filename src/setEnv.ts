@@ -11,7 +11,7 @@ switch (process.env.NODE_ENV?.trim()) {
     console.log('.env.test is the right one');
     break;
   case 'prod':
-    pth = './.env';
+    pth = '.env';
     break;
 
   default:
