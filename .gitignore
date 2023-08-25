@@ -4,3 +4,4 @@ build/src
 **/*.log
 *.log
 goals-database-firebase-adminsdk-5g0pg-31ce41ff6b.json
+*.env
