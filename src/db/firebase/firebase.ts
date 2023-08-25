@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import * as admin from "firebase-admin";
 import * as firestore from "firebase-admin/firestore";
-import * as goal_database_key from './goals-database-firebase-adminsdk-5g0pg-31ce41ff6b.json';
+// import * as goal_database_key from './goals-database-firebase-adminsdk-5g0pg-31ce41ff6b.json';
 import { environment } from "../../config/environment";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
