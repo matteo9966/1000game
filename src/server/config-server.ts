@@ -35,11 +35,22 @@ export function configServer() {
         'https://192.168.56.1:4200',
         'https://192.168.1.179',
         'http://192.168.1.179',
-        'https://matteo9966.github.io/'
-        
+        'https://matteo9966.github.io',
       ],
     })
   );
+  app.use(
+    cors({
+      origin: 'https://matteo9966.github.io',
+    })
+  );
+  app.options("/*", function(req, res, next){
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization, Content-Length, X-Requested-With');
+    res.send(200);
+  });
+  
   app.use(`${basepath}${ROUTES.games.base}`, gameRoutes);
   app.use(`${basepath}${ROUTES.users.base}`, userRoutes);
   app.use(`${basepath}${ROUTES.health}`, route);
