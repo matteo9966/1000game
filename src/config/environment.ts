@@ -1,4 +1,4 @@
-import { DotenvParseOutput } from 'dotenv';
+import {DotenvParseOutput} from 'dotenv';
 import {B64ToASCII} from '../utils/base64-to-ascii';
 export const environment = {
   basepath: '',
@@ -7,7 +7,8 @@ export const environment = {
   dbname: '',
   privatekey: '',
   publickey: '',
-  firebase:''
+  firebase: '',
+  firebase_config: '',
 };
 
 export function initEnvironment(parsed: DotenvParseOutput) {
@@ -18,5 +19,5 @@ export function initEnvironment(parsed: DotenvParseOutput) {
   environment.privatekey = B64ToASCII(parsed.PRIVATEKEY)!;
   environment.publickey = B64ToASCII(parsed.PRIVATEKEY)!;
   environment.firebase = parsed.FIRESTORE_EMULATOR_HOST;
+  environment.firebase_config = JSON.parse(B64ToASCII(parsed.FIREBASE_CONGIG)!);
 }
-

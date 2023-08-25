@@ -43,9 +43,9 @@ export const signupAdminController: RequestHandler = async (req, res, next) => {
   }
   parsedUser.password = passwordHash;
 
-  const inserted = await userModel.insertUser(parsedUser);
+  // const inserted = await userModel.insertUser(parsedUser);
   const insertedInFirebase = await firestoreUserModel.insertUser(parsedUser);
-  if (!inserted) {
+  if (!insertedInFirebase) {
     throw new CustomServerError('Error while inserting the new user', 500);
   }
 

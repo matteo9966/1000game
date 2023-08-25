@@ -227,3 +227,7 @@ hello!!!
     ✔ should return error object if provide username with spaces
 
 `
+
+
+from the client side, the request is made to 
+https://one000-game-api.onrender.com/api/v1/users/signup-user

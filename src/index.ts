@@ -18,6 +18,7 @@ function main() {
    */
   const server = app.listen(port, () => {
     console.log(`Listening on port ${(<any>server?.address())?.port}`);
+    console.log('environment:',JSON.stringify(environment,null,2))
     // console.log(`environment: ${JSON.stringify(environment,null,2)}`);
     // console.log(`__dirname: ${__dirname}`);
     // console.log(`__filename: ${__filename}`);

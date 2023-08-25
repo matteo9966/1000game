@@ -2,6 +2,7 @@
 import * as admin from "firebase-admin";
 import * as firestore from "firebase-admin/firestore";
 import * as goal_database_key from './goals-database-firebase-adminsdk-5g0pg-31ce41ff6b.json';
+import { environment } from "../../config/environment";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -29,7 +30,7 @@ export function initializeFirestore(){
     }
 
     const app = admin.initializeApp({
-        credential:admin.credential.cert(goal_database_key as any),
+        credential:admin.credential.cert(environment.firebase_config as any),
         projectId:'goals-database',
 
     })

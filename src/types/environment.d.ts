@@ -10,6 +10,7 @@ declare global {
       PRIVATEKEY:string;
       PUBLICKEY:string;
       FIRESTORE_EMULATOR_HOST:string;
+      FIREBASE_CONFIG:string;
 
     }
   }
