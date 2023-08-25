@@ -19,7 +19,7 @@ switch (process.env.NODE_ENV?.trim()) {
 }
 
 function setConfig() {
-  const {parsed, error} = config({path: pth, debug: true, override: true});
+  const {parsed, error} = config({ debug: true, override: true});
   if (error || !parsed) {
     console.log(
       'Error while parsing the environment variables, please set env variables'
